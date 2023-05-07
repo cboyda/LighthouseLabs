@@ -1,3 +1,6 @@
+From
+https://data.compass.lighthouselabs.ca/projects/SQL-final-project
+
 Submission Guidelines:
 
 For this project, you will need to submit a link to your github repo that contains all of the files listed. The files submitted will be evaluated.
