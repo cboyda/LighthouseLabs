@@ -20,6 +20,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
+
 TOP 10 CITIES BY PRODUCTPRICE
 ```
 SELECT 
@@ -55,6 +56,39 @@ TOP 10 CITIES
 "Seattle"	        "$4,252.95"	    "USD"
 ```
 
+TOP 10 COUNTRIES BY PRODUCTPRICE
+```
+SELECT 
+    country, 
+    SUM(productPrice) as Sum_in_Millions, 
+    currencyCode 
+FROM 
+    all_sessions 
+WHERE 
+    country IS NOT NULL AND city <> '(not set)'
+GROUP BY 
+    country, 
+    currencyCode 
+ORDER BY 
+    SUM_in_Millions DESC 
+LIMIT 10;
+```
+
+Answer:
+TOP 10 COUNTRIES BY PRODUCTPRICE
+```
+"country"	        "sum_in_millions"	"currencycode"
+"United States"	    "$153,591.79"	    "USD"
+"India"	            "$8,837.61"	        "USD"
+"United States"	    "$7,474.36"	        "USD"
+"United Kingdom"	"$5,963.74"	        "USD"
+"Canada"	        "$5,159.26"	        "USD"
+"Australia"	        "$3,599.59"	        "USD"
+"Japan"	            "$1,822.15"	        "USD"
+"France"	        "$1,699.01"	        "USD"
+"Ireland"	        "$1,478.51"	        "USD"
+"Hong Kong"	        "$1,434.01"	        "USD"
+```
 
 
 
