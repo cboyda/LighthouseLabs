@@ -276,3 +276,10 @@ UPDATE products SET name = trim(name);
 UPDATE all_sessions
 SET city='(not set)'
 WHERE city = 'not available in demo dataset';
+
+-- FIX 14 (d)
+UPDATE all_sessions
+SET sessionQualityDim=0
+WHERE sessionQualityDim is NULL;
+-- UPDATE 13906
+-- Query returned successfully in 272 msec.
