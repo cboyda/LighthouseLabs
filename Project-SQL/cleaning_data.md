@@ -610,12 +610,31 @@ WHERE city = 'not available in demo dataset';
 -- Query returned successfully in 296 msec.
 ```
 
-## (c) all_sessions.totalTransactionRevenue and all_sessions.transactions
+## (c) all_sessions.totalTransactionRevenue, all_sessions.transactions, all_sessions.productrefundAmount, all_sessions.productQuantity
 	
-Both of these columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
+These columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
 
 ![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns.png?raw=true)
+	
+![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns2.png?raw=true)
 
 NO columns deleted since this is a destructive change and would need to be confirmed before applied.
 
+## (d) all_sessions.sessionQualityDim
+
+```
+select sessionQualityDim,  Count(*) as Count
+FROM all_sessions
+GROUP BY sessionQualityDim
+ORDER BY sessionQualityDim DESC;
+-- returns 45 different variations
+-- including 13,906 NULL's
+-- replacing with 0 to match INTEGER and for better comparisons
+
+UPDATE all_sessions
+SET sessionQualityDim=0
+WHERE sessionQualityDim is NULL;
+-- UPDATE 13906
+-- Query returned successfully in 272 msec.
+```
 </details>
