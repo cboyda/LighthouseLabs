@@ -14,9 +14,9 @@ What issues will you address by cleaning the data?
 - [ ] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
 - [ ] 10. Investigate analytics.units_sold is STRING when expecting NUMERIC.
-- [ ] 11. Check products.sentimentscore violates not-null constraint, should these be zero? 
-- [ ] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero?
-- [ ] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report..restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  May solve #11 and #12 from this information?
+- [X] 11. Check products.sentimentscore violates not-null constraint, should these be zero? FIXED in 1(f)
+- [X] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero? FIXED in 1(g)
+- [ ] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report..restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
 
 
 
