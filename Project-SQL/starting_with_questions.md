@@ -98,11 +98,26 @@ Here is the formatted table for "country":
 
 
 SQL Queries:
-
-
+TOP 10 Average of Products Ordered by Country and City
+```
+SELECT city, country, AVG(num_products_ordered) AS average_products_ordered
+FROM visitor_orders
+GROUP BY city, country;
+```
 
 Answer:
-
+| country          | city            | average_products_ordered |
+|------------------|----------------|--------------------------|
+| United States    | Council Bluffs | 7589                     |
+| Mali             | (not set)       | 3786                     |
+| Ireland          | Cork            | 3786                     |
+| Montenegro       | (not set)       | 3786                     |
+| United States    | Bellflower      | 3786                     |
+| Chile            | Santiago        | 3607                     |
+| United States    | Bellingham      | 2836                     |
+| United States    | Detroit         | 2748                     |
+| Papua New Guinea | (not set)       | 2558                     |
+| Réunion          | (not set)       | 2538                     |
 
 
 
