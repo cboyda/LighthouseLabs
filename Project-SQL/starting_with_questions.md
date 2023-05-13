@@ -20,10 +20,40 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
-
+TOP 10 CITIES
+```
+SELECT 
+    city, 
+    SUM(productPrice), 
+    currencyCode 
+FROM 
+    all_sessions 
+WHERE 
+    city IS NOT NULL 
+GROUP BY 
+    city, 
+    currencyCode 
+ORDER BY 
+    SUM DESC 
+LIMIT 10;
+```
 
 
 Answer:
+TOP 10 CITIES
+```
+"city"	        "sum"	    "currencycode"
+"Mountain View"	44995560000	"USD"
+"New York"	    19234200000	"USD"
+"San Francisco"	15411110000	"USD"
+"Sunnyvale"	    13340860000	"USD"
+"San Jose"	    7631500000	"USD"
+"Los Angeles"	6294240000	"USD"
+"Chicago"	    5990020000	"USD"
+"London"	    5731810000	"USD"
+"Palo Alto"	    5270600000	"USD"
+"Seattle"	    4252950000	"USD"
+```
 
 
 
