@@ -15,7 +15,7 @@ In your copy of the cleaning_data.md file, describe what issues you addressed by
 </details>    
 
 What issues will you address by cleaning the data?
-- [ ] 0. The unit cost in the data needs to be divided by 1,000,000.
+- [X] 0. The unit cost in the data needs to be divided by 1,000,000.
 - [X] 1. Find all fields with any NULL values in ALL tables.
 - [X] 2. Check analytics.bounces violates not-null constraint, FIXED in 1(d)
 - [X] 3. Check analytics.pageviews violates not-null constraint, FIXED in 1(b)
