@@ -10,11 +10,11 @@
 
 ```mermaid
 graph TD;
-    analytics.csv_448.7MB-->tbl_analytics_716MB-->4,301,122 rows;
-    all_sessions.csv_3.9MB-->tbl_all_sessions_4.7MB;
-    products.csv_0.069MB-->tbl_products_0.2MB;
-    sales_by_sku_0.007MB-->tbl_sales_by_sku_0.08MB;
-    sales_report_0.034MB-->tbl_sales_report_0.12MB;
+    analytics.csv_448.7MB-->tbl_analytics_716MB-->4,301,122_rows;
+    all_sessions.csv_3.9MB-->tbl_all_sessions_4.7MB-->15,134_rows;
+    products.csv_0.069MB-->tbl_products_0.2MB-->1,094_rows;
+    sales_by_sku_0.007MB-->tbl_sales_by_sku_0.08MB-->456_rows;
+    sales_report_0.034MB-->tbl_sales_report_0.12MB-->454_rows;
 ```
 
 ## Results
