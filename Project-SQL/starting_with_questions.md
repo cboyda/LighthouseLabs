@@ -16,7 +16,7 @@ Provide the answer to the 5 questions and the queries used to answer each questi
 Answer the following questions and provide the SQL queries used to find the answer.
 </details>
     
-**Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
+## **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
 "Transaction revenues" undefined, assuming it is the SUM of all_sessions.productPrice field.
 
@@ -94,7 +94,7 @@ Here is the formatted table for "country":
 
 
 
-**Question 2: What is the average number of products ordered from visitors in each city and country?**
+## **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
 SQL Queries:
@@ -161,7 +161,7 @@ TOP 10 Average of Products Ordered by Country
 | Armenia             | 1351                   |
 
 
-**Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
+## **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 
 SQL Queries:
@@ -174,7 +174,7 @@ Answer:
 
 
 
-**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+## **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
 SQL Queries:
@@ -187,7 +187,7 @@ Answer:
 
 
 
-**Question 5: Can we summarize the impact of revenue generated from each city/country?**
+## **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
 
