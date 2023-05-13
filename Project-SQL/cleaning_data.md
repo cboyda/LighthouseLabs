@@ -25,7 +25,7 @@ What issues will you address by cleaning the data?
 - [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue; not modified as math unaffected and too time consuming.
 - [X] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
-- [ ] 10. ???
+- [X] 10. Investigate all_sessions.visitid and analytics.visitid.  Is this a join?
 - [X] 11. Check products.sentimentscore violates not-null constraint, should these be zero? FIXED in 1(f)
 - [X] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero? FIXED in 1(g)
 - [X] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report.restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
@@ -426,7 +426,7 @@ This was just a typo when table was created.  Easy fix, change datatype to match
 ALTER TABLE public.all_sessions ALTER COLUMN fullvisitorid TYPE numeric USING fullvisitorid::numeric;
 ```
 
-Oddly none match eachother, they must be uniquely generated.
+Oddly none of fullvisitorid matches eachother (between analytics and all_sessions tables), they must be uniquely generated.
 ```
 SELECT COUNT(*) FROM analytics
 JOIN all_sessions ON analytics.fullvisitorid = all_sessions.fullvisitorid;
@@ -468,6 +468,7 @@ Datatype FIXED.
 <summary> 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import? </summary
 
 Check for values in this mystery column28:
+
 ```
 select * from all_sessions where column28 is not null;
 -- returns 15,134 rows
@@ -477,6 +478,40 @@ select * from all_sessions where column28 is not null;
 ALTER TABLE all_sessions DROP COLUMN column28;
 ```
 	FIXED column28.
+</details>
+	
+<summary> 10. Investigate all_sessions.visitid and analytics.visitid.  Is this a join? </summary
+
+Check for values of visitid between analytics and all_sessions tables:
+
+```
+SELECT COUNT(*) FROM all_sessions
+JOIN analytics USING(visitid);
+-- returns 107,159 rows
+
+SELECT COUNT(*) FROM analytics
+full outer JOIN all_sessions USING(visitid);
+-- returns 4,316,292 rows
+```
+
+Let's check for duplicate values:
+
+```
+select visitid, count(*)
+from analytics
+group by visitid
+HAVING count(*) > 1;
+-- returns 146,517 duplicate visitID rows in analytics table
+
+select visitid, count(*)
+from all_sessions
+group by visitid
+HAVING count(*) > 1;
+-- returns 553 duplicate visitID rows in all_sessions table
+```
+	
+There is DEFINATELY a JOIN relationship but this isn't a primary key for either table.
+
 </details>
 	
 <details>
