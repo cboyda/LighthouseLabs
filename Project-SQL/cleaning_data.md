@@ -320,7 +320,6 @@ WHERE NOT EXISTS (
   SELECT * FROM products 
   WHERE products.SKU = sk.productSKU
 );
-
 -- returns 8 rows
 -- "salesbysku_id"	"productsku"	"total_ordered"
 -- 166				"GGOEYAXR066128"	3
@@ -342,7 +341,6 @@ select * from products where SKU like 'GGOEGALJ0579%';
 -- "GGOEGALJ057914"	" Women's Short Sleeve Performance Tee Charcoal"	11	14	17	0.3	0.5
 -- "GGOEGALJ057913"	" Women's Short Sleeve Performance Tee Charcoal"	6	11	10	0.8	1.2
 -- "GGOEGALJ057915"	" Women's Short Sleeve Performance Tee Charcoal"	6	11	16	0.8	1.3
-
 select * from products where SKU like 'GGOEYAXR066%';
 -- probably this same name
 -- "sku"	"name"	"orderedquantity"	"stocklevel"	"restockingleadtime"	"sentimentscore"	"sentimentmagnitude"
@@ -400,7 +398,6 @@ Oddly none match eachother, they must be uniquely generated.
 SELECT COUNT(*) FROM analytics
 JOIN all_sessions ON analytics.fullvisitorid = all_sessions.fullvisitorid;
 -- returns 0
-
 SELECT COUNT(*) FROM all_sessions
 JOIN analytics USING(fullvisitorid);
 -- returns 0
