@@ -21,9 +21,10 @@ What issues will you address by cleaning the data?
 
 
 
-Queries:
+# Queries:
 Below, provide the SQL queries you used to clean your data.
-# 1. Find all fields with any NULL values in ALL tables., then decide how to proceed with them.
+<details>
+<summary> 1. Find all fields with any NULL values in ALL tables., then decide how to proceed with them. </summary>
 
 QUERY:
 Credit: https://stackoverflow.com/questions/17678635/list-all-tables-in-postgres-that-contain-a-boolean-type-column-with-null-values
@@ -273,9 +274,10 @@ group by
 
 i thru q) all_sessions.[field_name] (NULL)
 	Without definitions of what these values are, ignoring these columns and leaving these NULL values as-is. No FIX applied.
+</details>
 
 <details>
-<summary> # 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC? </summary>
+<summary> 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC? </summary>
 Investigative query:
 ```
 select count(*) from analytics where units_sold ='';
@@ -307,5 +309,8 @@ ALTER TABLE public.analytics ALTER COLUMN units_sold TYPE integer USING units_so
 	COLUMN FIXED.
 </details>
 
-# 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
+<details>
+<summary> 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU </summary>
+
+</details>
 
