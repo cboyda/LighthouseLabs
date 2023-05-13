@@ -8,6 +8,15 @@
 2. Tables created analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows)
 3. Cleaned Data which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
 
+```mermaid
+graph TD;
+    all_sessions.csv-->tbl_all_sessions;
+    analytics.csv-->tbl_analytics;
+    products.csv-->tbl_products;
+    sales_by_sku-->tbl_sales_by_sku;
+    sales_report-->tbl_sales_report;
+```
+
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
