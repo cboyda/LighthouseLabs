@@ -610,7 +610,7 @@ WHERE city = 'not available in demo dataset';
 -- Query returned successfully in 296 msec.
 ```
 
-## (c) all_sessions.totalTransactionRevenue, all_sessions.transactions, all_sessions.productrefundAmount, all_sessions.productQuantity
+## (c) all_sessions.totalTransactionRevenue, all_sessions.transactions, all_sessions.productrefundAmount, all_sessions.productQuantity, all_sessions.productRevenue, all_sessions.itemQuantity, all_sessions.itemRevenue, all_sessions.transactionRevenue, all_sessions.transactionId, all_sessions.searchKeyword
 	
 These columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
 
@@ -622,6 +622,7 @@ NO columns deleted since this is a destructive change and would need to be confi
 
 ## (d) all_sessions.sessionQualityDim
 
+Replacing with 0 to match INTEGER and for better comparisons.
 ```
 select sessionQualityDim,  Count(*) as Count
 FROM all_sessions
@@ -629,7 +630,7 @@ GROUP BY sessionQualityDim
 ORDER BY sessionQualityDim DESC;
 -- returns 45 different variations
 -- including 13,906 NULL's
--- replacing with 0 to match INTEGER and for better comparisons
+
 
 UPDATE all_sessions
 SET sessionQualityDim=0
@@ -637,4 +638,9 @@ WHERE sessionQualityDim is NULL;
 -- UPDATE 13906
 -- Query returned successfully in 272 msec.
 ```
+	
+## (e) all_sessions.productPrice
+
+All prices in millions, ranging from 8.99 to 300, could divide by 1 million for easier readability but would discuss with SME first.
+
 </details>
