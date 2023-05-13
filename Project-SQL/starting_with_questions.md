@@ -54,19 +54,7 @@ TOP 10 CITIES
 | London        | $5,731.81       | USD          |
 | Palo Alto     | $5,270.60       | USD          |
 | Seattle       | $4,252.95       | USD          |
-```
-"city"	            "sum_in_millions"	"currencycode"
-"Mountain View"	    "$44,995.56"	    "USD"
-"New York"	        "$19,234.20"	    "USD"
-"San Francisco"	    "$15,411.11"	    "USD"
-"Sunnyvale"	        "$13,340.86"	    "USD"
-"San Jose"	        "$7,631.50"	        "USD"
-"Los Angeles"	    "$6,294.24"	        "USD"
-"Chicago"	        "$5,990.02"	        "USD"
-"London"	        "$5,731.81"	        "USD"
-"Palo Alto"	        "$5,270.60"	        "USD"
-"Seattle"	        "$4,252.95"	        "USD"
-```
+
 
 TOP 10 COUNTRIES BY PRODUCTPRICE
 ```
@@ -88,19 +76,20 @@ LIMIT 10;
 
 Answer:
 TOP 10 COUNTRIES BY PRODUCTPRICE
-```
-"country"	        "sum_in_millions"	"currencycode"
-"United States"	    "$153,591.79"	    "USD"
-"India"	            "$8,837.61"	        "USD"
-"United States"	    "$7,474.36"	        "USD"
-"United Kingdom"	"$5,963.74"	        "USD"
-"Canada"	        "$5,159.26"	        "USD"
-"Australia"	        "$3,599.59"	        "USD"
-"Japan"	            "$1,822.15"	        "USD"
-"France"	        "$1,699.01"	        "USD"
-"Ireland"	        "$1,478.51"	        "USD"
-"Hong Kong"	        "$1,434.01"	        "USD"
-```
+Here is the formatted table for "country":
+
+| country         | sum_in_millions | currencycode |
+|-----------------|----------------|--------------|
+| United States   | $153,591.79    | USD          |
+| India           | $8,837.61      | USD          |
+| United States   | $7,474.36      | USD          |
+| United Kingdom  | $5,963.74      | USD          |
+| Canada          | $5,159.26      | USD          |
+| Australia       | $3,599.59      | USD          |
+| Japan           | $1,822.15      | USD          |
+| France          | $1,699.01      | USD          |
+| Ireland         | $1,478.51      | USD          |
+| Hong Kong       | $1,434.01      | USD          |
 
 
 
