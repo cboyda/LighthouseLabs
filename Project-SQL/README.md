@@ -4,9 +4,9 @@
 (fill in your description and goals here)
 
 ## Process
-1. CSV import from 5 files
-2. Tables created analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows)
-3. Cleaned Data which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
+1. IMPORT data from 5 CSV files
+2. PostgreSQL Tables created to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows)
+3. SQL Cleaning of Data which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
 
 ```mermaid
 graph TD;
