@@ -408,10 +408,11 @@ SELECT COUNT(*) FROM all_sessions
 JOIN analytics USING(fullvisitorid);
 -- returns 0
 ```
+	
 </details>
 	
 <details>
-<summary> 7. </summary
+<summary> 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import? </summary
 
 Check for values in this mystery column28:
 ```
