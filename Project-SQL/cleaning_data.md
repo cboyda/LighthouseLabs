@@ -4,9 +4,9 @@
     
 
 What issues will you address by cleaning the data?
-- [ ] 1. Find all fields with any NULL values in ALL tables.
-- [ ] 2. Check analytics.bounces violates not-null constraint
-- [ ] 3. Check analytics.pageviews violates not-null constraint  
+- [X] 1. Find all fields with any NULL values in ALL tables.
+- [X] 2. Check analytics.bounces violates not-null constraint, FIXED in 1(d)
+- [X] 3. Check analytics.pageviews violates not-null constraint, FIXED in 1(b)
 - [ ] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
 - [ ] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
 - [ ] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR? These seem to be connected.
