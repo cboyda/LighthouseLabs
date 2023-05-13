@@ -441,6 +441,7 @@ Also corrected CREATE TABLE initial code to ensure this problem doesn't reoccur.
 
 <details>
 <summary> 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC. </summary
+
 Checking for any number data in all_sessions.itemrevenue, 0 found.
 Checking for any non-numeric data in all_sessions.itemvenue, 15,134 found but they are all just blank "" fields.
 Converting blanks to zeros using:
