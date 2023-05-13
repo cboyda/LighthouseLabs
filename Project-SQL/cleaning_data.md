@@ -25,10 +25,10 @@ What issues will you address by cleaning the data?
 - [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue; not modified as math unaffected and too time consuming.
 - [X] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
-- [ ] 10. Investigate analytics.units_sold is STRING when expecting NUMERIC.
+- [ ] 10. ???
 - [X] 11. Check products.sentimentscore violates not-null constraint, should these be zero? FIXED in 1(f)
 - [X] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero? FIXED in 1(g)
-- [ ] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report..restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
+- [X] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report.restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
 
 
 
@@ -477,5 +477,55 @@ select * from all_sessions where column28 is not null;
 ALTER TABLE all_sessions DROP COLUMN column28;
 ```
 	FIXED column28.
+</details>
+	
+<details>
+<summary> 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report.restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE? </summary>
+
+sales_report seems to have duplicated columns that should be stored ONLY in the products table.
+Let's verify they are similar.
+
+```
+select 
+	p.SKU,
+	p.name as ProdutName,
+	sr.name as SRName,
+	p.stockLevel as ProductStock,
+	sr.stockLevel as SRStock,
+	p.restockingLeadTime as ProductLead,
+	sr.restockingLeadTime as SRLead,
+	p.sentimentScore as ProductSScore,
+	sr.sentimentScore as SRSScore,
+	p.sentimentMagnitude as ProductSMag,
+	sr.sentimentMagnitude as SRSMag
+from
+	products as p
+join 
+	sales_report as sr ON p.sku = sr.productSKU
+where
+	sr.name = p.name
+	and
+	sr.stockLevel = p.stockLevel
+	and
+	sr.restockingLeadTime = p.restockingLeadTime
+	and
+	sr.sentimentScore = p.sentimentScore
+	and
+	sr.sentimentMagnitude = p.sentimentMagnitude;
+-- returns ALL 454 rows, so they all match
+```
+	
+Now that we know they are the same, we are going to drop the duplicate columns from sales_report table using query:
+
+```
+ALTER TABLE sales_report 
+DROP COLUMN IF EXISTS name, 
+DROP COLUMN IF EXISTS stockLevel, 
+DROP COLUMN IF EXISTS restockingLeadTime,
+DROP COLUMN IF EXISTS sentimentScore,
+DROP COLUMN IF EXISTS sentimentMagnitude;
+```
+
+The IF EXISTS has been added in case we wanted to limit these columns from the next import.
 </details>
 
