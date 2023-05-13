@@ -35,6 +35,20 @@ What issues will you address by cleaning the data?
 
 # Queries:
 Below, provide the SQL queries you used to clean your data.
+
+<details>
+	<summary> 0. The unit cost in the data needs to be divided by 1,000,000.</summary>
+	There is no 'unit cost' field.  
+	Following the assignment instructions and assuming they meant analytics.unit_price dividing by 1 million using:
+```
+UPDATE analytics
+SET unit_price=ROUND(unit_price/1000000,2);
+-- UPDATE 4301122
+-- Query returned successfully in 1 min 5 secs.
+```
+	
+</details>
+
 <details>
 <summary> 1. Find all fields with any NULL values in ALL tables., then decide how to proceed with them. </summary>
 
