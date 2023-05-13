@@ -22,7 +22,7 @@ What issues will you address by cleaning the data?
 - [X] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
 - [X] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
 - [X] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?
-- [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue, 
+- [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue; not modified as math unaffected and too time consuming.
 - [ ] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
 - [ ] 10. Investigate analytics.units_sold is STRING when expecting NUMERIC.
