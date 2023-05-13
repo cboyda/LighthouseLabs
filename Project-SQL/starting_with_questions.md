@@ -42,6 +42,18 @@ LIMIT 10;
 
 Answer:
 TOP 10 CITIES
+| city           | sum_in_millions | currencycode |
+| --------------|----------------|--------------|
+| Mountain View | $44,995.56      | USD          |
+| New York       | $19,234.20      | USD          |
+| San Francisco | $15,411.11      | USD          |
+| Sunnyvale     | $13,340.86      | USD          |
+| San Jose      | $7,631.50       | USD          |
+| Los Angeles   | $6,294.24       | USD          |
+| Chicago       | $5,990.02       | USD          |
+| London        | $5,731.81       | USD          |
+| Palo Alto     | $5,270.60       | USD          |
+| Seattle       | $4,252.95       | USD          |
 ```
 "city"	            "sum_in_millions"	"currencycode"
 "Mountain View"	    "$44,995.56"	    "USD"
