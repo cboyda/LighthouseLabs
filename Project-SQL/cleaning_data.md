@@ -420,7 +420,8 @@ SELECT COUNT(*) FROM all_sessions
 JOIN analytics USING(fullvisitorid);
 -- returns 0
 ```
-	
+
+Also corrected CREATE TABLE initial code to ensure this problem doesn't reoccur.
 </details>
 	
 <details>
