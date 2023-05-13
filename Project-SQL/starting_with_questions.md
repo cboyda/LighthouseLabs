@@ -98,28 +98,67 @@ Here is the formatted table for "country":
 
 
 SQL Queries:
-TOP 10 Average of Products Ordered by Country and City
+TOP 10 Average of Products Ordered by City
 ```
-SELECT city, country, AVG(num_products_ordered) AS average_products_ordered
-FROM visitor_orders
-GROUP BY city, country;
+SELECT 
+	city,
+	round(AVG(p.orderedQuantity),0) as average_products_ordered
+FROM
+	all_sessions as als
+JOIN products as p ON als.productSKU = p.SKU
+WHERE 
+    city IS NOT NULL AND city <> '(not set)'
+GROUP BY
+	city
+ORDER BY
+	average_products_ordered DESC
+LIMIT 10;
 ```
 
 Answer:
-| country          | city            | average_products_ordered |
-|------------------|----------------|--------------------------|
-| United States    | Council Bluffs | 7589                     |
-| Mali             | (not set)       | 3786                     |
-| Ireland          | Cork            | 3786                     |
-| Montenegro       | (not set)       | 3786                     |
-| United States    | Bellflower      | 3786                     |
-| Chile            | Santiago        | 3607                     |
-| United States    | Bellingham      | 2836                     |
-| United States    | Detroit         | 2748                     |
-| Papua New Guinea | (not set)       | 2558                     |
-| Réunion          | (not set)       | 2538                     |
+TOP 10 Average of Products Ordered by City
+| city           | average_products_ordered |
+|----------------|--------------------------|
+| Council Bluffs | 7589                     |
+| Cork           | 3786                     |
+| Bellflower     | 3786                     |
+| Santiago       | 3607                     |
+| Bellingham     | 2836                     |
+| Detroit        | 2748                     |
+| Westville      | 2299                     |
+| Santa Fe       | 1933                     |
+| Nashville      | 1886                     |
+| Brno           | 1548                     |
 
+TOP 10 Average of Products Ordered by Country
+```
+SELECT 
+	country,
+	round(AVG(p.orderedQuantity),0) as average_products_ordered
+FROM
+	all_sessions as als
+JOIN products as p ON als.productSKU = p.SKU
+GROUP BY
+	country
+ORDER BY
+	average_products_ordered DESC
+LIMIT 10;
+```
 
+Answer:
+TOP 10 Average of Products Ordered by Country
+| country             | average_products_ordered |
+|---------------------|------------------------|
+| Mali                | 3786                   |
+| Montenegro          | 3786                   |
+| Papua New Guinea    | 2558                   |
+| Réunion             | 2538                   |
+| Georgia             | 2506                   |
+| Côte d’Ivoire      | 1929                   |
+| Moldova             | 1893                   |
+| Tanzania            | 1429                   |
+| Trinidad & Tobago | 1380                   |
+| Armenia             | 1351                   |
 
 
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
