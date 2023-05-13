@@ -614,6 +614,8 @@ WHERE city = 'not available in demo dataset';
 	
 Both of these columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
 
-![alt text](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns.png?raw=true)
+![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns.png?raw=true)
+
+NO columns deleted since this is a destructive change and would need to be confirmed before applied.
 
 </details>
