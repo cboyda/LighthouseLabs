@@ -7,7 +7,7 @@
 </details>
 
 <details>
-	<summary> Instructions from Project-SQL/instructional_guidelines.md</summary>
+	<summary> Instructions from Project-SQL/assignment.md</summary>
 As always, once you have received any dataset, your first task is to orient yourself to the data contained within. While exploring the data, you should keep an eye out for any of potential data issues that need to be cleaned.
 Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
 Apart from this, did you see any other issue that requires cleaning? Be sure to take the time upfront to address them.
