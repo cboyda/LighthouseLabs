@@ -8,7 +8,7 @@ What issues will you address by cleaning the data?
 - [X] 2. Check analytics.bounces violates not-null constraint, FIXED in 1(d)
 - [X] 3. Check analytics.pageviews violates not-null constraint, FIXED in 1(b)
 - [X] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
-- [ ] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
+- [X] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
 - [ ] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR? These seem to be connected.
 - [ ] 7. Convert NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue, 
 - [ ] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
@@ -85,7 +85,7 @@ p) NOTICE:  Table all_sessions has NULLs in the itemquantity field of type integ
 q) NOTICE:  Table all_sessions has NULLs in the transactionrevenue field of type numeric
 ```
 
-a) analytics.userid (NULL)
+## a) analytics.userid (NULL)
 QUERY:
 ```
 select 
@@ -101,7 +101,7 @@ group by
 	RETURNS 4,301,122 (aka 100% of rows = ALL).
 	THEREFORE since results in ALL records are NULL.  No fix applied since this seems to be universally missing data for all rows.
 
-b) analytics.pageviews (NULL)
+## b) analytics.pageviews (NULL)
 QUERY:
 ```
 select 
@@ -125,7 +125,7 @@ WHERE pageviews IS NULL;
 ```
 	Now we can do math on the pageviews column.  Could consider ALTER TABLE for field constraint NOT NULL?
 
-c) analytics.timeonsite (NULL)
+## c) analytics.timeonsite (NULL)
 QUERY:
 ```
 select 
@@ -140,7 +140,7 @@ group by
 ```
 	RETURNS: 477,465.  This this affects 11% of rows, too many to consider deleting data (>5%), IGNORING.
 
-d) analytics.bounces (NULL)
+## d) analytics.bounces (NULL)
 QUERY:
 ```
 select 
@@ -166,7 +166,7 @@ WHERE bounces IS NULL;
 
 Now we can do math on the bounces column.  Could consider ALTER TABLE for field constraint NOT NULL?
 
-e) analytics.revenue (NULL)
+## e) analytics.revenue (NULL)
 QUERY:
 ```
 select 
@@ -183,7 +183,7 @@ group by
 	IGNORING (but could have replaced NULL with 0). No FIX applied.
 
 
-f) products.sentimentscore (NULL)
+## f) products.sentimentscore (NULL)
 QUERY:
 ```
 select 
@@ -210,15 +210,15 @@ select count (*) from products where sentimentscore = 0;
 QUERY for FIX:
 ```
 UPDATE products
-SET bounces=0
-WHERE bounces IS NULL;
+SET sentimentscore=0
+WHERE sentimentscore IS NULL;
 ```
 	UPDATE 1
 	Query returned successfully in 198 msec.
 
 Now we can do math on the sentimentscore column.  Could consider ALTER TABLE for field constraint NOT NULL?	
 
-g) products.sentimentmagnitude (NULL)
+## g) products.sentimentmagnitude (NULL)
 QUERY:
 ```
 select 
@@ -272,7 +272,7 @@ group by
 ```
 	RETURNS 78 rows. Since we do not know what this ratio calcuation is, leaving these NULL values as-is. No FIX applied.
 
-i thru q) all_sessions.[field_name] (NULL)
+## i thru q) all_sessions.[field_name] (NULL)
 	Without definitions of what these values are, ignoring these columns and leaving these NULL values as-is. No FIX applied.
 </details>
 
@@ -311,6 +311,79 @@ ALTER TABLE public.analytics ALTER COLUMN units_sold TYPE integer USING units_so
 
 <details>
 <summary> 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU </summary>
+```
+-- Find mismatched rows
+SELECT * 
+FROM sales_by_sku as sk
+WHERE NOT EXISTS (
+  SELECT * FROM products 
+  WHERE products.SKU = sk.productSKU
+);
 
+-- returns 8 rows
+-- "salesbysku_id"	"productsku"	"total_ordered"
+-- 166				"GGOEYAXR066128"	3
+-- 239				"GGOEGALJ057912"	2
+-- 320				"9180753"			0
+-- 407				"9184677"			0
+-- 418				"9184663"			0
+-- 426				"9182763"			0
+-- 427				"9182779"			0
+-- 445				"9182182"			0
+```
+
+Let's look for hints to see if we can create them in the products table manually...
+
+```
+select * from products where SKU like 'GGOEGALJ0579%';
+-- probably this same name
+--  "sku"	"name"	"orderedquantity"	"stocklevel"	"restockingleadtime"	"sentimentscore"	"sentimentmagnitude"
+-- "GGOEGALJ057914"	" Women's Short Sleeve Performance Tee Charcoal"	11	14	17	0.3	0.5
+-- "GGOEGALJ057913"	" Women's Short Sleeve Performance Tee Charcoal"	6	11	10	0.8	1.2
+-- "GGOEGALJ057915"	" Women's Short Sleeve Performance Tee Charcoal"	6	11	16	0.8	1.3
+
+select * from products where SKU like 'GGOEYAXR066%';
+-- probably this same name
+-- "sku"	"name"	"orderedquantity"	"stocklevel"	"restockingleadtime"	"sentimentscore"	"sentimentmagnitude"
+-- "GGOEYAXR066155"	" Toddler Short Sleeve Tee Red"	6	7	14	0.3	0.5
+-- "GGOEYAXR066130"	" Toddler Short Sleeve Tee Red"	3	4	17	0.3	0.5
+-- "GGOEYAXR066129"	" Toddler Short Sleeve Tee Red"	4	7	17	0.7	1.1
+```
+
+But now the other productSKU's are not an easy guess.
+```
+select * from products where SKU like '918075%';
+-- harder to guess
+-- "sku"	"name"	"orderedquantity"	"stocklevel"	"restockingleadtime"	"sentimentscore"	"sentimentmagnitude"
+-- "9180757"	"Yoga Block"	0	0	13	0.1	0.3
+-- "9180759"	" Lunch Bag"	0	0	6	0.5	0.8
+-- "9180754"	"8 pc Android Sticker Sheet"	0	0	13	0.5	0.8
+-- "9180756"	"Windup Android"	0	0	6	0.7	1.1
+```
+Since these SKU's are harder to recreate manually and have total_ordered = 0 I consider these perfect to be dropped.
+
+Personal preference would be to DROP these mismatched 6 rows (with 0 totla_ordered) and recreate the 2 rows with total_ordered.  It doesn't seem like much data lost and then we would gain full relationship integrity between PRODUCTS and SALES_BY_SKU tables, which makes future queries much easier. 
+
+FIX QUERY to manually create the 2 new productskus GGOEYAXR066128 and GGOEGALJ057912:
+```
+INSERT INTO products (sku, name, orderedquantity, stocklevel, restockingleadtime, sentimentscore, sentimentmagnitude) 
+VALUES ('GGOEYAXR066128', ' Toddler Short Sleeve Tee Red',0,0,0,0,0.1);
+INSERT INTO products (sku, name, orderedquantity, stocklevel, restockingleadtime, sentimentscore, sentimentmagnitude) 
+VALUES ('GGOEGALJ057912', ' Women''s Short Sleeve Performance Tee Charcoal',0,0,0,0,0.1);
+```
+
+FIX Remove 6 unecessary SKU's from sales_by_sku:
+```
+DELETE FROM sales_by_sku where productsku IN('9180753','9184677','9184663','9182763','9182779','9182182');	
+```
+
+TABLE sales_by_sku now has a total of 456 rows.
+
+Now we can ADD the foreign key constraint, between PRODUCTS and SALES_BY_SKU for easier future queries and relationships!
+```
+ALTER TABLE public.sales_by_sku ADD CONSTRAINT sales_by_sku_fk FOREIGN KEY (productsku) REFERENCES public.products(sku) ON DELETE CASCADE ON UPDATE CASCADE;
+```
+
+FIX APPLIED, Foreign Key created!
 </details>
 
