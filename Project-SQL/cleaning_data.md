@@ -441,11 +441,9 @@ Also corrected CREATE TABLE initial code to ensure this problem doesn't reoccur.
 
 <details>
 <summary> 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC. </summary
-
-	Checking for any number data in all_sessions.itemrevenue, 0 found.
-	Checking for any non-numeric data in all_sessions.itemvenue, 15,134 found but they are all just blank "" fields.
-	
-	Converting blanks to zeros using:
+Checking for any number data in all_sessions.itemrevenue, 0 found.
+Checking for any non-numeric data in all_sessions.itemvenue, 15,134 found but they are all just blank "" fields.
+Converting blanks to zeros using:
 	
 ```
 UPDATE all_sessions
@@ -455,12 +453,13 @@ WHERE itemrevenue ='';
 -- Query returned successfully in 317 msec.
 ```
 	
-	Now we have a numerical value instead of a string, so we can convert datatype with:
+Now we have a numerical value instead of a string, so we can convert datatype with:
 
 ```
 ALTER TABLE public.all_sessions ALTER COLUMN itemrevenue TYPE integer USING itemrevenue::integer;
 ```
-	Datatype FIXED.	
+
+Datatype FIXED.	
 </details>
 	
 	
