@@ -473,13 +473,17 @@ Check for values in this mystery column28:
 select * from all_sessions where column28 is not null;
 -- returns 15,134 rows
 ```
-	Since all rows are null, this just looks like poor import, deleting column as irrelevant to our analysis.  
+
+Since all rows are null, this just looks like poor import, deleting column as irrelevant to our analysis.  
+
 ```
 ALTER TABLE all_sessions DROP COLUMN column28;
 ```
-	FIXED column28.
+
+FIXED column28.
 </details>
-	
+
+<details>
 <summary> 10. Investigate all_sessions.visitid and analytics.visitid.  Is this a join? </summary
 
 Check for values of visitid between analytics and all_sessions tables:
