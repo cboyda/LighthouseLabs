@@ -279,6 +279,7 @@ group by
 <details>
 <summary> 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC? </summary>
 Investigative query:
+	
 ```
 select count(*) from analytics where units_sold ='';
 -- returns 4,205,975
@@ -306,12 +307,15 @@ Now modify column type to appropriate NUMERIC field:
 ```
 ALTER TABLE public.analytics ALTER COLUMN units_sold TYPE integer USING units_sold::integer;
 ```
-	COLUMN FIXED.
+	
+COLUMN FIXED.
 </details>
 
 <details>
 <summary> 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU </summary>
+
 Starting the search for the problem rows.
+
 ```
 -- Find mismatched rows
 SELECT * 
@@ -388,7 +392,9 @@ FIX APPLIED, Foreign Key created!
 
 <details>
 <summary> 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?</summary>
+
 This was just a typo when table was created.  Easy fix, change datatype to match with query:
+
 ```
 ALTER TABLE public.all_sessions ALTER COLUMN fullvisitorid TYPE numeric USING fullvisitorid::numeric;
 ```
