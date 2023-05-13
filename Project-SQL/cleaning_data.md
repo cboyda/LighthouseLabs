@@ -12,7 +12,7 @@ What issues will you address by cleaning the data?
 - [X] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?
 - [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue, 
 - [ ] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
-- [ ] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
+- [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
 - [ ] 10. Investigate analytics.units_sold is STRING when expecting NUMERIC.
 - [ ] 11. Check products.sentimentscore violates not-null constraint, should these be zero? 
 - [ ] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero?
@@ -408,5 +408,20 @@ SELECT COUNT(*) FROM all_sessions
 JOIN analytics USING(fullvisitorid);
 -- returns 0
 ```
+</details>
+	
+<details>
+<summary> 7. </summary
+
+Check for values in this mystery column28:
+```
+select * from all_sessions where column28 is not null;
+-- returns 15,134 rows
+```
+	Since all rows are null, this just looks like poor import, deleting column as irrelevant to our analysis.  
+```
+ALTER TABLE all_sessions DROP COLUMN column28;
+```
+	FIXED column28.
 </details>
 
