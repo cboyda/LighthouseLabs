@@ -655,5 +655,17 @@ Also changing datatype to format nicely with MONEY.
 ```
 ALTER TABLE public.all_sessions ALTER COLUMN productprice TYPE money USING productprice::money;
 ```
+
+## (f) all_sessions.currencyCode
+
+This is minor but Country "United States" is missing the CurrencyCode, we know this to be USD to just adding for easier comparison (like the top 10 Countries question).
+
+```
+UPDATE all_sessions
+SET currencyCode = 'USD'
+WHERE Country = 'United States';
+-- UPDATE 8727
+-- Query returned successfully in 249 msec.
+```
 	
 </details>
