@@ -7,7 +7,7 @@ What issues will you address by cleaning the data?
 - [X] 1. Find all fields with any NULL values in ALL tables.
 - [X] 2. Check analytics.bounces violates not-null constraint, FIXED in 1(d)
 - [X] 3. Check analytics.pageviews violates not-null constraint, FIXED in 1(b)
-- [ ] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
+- [X] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
 - [ ] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
 - [ ] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR? These seem to be connected.
 - [ ] 7. Convert NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue, 
@@ -23,7 +23,7 @@ What issues will you address by cleaning the data?
 
 Queries:
 Below, provide the SQL queries you used to clean your data.
-1. Find all fields with any NULL values in ALL tables., then decide how to proceed with them.
+# 1. Find all fields with any NULL values in ALL tables., then decide how to proceed with them.
 
 QUERY:
 Credit: https://stackoverflow.com/questions/17678635/list-all-tables-in-postgres-that-contain-a-boolean-type-column-with-null-values
@@ -273,3 +273,39 @@ group by
 
 i thru q) all_sessions.[field_name] (NULL)
 	Without definitions of what these values are, ignoring these columns and leaving these NULL values as-is. No FIX applied.
+
+<details>
+<summary> # 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC? </summary>
+Investigative query:
+```
+select count(*) from analytics where units_sold ='';
+-- returns 4,205,975
+```
+
+Apply FIX:
+```
+-- FIX for #4
+UPDATE analytics
+SET units_sold=0
+WHERE units_sold ='';
+-- UPDATE 4205975
+-- Query returned successfully in 55 secs 886 msec.
+```
+
+Check if any other fixes required?
+```
+select count(*) from analytics Where units_sold::integer > 0;
+-- returns 95,146
+-- adding 4205975 = 4301121 = 100% of our rows
+-- now that "" are 0's we can modify the field type
+```
+
+Now modify column type to appropriate NUMERIC field:
+```
+ALTER TABLE public.analytics ALTER COLUMN units_sold TYPE integer USING units_sold::integer;
+```
+	COLUMN FIXED.
+</details>
+
+# 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
+
