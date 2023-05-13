@@ -616,7 +616,7 @@ These columns are blank, no values.  Consideration could be given to remove thes
 
 ![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns.png?raw=true)
 	
-![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns2.png?raw=true)
+![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/0225c5660ed107eae9d369874e4655a14f49e79e/Project-SQL/images/all_sessions-unused%20columns2.png?raw=true)
 
 NO columns deleted since this is a destructive change and would need to be confirmed before applied.
 
