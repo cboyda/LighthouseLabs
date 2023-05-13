@@ -573,6 +573,7 @@ The IF EXISTS has been added in case we wanted to limit these columns from the n
 <details>
 <summary> 14. Investigate individual values in the tables, any individual field data needed?</summary>	
 
+## (a) products.name
 Starting with products table, let's check the name string field with:
 
 ```
@@ -580,7 +581,41 @@ SELECT name, COUNT(*) AS count
 FROM products
 GROUP BY name
 ORDER BY name;
--- shows some names start with leading spaces = FIX
+-- shows some names start with leading spaces = FIX these 313 values
 ```
+
+```
+-- FIX 14 (a)
+UPDATE products SET name = trim(name);
+-- updates 1094 rows
+```
+
+## (b) all_sessions.city
+	
+```
+SELECT city, COUNT(*) AS count
+FROM all_sessions
+GROUP BY city
+ORDER BY city;
+-- we don't need both (not set) and "not available in demo dataset", renaming later
+-- "city"							"count"
+-- "not available in demo dataset"	8302
+-- "(not set)"						354
+
+-- FIX 14(b)
+UPDATE all_sessions
+SET city='(not set)'
+WHERE city = 'not available in demo dataset';
+-- UPDATE 8302, which matches our initial count
+-- Query returned successfully in 296 msec.
+```
+
+## (c) all_sessions.totalTransactionRevenue and all_sessions.transactions
+	
+Both of these columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
+
+![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns.png?raw=true)
+
+NO columns deleted since this is a destructive change and would need to be confirmed before applied.
 
 </details>
