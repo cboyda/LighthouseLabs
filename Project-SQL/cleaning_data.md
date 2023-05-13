@@ -9,8 +9,8 @@ What issues will you address by cleaning the data?
 - [X] 3. Check analytics.pageviews violates not-null constraint, FIXED in 1(b)
 - [X] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
 - [X] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
-- [ ] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR? These seem to be connected.
-- [ ] 7. Convert NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue, 
+- [X] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?
+- [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue, 
 - [ ] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [ ] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
 - [ ] 10. Investigate analytics.units_sold is STRING when expecting NUMERIC.
@@ -385,5 +385,13 @@ ALTER TABLE public.sales_by_sku ADD CONSTRAINT sales_by_sku_fk FOREIGN KEY (prod
 ```
 
 FIX APPLIED, Foreign Key created!
+</details>
+
+<details>
+<summary> 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?</summary>
+This was just a typo when table was created.  Easy fix, change datatype to match with query:
+```
+ALTER TABLE public.all_sessions ALTER COLUMN fullvisitorid TYPE numeric USING fullvisitorid::numeric;
+```
 </details>
 
