@@ -20,21 +20,21 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
-TOP 10 CITIES
+TOP 10 CITIES BY PRODUCTPRICE
 ```
 SELECT 
     city, 
-    SUM(productPrice), 
+    SUM(productPrice) as Sum_in_Millions, 
     currencyCode 
 FROM 
     all_sessions 
 WHERE 
-    city IS NOT NULL 
+    city IS NOT NULL AND city <> '(not set)'
 GROUP BY 
     city, 
     currencyCode 
 ORDER BY 
-    SUM DESC 
+    SUM_in_Millions DESC 
 LIMIT 10;
 ```
 
@@ -42,17 +42,17 @@ LIMIT 10;
 Answer:
 TOP 10 CITIES
 ```
-"city"	        "sum"	    "currencycode"
-"Mountain View"	44995560000	"USD"
-"New York"	    19234200000	"USD"
-"San Francisco"	15411110000	"USD"
-"Sunnyvale"	    13340860000	"USD"
-"San Jose"	    7631500000	"USD"
-"Los Angeles"	6294240000	"USD"
-"Chicago"	    5990020000	"USD"
-"London"	    5731810000	"USD"
-"Palo Alto"	    5270600000	"USD"
-"Seattle"	    4252950000	"USD"
+"city"	            "sum_in_millions"	"currencycode"
+"Mountain View"	    "$44,995.56"	    "USD"
+"New York"	        "$19,234.20"	    "USD"
+"San Francisco"	    "$15,411.11"	    "USD"
+"Sunnyvale"	        "$13,340.86"	    "USD"
+"San Jose"	        "$7,631.50"	    "USD"
+"Los Angeles"	    "$6,294.24"	    "USD"
+"Chicago"	        "$5,990.02"	    "USD"
+"London"	        "$5,731.81"	    "USD"
+"Palo Alto"	        "$5,270.60"	    "USD"
+"Seattle"	        "$4,252.95"	    "USD"
 ```
 
 
