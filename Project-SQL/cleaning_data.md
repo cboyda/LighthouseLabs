@@ -311,6 +311,7 @@ ALTER TABLE public.analytics ALTER COLUMN units_sold TYPE integer USING units_so
 
 <details>
 <summary> 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU </summary>
+Starting the search for the problem rows.
 ```
 -- Find mismatched rows
 SELECT * 
