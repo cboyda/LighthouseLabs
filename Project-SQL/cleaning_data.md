@@ -35,6 +35,7 @@ What issues will you address by cleaning the data?
 
 # Queries:
 Below, provide the SQL queries you used to clean your data.
+File project1-postgresgl.sql is the full creation, then cleaning file.  Just remember to only run the cleaning component AFTER the data has been imported.
 
 <details>
 	<summary> 0. The unit cost in the data needs to be divided by 1,000,000.</summary>
