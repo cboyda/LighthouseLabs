@@ -641,6 +641,19 @@ WHERE sessionQualityDim is NULL;
 	
 ## (e) all_sessions.productPrice
 
-All prices in millions, ranging from 8.99 to 300, could divide by 1 million for easier readability but would discuss with SME first.
+All prices in millions, ranging from 8.99 to 300, could divide by 1 million for easier readability.
 
+```
+UPDATE all_sessions
+SET productPrice=productPrice/1000000;
+--UPDATE 15134
+--Query returned successfully in 353 msec.
+```
+
+Also changing datatype to format nicely with MONEY.
+
+```
+ALTER TABLE public.all_sessions ALTER COLUMN productprice TYPE money USING productprice::money;
+```
+	
 </details>
