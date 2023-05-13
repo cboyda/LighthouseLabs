@@ -10,7 +10,7 @@
 
 ```mermaid
 graph TD;
-    analytics.csv_448.7MB-->tbl_analytics_716MB;
+    analytics.csv_448.7MB-->tbl_analytics_716MB-->4,301,122rows;
     all_sessions.csv_3.9MB-->tbl_all_sessions_4.7MB;
     products.csv_0.069MB-->tbl_products_0.2MB;
     sales_by_sku_0.007MB-->tbl_sales_by_sku_0.08MB;
