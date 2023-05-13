@@ -1,5 +1,5 @@
 # cleaning_data.md file
--- Part 2: Data Cleaning
+# Part 2: Data Cleaning
 <details>
 	<summary> Instructions from Project-SQL/instructional_guidelines.md</summary>
 --    Fill out this file with a description of the issues that will be addressed by cleaning the data
