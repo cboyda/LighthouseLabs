@@ -570,3 +570,17 @@ DROP COLUMN IF EXISTS sentimentMagnitude;
 The IF EXISTS has been added in case we wanted to limit these columns from the next import.
 </details>
 
+<details>
+<summary> 14. Investigate individual values in the tables, any individual field data needed?</summary>	
+
+Starting with products table, let's check the name string field with:
+
+```
+SELECT name, COUNT(*) AS count
+FROM products
+GROUP BY name
+ORDER BY name;
+-- shows some names start with leading spaces = FIX
+```
+
+</details>
