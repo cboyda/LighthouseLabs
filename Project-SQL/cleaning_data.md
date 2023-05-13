@@ -23,7 +23,7 @@ What issues will you address by cleaning the data?
 - [X] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
 - [X] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?
 - [ ] 7. Consider NUMERIC fields with null to 0 for easier math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue; not modified as math unaffected and too time consuming.
-- [ ] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
+- [X] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
 - [ ] 10. Investigate analytics.units_sold is STRING when expecting NUMERIC.
 - [X] 11. Check products.sentimentscore violates not-null constraint, should these be zero? FIXED in 1(f)
@@ -438,6 +438,31 @@ JOIN analytics USING(fullvisitorid);
 
 Also corrected CREATE TABLE initial code to ensure this problem doesn't reoccur.
 </details>
+
+<details>
+<summary> 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC. </summary
+
+	Checking for any number data in all_sessions.itemrevenue, 0 found.
+	Checking for any non-numeric data in all_sessions.itemvenue, 15,134 found but they are all just blank "" fields.
+	
+	Converting blanks to zeros using:
+	
+```
+UPDATE all_sessions
+SET itemrevenue=0
+WHERE itemrevenue ='';
+-- UPDATE 15134
+-- Query returned successfully in 317 msec.
+```
+	
+	Now we have a numerical value instead of a string, so we can convert datatype with:
+
+```
+ALTER TABLE public.all_sessions ALTER COLUMN itemrevenue TYPE integer USING itemrevenue::integer;
+```
+	Datatype FIXED.	
+</details>
+	
 	
 <details>
 <summary> 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import? </summary
