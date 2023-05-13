@@ -393,5 +393,16 @@ This was just a typo when table was created.  Easy fix, change datatype to match
 ```
 ALTER TABLE public.all_sessions ALTER COLUMN fullvisitorid TYPE numeric USING fullvisitorid::numeric;
 ```
+
+Oddly none match eachother, they must be uniquely generated.
+```
+SELECT COUNT(*) FROM analytics
+JOIN all_sessions ON analytics.fullvisitorid = all_sessions.fullvisitorid;
+-- returns 0
+
+SELECT COUNT(*) FROM all_sessions
+JOIN analytics USING(fullvisitorid);
+-- returns 0
+```
 </details>
 
