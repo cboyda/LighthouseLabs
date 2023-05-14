@@ -1,12 +1,13 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-Create efficient PostgreSQL database for ecommerce data files and clean in preparation for analysis.
+Create an efficient PostgreSQL database for ecommerce data files and clean in preparation for analysis.
 
 ## Process
 1. IMPORT data from 5 CSV files
 2. PostgreSQL Tables created to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows)
 3. SQL Cleaning of Data which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
+4. Answer question from the data generated.
 
 ```mermaid
 graph TD;
@@ -20,8 +21,60 @@ graph TD;
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
+1. This data has been manually screened prior to being imported.  
+* For example in all_sessions.pagetitle on row 448 of the csv the length of characters is 576 characters.  
+Statistical Analysis of the length of all page titles shows:
+| Statistic         | Value             |
+| ----------------- | ----------------- |
+| Mean              | 35.00330382       |
+| Standard Error    | 0.14942259        |
+| Median            | 40                |
+| Mode              | 50                |
+| Standard Deviation| 18.38201537       |
+| Sample Variance   | 337.8984891       |
+| Kurtosis          | 48.12838995       |
+| Skewness          | 1.209987756       |
+| Range             | 576               |
+| Minimum           | 0                 |
+| Maximum           | 576               |
+| Sum               | 529740            |
+| Count             | 15134             |
+
+![simple illustration in excel showing outlier field length](https://github.com/cboyda/LighthouseLabs/blob/15f7deb7294cb0d032a2db29461e5bcfd1ed4ece/Project-SQL/images/pagetitle%20field%20length%20outlier.png)?raw=true)
+
+
+This is not only a HUGE outlier but irrelevant information since the page title is not included in the querystring.
+```
+weixin://private/setresult/SCENE_FETCHQUEUE&eyJmdW5jIjoibG9nIiwicGFyYW1zIjp7Im1zZyI6Il9ydW5PbjNyZEFwaUxpc3QgOiBtZW51OnNoYXJlOnRpbWVsaW5lLG1lbnU6c2hhcmU6YXBwbWVzc2FnZSxvblZvaWNlUmVjb3JkRW5kLG9uVm9pY2VQbGF5QmVnaW4sb25Wb2ljZVBsYXlFbmQsb25Mb2NhbEltYWdlVXBsb2FkUHJvZ3Jlc3Msb25JbWFnZURvd25sb2FkUHJvZ3Jlc3Msb25Wb2ljZVVwbG9hZFByb2dyZXNzLG9uVm9pY2VEb3dubG9hZFByb2dyZXNzLG1lbnU6c2V0Zm9udCxtZW51OnNoYXJlOndlaWJvLG1lbnU6c2hhcmU6ZW1haWwsd3hkb3dubG9hZDpzdGF0ZV9jaGFuZ2UsaGRPbkRldmljZVN0YXRlQ2hhbmdlZCxhY3Rpdml0eTpzdGF0ZV9jaGFuZ2UifSwiX19tc2dfdHlwZSI6ImNhbGwiLCJfX2NhbGxiYWNrX2lkIjoiMTAwMCJ9
+```
+shortened to
+```
+weixin://private/setresult/SCENE_FETCHQUEUE
+```
+since & and after is just a garbage url string
+
+2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md
+
 ## Challenges 
 (discuss challenges you faced in the project)
 
+1. The first challenge was that pg admin4 did a poor job of uploading csv data into Amazon AWS RDS PostgreSQL.
+* GUI import failed
+* psql command lines failed
+* COPY is not available
+* \copy was too limited
+Solution was to find and use other tools to complete the necessary upload, DBeaver turned out to be an excellent tool.
+
+2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
+* why is the same information (totals) repeated in sales_by_sku and sales_report
+* there is multiple information that seems to be in the wrong tables, for example why is product category in all_sessions instead of products
+
+3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 on https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md
+
 ## Future Goals
 (what would you do if you had more time?)
+
+1. Consult a subject matter expert to better understand the goals and data.
+2. Redo the data export of the CSV so that the data/columns are in the correct tables.
+3. Minimize duplicate data creation in the CSV files PRIOR to importing into the database.
+4. Enforce data integrity throughout ALL steps.  There are productSKUs that are missing in the product table, perhaps this needs DELETE/ALTER CASCADE constraints added to other parts of another database?
