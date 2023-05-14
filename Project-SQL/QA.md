@@ -20,7 +20,8 @@ What are your risk areas? Identify and describe them.
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
-1. Investigate the value of sales_by_sku and sales_report tables.
+<details>
+<summary> 1. Investigate the value of sales_by_sku and sales_report tables.</summary>
 
 I was trying to answer Question 1 a different way, looking at the relationship between products and these 2 tables.
 
@@ -93,5 +94,18 @@ WHERE sbs.total_ordered <> sr.total_ordered;
 ### CONCERN:
 What are these values actually reporting? 
 Illustrates why you need a SME to make sense of the data!
+</details>
+	
+<details>
+<summary> 2. Find, Fix, Future</summary>
 
+As issues that were found were documented in https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md but more importantly steps were placed to ensure data integrity was maintained into the future.
+	
+A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective.
+	
+The FULL list of fixes is included in https://github.com/cboyda/LighthouseLabs/blob/0af877b6641cc14c155db88b8b63c905e8a5b81e/Project-SQL/project1-postgresql.sql
+
+This was also created in case the data/imported tables was corrupted and needed to be redone.
+	
+</details>
 
