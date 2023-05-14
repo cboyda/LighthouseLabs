@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DbVisualizer>
+  <ImportSettings>
+    <BatchImport>true</BatchImport>
+    <BatchSize>1000</BatchSize>
+    <BooleanFalse>false, no, 0, off</BooleanFalse>
+    <BooleanFalseFormat>false</BooleanFalseFormat>
+    <BooleanFalseFormats>false, no, 0, off</BooleanFalseFormats>
+    <BooleanTrueFormat>true</BooleanTrueFormat>
+    <BooleanTrueFormats>true, yes, 1, on</BooleanTrueFormats>
+    <CommitSize>100</CommitSize>
+    <CsvColumnDelimiter>,</CsvColumnDelimiter>
+    <CsvColumnDelimiterType>Auto Detect</CsvColumnDelimiterType>
+    <CsvRowDelimiter>\n</CsvRowDelimiter>
+    <CsvSkipEmptyRows>true</CsvSkipEmptyRows>
+    <CsvSkipRowsStartingWith />
+    <CsvTextQuotedBetween />
+    <DateFormat>Unformatted</DateFormat>
+    <DecimalSeparator>.</DecimalSeparator>
+    <Destination>Current Database Table</Destination>
+    <DetectDatatypeForQuoted>false</DetectDatatypeForQuoted>
+    <Encoding>UTF-8</Encoding>
+    <ExcelSheetId>1</ExcelSheetId>
+    <Filename>/Users/clintonboyda/Documents/GitHub/LighthouseLabs/SQL Data Files/all_sessions.csv</Filename>
+    <HeaderStartRow>1</HeaderStartRow>
+    <RegularImport>false</RegularImport>
+    <ShowNullAs>(null)</ShowNullAs>
+    <StartRowOfData>2</StartRowOfData>
+    <StopOnError>true</StopOnError>
+    <ThousandSeparator xml:space="preserve">,</ThousandSeparator>
+    <TimeFormat>Unformatted</TimeFormat>
+    <TimeStampFormat>Unformatted</TimeStampFormat>
+    <UseDelimiters>true</UseDelimiters>
+  </ImportSettings>
+</DbVisualizer>

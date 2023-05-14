@@ -283,3 +283,25 @@ SET sessionQualityDim=0
 WHERE sessionQualityDim is NULL;
 -- UPDATE 13906
 -- Query returned successfully in 272 msec.
+
+-- FIX 14 (e)
+UPDATE all_sessions
+SET productPrice=productPrice/1000000;
+-- UPDATE 15134
+-- Query returned successfully in 353 msec.
+
+ALTER TABLE public.all_sessions ALTER COLUMN productprice TYPE money USING productprice::money;
+-- I would prefer to use BIGINT 
+
+
+-- FIX 14 (f)
+UPDATE all_sessions
+SET currencyCode = 'USD'
+WHERE Country = 'United States';
+-- UPDATE 8727
+-- Query returned successfully in 249 msec.
+
+
+
+
+-- Note these fixes could have been grouped for each table but some were needed in specific order so leaving as-is.
