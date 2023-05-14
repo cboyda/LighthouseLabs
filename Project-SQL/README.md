@@ -92,5 +92,6 @@ graph TD;
     tbl_sales_report_0.12MB-->0.12MB;
 ```
 
-    For curiousity, AWS RDS costs to complete this project was less than $2 and allowed me to leverage the speed and power of cloud database services!
+    For curiousity, AWS RDS costs to complete this project was less than $2 and allowed me to 
+    leverage the speed and power of cloud database services!
 
