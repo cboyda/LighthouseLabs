@@ -674,6 +674,8 @@ Also changing datatype to format nicely with MONEY.
 ```
 ALTER TABLE public.all_sessions ALTER COLUMN productprice TYPE money USING productprice::money;
 ```
+	
+Please note I am doing this to be CONSISTENT with FIX 0.  I do NOT agree this should be done normally as it becomes more prone to future rounding errors.
 
 ## (f) all_sessions.currencyCode
 
