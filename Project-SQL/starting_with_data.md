@@ -24,9 +24,9 @@ The queries you used to answer the question
 The answer to the question
 </details>  
 
-Question 1: Find the total number of duplicate visitors (`fullVisitorID`)
+## Question 1: Find the total number of duplicate visitors (`fullVisitorID`)
 
-SQL Queries:
+** SQL Queries:
 ```
 -- test for duplicates of fullvisitorID
 SELECT fullvisitorid, COUNT(*) as count
@@ -56,13 +56,14 @@ HAVING COUNT(*) > 1;
 -- returns 146,517 duplicates
 ```
 
-Answer: Provided in comments after each query above, not enough space for 120k rows.
+** Answer: 
+Provided in comments after each query above, not enough space for 120k rows.
 
 
 
-Question 2: Find all duplicate records in all tables.
+## Question 2: Find all duplicate records in all tables.
 
-SQL Queries:
+** SQL Queries:
 ```
 DO $$
 DECLARE
@@ -87,7 +88,7 @@ BEGIN
 END$$;
 ```
 
-Answer:
+** Answer:
 ```
 NOTICE:  Table: all_sessions, Column: allsession_id, NO Duplicates found.
 NOTICE:  Table: all_sessions, Column: channelgrouping, Duplicates: 8653
@@ -157,9 +158,9 @@ Query returned successfully in 2 min 23 secs.
 ```
 
 
-Question 3: Find each unique product viewed by each visitor.
+## Question 3: Find each unique product viewed by each visitor.
 
-SQL Queries:
+** SQL Queries:
 ```
 SELECT visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
 FROM all_sessions
@@ -169,7 +170,7 @@ Order By visitid;
 -- returns 13,099 rows
 ```
 
-Answer:
+** Answer:
 Sample output, but not the whole 13,099 rows for each visit.
 | visitid    | productsku        | prodname                                    | prodcategory                         |
 |------------|------------------|---------------------------------------------|-------------------------------------|
@@ -185,7 +186,8 @@ Sample output, but not the whole 13,099 rows for each visit.
 | 1470063888 | GGOEGAAX0105     | Google Men's 100% Cotton Short Sleeve Hero Tee Black | Home/Apparel/Men's/ |
 
 
-NOTE: If the query includes a condition that the visitID must exist in the Analytics table as well, with this query:
+** SPECIAL NOTE: 
+If the query includes a condition that the visitID must exist in the Analytics table as well, with the following query, then the results are drastically reduced:
 ```
 SELECT als.visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
 FROM all_sessions as als
@@ -196,16 +198,4 @@ Order By als.visitid;
 -- RESULT returns 3,670 values
 ```
 
-Question 4: 
 
-SQL Queries:
-
-Answer:
-
-
-
-Question 5: 
-
-SQL Queries:
-
-Answer:
