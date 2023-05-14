@@ -1,5 +1,7 @@
 # Part 3: Starting with Questions
+
 ## startingwithquestions.md file
+
 <details>
 <summary>from Project-SQL/assignment.md</summary>
 
