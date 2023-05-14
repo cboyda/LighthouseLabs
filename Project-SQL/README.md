@@ -78,9 +78,9 @@ Schema generated from PG Admin4:
 My solution was to find and use other tools to complete the necessary upload, [DBeaver](https://dbeaver.io/) turned out to be an excellent product.
 
 2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
-* why is the same information (totals) repeated in sales_by_sku and sales_report
-* there is multiple information that seems to be in the wrong tables, for example why is product category in all_sessions instead of products
-* For an example see step #13 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
+    * why is the same information (totals) repeated in sales_by_sku and sales_report
+    * there is multiple information that seems to be in the wrong tables, for example why is product category in all_sessions instead of products
+    * For an example see step #13 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
 
 3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
 
