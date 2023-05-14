@@ -1,5 +1,7 @@
-# cleaning_data.md file
 # Part 2: Data Cleaning
+
+## cleaning_data.md file
+
 <details>
 	<summary> Instructions from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/5c0177c223982136dfd2ba61bea07111093da181/Project-SQL/instructional_guidelines.md)</summary>
 --    Fill out this file with a description of the issues that will be addressed by cleaning the data
