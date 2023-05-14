@@ -1451,12 +1451,39 @@ These results are too long, we need a better more reliable way to define TOP-SEL
 
 ## **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
+How is "revenue generated" defined?  We only know the price of an item and how many sessions that item was ordered in all_sessions. 
+We do not know the quantity by city/country so this question can not be answered with the data provided.
+Can we summarize the impact of revenue generated from each city/countr ? NO.
+
+The only 'revenue' field is in the analytics table and this is mostly empty.
+
 SQL Queries:
-
-
+N/A
+```
+-- check mismatched VISITid's between all_sessions and analytics for question 5.
+SELECT als.visitID AS sessions_VisitID, ay.visitID AS analytics_VisitID
+FROM all_sessions AS als
+LEFT JOIN analytics AS ay ON als.visitID = ay.visitID
+WHERE ay.visitID IS NULL OR als.visitID IS NULL OR ay.visitID <> als.visitID;
+-- Returns 11,375 rows
+-- So there are 11,375 visitID sessions in all_sessions that are missing in the analytics.
+```
 
 Answer:
-
+N/A
+Lack of data for revenue highlighted with:
+```
+SELECT 
+    VisitID, 
+    COUNT(*) AS Count
+FROM 
+    analytics 
+WHERE 
+    Revenue = 0 or revenue is null
+GROUP BY 
+    VisitID, Revenue;
+-- Returns 148,642 = 100% of the unique VisitID's and there are duplicates, so which do we use?
+```
 
 
 
