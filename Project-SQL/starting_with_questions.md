@@ -3,7 +3,7 @@
 ## startingwithquestions.md file
 
 <details>
-<summary>from Project-SQL/assignment.md</summary>
+<summary>instructions from Project-SQL/assignment.md</summary>
 
 This database provides data on revenue by product as well as data on how each visitor to the site interacted with the products (when they visited, where they were based, how many pages they viewed, how long they stayed on the site, and the number of transactions they entered).
 
@@ -11,7 +11,7 @@ In the starting_with_questions.md file there are 5 questions you need to answer 
 </details>
 
 <details>
-<summary>from Project-SQL/instructional_guidelines.md</summary>
+<summary>instructions from Project-SQL/instructional_guidelines.md</summary>
 
 Provide the answer to the 5 questions and the queries used to answer each question
 
