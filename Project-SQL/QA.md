@@ -19,3 +19,79 @@ What are your risk areas? Identify and describe them.
 
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
+
+1. Investigate the value of sales_by_sku and sales_report tables.
+
+I was trying to answer Question 1 a different way, looking at the relationship between products and these 2 tables.
+
+```
+SELECT 
+	p.SKU,
+	-- this is different p.orderedquantity as product_ordered_quantity,
+	sbs.total_ordered as sales_sku_total_ordered,
+	sr.total_ordered as sales_report_total_ordered
+FROM
+	products AS p
+	JOIN sales_by_sku AS sbs ON p.SKU = sbs.productsku
+	JOIN sales_report AS sr ON p.SKU = sr.productsku;
+```
+
+RETURNS
+
+| sku            | total_ordered | total_ordered-2 |
+|----------------|---------------|-----------------|
+| GGOEGAAX0581   | 0             | 0               |
+| 9181139        | 0             | 0               |
+| GGOEGAAX0596   | 1             | 1               |
+| GGOEGAAX0365   | 0             | 0               |
+| GGOEGAAX0325   | 6             | 6               |
+| GGOEGAAX0296   | 0             | 0               |
+| GGOEGHGH019699 | 14            | 14              |
+| GGOEGDWR015799 | 5             | 5               |
+| GGOEGAAX0081   | 42            | 42              |
+| GGOEGALB036514 | 8             | 8               |
+
+Hypothesis if total_ordered are the same in sales_by_sku and sales_report
+but the number of rows is different which productSKU's are missing between them?
+
+```
+SELECT sbs.productsku AS missing_sku
+FROM sales_by_sku AS sbs
+LEFT JOIN sales_report AS sr ON sbs.productsku = sr.productsku
+WHERE sr.productsku IS NULL;
+
+-- RETURNS
+-- "missing_sku"
+-- "GGOEYAXR066128"
+-- "GGOEGALJ057912"
+```
+
+```
+select * from sales_by_sku where productsku = 'GGOEYAXR066128' OR productsku = 'GGOEGALJ057912';
+
+-- RETURNS
+-- "salesbysku_id"	"productsku"	"total_ordered"
+-- 166				"GGOEYAXR066128"	3
+-- 239				"GGOEGALJ057912"	2
+```
+
+This leads me to want to DROP the sales_report table because it has 2 less SKU's
+but it has a column called ratio that is missing from sales_by_sku
+Since we want to limit any destructive losses, no tables dropped but definately a future discussion.
+
+Let's just double check and see if they are all the same data
+
+```
+SELECT sbs.productSKU, sbs.total_ordered AS sales_by_sku_total_ordered, sr.total_ordered AS sales_report_total_ordered
+FROM sales_by_sku AS sbs
+JOIN sales_report AS sr ON sbs.productSKU = sr.productSKU
+WHERE sbs.total_ordered <> sr.total_ordered;
+-- RETURNS NOTHING so every SKU has the same total_ordered in both tables 
+-- EQUALS redundant columns CONFIRMED
+```
+
+### CONCERN:
+What are these values actually reporting? 
+Illustrates why you need a SME to make sense of the data!
+
+
