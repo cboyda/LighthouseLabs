@@ -97,7 +97,7 @@ Illustrates why you need a SME to make sense of the data!
 </details>
 	
 <details>
-<summary> 2. Find, Fix, Future</summary>
+<summary> 2. Find, Fix, Future Proof</summary>
 
 As issues that were found were documented in https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md but more importantly steps were placed to ensure data integrity was maintained into the future.
 	
