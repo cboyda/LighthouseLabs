@@ -56,7 +56,7 @@ shortened to
 weixin://private/setresult/SCENE_FETCHQUEUE
 ```
 Since & and anything after is not needed for pagetitle information, and the URL still works!
-Once cleaned ('pagetitle') nicely fit into a much smaller varchar field.
+Once cleaned (`pagetitle`) nicely fit into a much smaller varchar field.
 
 2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on [part 5: QA your data steps](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md)
 
