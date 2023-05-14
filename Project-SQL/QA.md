@@ -125,7 +125,7 @@ RETURNS
 | GGOEGHGH019699 | 1573                     | 14                      | 14                          |
 
 	
-### How is products ordered quantity larger than sales_by_sku or sales_report total ordered?
+### How is products ORDERED QUANTITY larger than sales_by_sku or sales_report TOTAL ordered?
 
 </details>
 
