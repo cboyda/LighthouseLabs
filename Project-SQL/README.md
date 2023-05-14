@@ -21,7 +21,7 @@ graph TD;
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
-1. This data has been manually screened prior to being imported.  
+1. This data needed to be manually screened prior to being imported.  
 * For example in all_sessions.pagetitle on row 448 of the csv the length of characters is 576 characters.  
 Statistical Analysis of the length of all page titles shows:
 | Statistic         | Value             |
