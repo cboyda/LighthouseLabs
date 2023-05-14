@@ -1,4 +1,4 @@
-Part 5: QA Your Data
+# Part 5: QA Your Data
 
 <details>
 <summary>from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/fc95cb5355aa7df9dd06aae010d5fd1404754fed/Project-SQL/assignment.md)</summary>
