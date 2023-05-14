@@ -209,13 +209,58 @@ ANSWER:
 
 ## **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
+The best way to see if there are any patterns are to look at the product categories for the products ordered previous query.
 
 SQL Queries:
 
-
+```
+SELECT 
+    Name,
+    Type,
+    v2ProductCategory,
+    ROUND(average_products_ordered, 0) AS average_products_ordered
+FROM (
+    SELECT 
+        country AS Name,
+        'country' AS Type,
+        v2ProductCategory,
+        AVG(p.orderedQuantity) AS average_products_ordered
+    FROM
+        all_sessions AS als
+    JOIN products AS p ON als.productSKU = p.SKU
+    GROUP BY country, v2ProductCategory
+    UNION 
+    SELECT 
+        city AS Name,
+        'city' AS Type,
+        v2ProductCategory,
+        AVG(p.orderedQuantity) AS average_products_ordered
+    FROM
+        all_sessions AS als
+    JOIN products AS p ON als.productSKU = p.SKU
+    WHERE 
+        city IS NOT NULL AND city <> '(not set)'
+    GROUP BY city, v2ProductCategory
+) AS combined
+ORDER BY average_products_ordered DESC
+LIMIT 10;
+```
 
 Answer:
+| name | type | v2productcategory | average_products_ordered |
+| --- | --- | --- | --- |
+| Council Bluffs | city | Home/Accessories/Fun/ | 15170 |
+| Santiago | city | Home/Lifestyle/ | 15170 |
+| Russia | country | Home/Accessories/Sports & Fitness/ | 15170 |
+| Chile | country | Home/Lifestyle/ | 15170 |
+| Kirkland | city | Home/Accessories/Fun/ | 15170 |
+| San Bruno | city | Home/Accessories/Sports & Fitness/ | 15170 |
+| Moscow | city | Home/Accessories/Sports & Fitness/ | 15170 |
+| Santa Clara | city | Home/Accessories/Sports & Fitness/ | 15170 |
+| San Diego | city | Home/Accessories/Sports & Fitness/ | 15170 |
+| United States | country | Drinkware | 10075 |
 
+So the pattern we can see is that HOME/ is definately in the popular average # of products ordered.
 
 
 
