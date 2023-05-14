@@ -78,3 +78,13 @@ Solution was to find and use other tools to complete the necessary upload, DBeav
 2. Redo the data export of the CSV so that the data/columns are in the correct tables.
 3. Minimize duplicate data creation in the CSV files PRIOR to importing into the database.
 4. Enforce data integrity throughout ALL steps.  There are productSKUs that are missing in the product table, perhaps this needs DELETE/ALTER CASCADE constraints added to other parts of another database?
+5. Optimization. Ultimate efficiency would be to minimize wasted resources.  Especially with 4million + rows.  Instead of generic NUMERIC declaration, NUMERIC(12,2) would save considerable space.
+* once exercise was completed my database size results showed large size modifications
+```mermaid
+graph TD;
+    tbl_analytics_716MB-->1,400MB;
+    tbl_all_sessions_4.7MB-->7.6MB;
+    tbl_products_0.2MB-->0.344MB;
+    tbl_sales_by_sku_0.08MB-->0.08MB;
+    tbl_sales_report_0.12MB-->0.12MB;
+```
