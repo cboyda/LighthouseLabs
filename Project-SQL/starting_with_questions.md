@@ -269,10 +269,55 @@ So the pattern we can see is that HOME/ is definately in the popular average # o
 
 
 SQL Queries:
-
+TOP-SELLING Product by Country
+```
+SELECT 
+    als.country AS Country,
+    p.Name AS Top_Selling_Product,
+	p.SKU,
+	SUM(als.productPrice * als.productQuantity) AS Revenue
+FROM 
+    all_sessions AS als
+JOIN 
+    products AS p ON als.productSKU = p.SKU
+GROUP BY 
+    als.country, p.Name, p.sku
+HAVING 
+    SUM(als.productPrice * als.productQuantity) = (
+        SELECT 
+            MAX(total_revenue)
+        FROM (
+            SELECT 
+                als2.country AS Country, 
+                p2.Name AS Product,
+                SUM(als2.productPrice * als2.productQuantity) AS total_revenue
+            FROM 
+                all_sessions AS als2
+            JOIN 
+                products AS p2 ON als2.productSKU = p2.SKU
+            GROUP BY 
+                als2.country, p2.Name
+        ) AS country_revenue
+        WHERE 
+            Country = als.country
+    )
+ORDER BY 
+    Country, Revenue DESC;
+```
 
 
 Answer:
+TOP-SELLING Product by Country
+| country      | top_selling_product              | sku           | revenue   |
+|--------------|----------------------------------|---------------|-----------|
+| Argentina    | Alpine Style Backpack            | GGOEGBRJ037299 | $99.99    |
+| Canada       | Youth Short Sleeve T-shirt Green | GGOEGAAX0684   | $18.99    |
+| Colombia     | Men's Short Sleeve Hero Tee Black| GGOEGAAX0318   | $16.99    |
+| Finland      | Laptop and Cell Phone Stickers   | GGOEGFKQ020399| $1.99     |
+| France       | Android Wool Heather Cap Heather/Black| GGOEAHPA004110| $17.49|
+| Ireland      | Laptop Backpack                  | GGOEGBRB013899 | $99.99    |
+| Spain        | Dress Socks                      | GGOEWAEA083899| $89.90    |
+| United States| Cam Outdoor Security Camera - USA| GGOENEBQ078999 | $1,114.00 |
 
 
 
