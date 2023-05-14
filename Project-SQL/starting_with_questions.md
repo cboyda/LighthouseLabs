@@ -22,7 +22,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 "Transaction revenues" undefined, assuming it is the SUM of all_sessions.productPrice field.
 
-SQL Queries:
+** SQL Queries:
 
 TOP 10 CITIES BY PRODUCTPRICE
 ```
@@ -43,7 +43,7 @@ LIMIT 10;
 ```
 
 
-Answer:
+** Answer:
 TOP 10 CITIES
 | city           | sum_in_millions | currencycode |
 | --------------|----------------|--------------|
@@ -58,7 +58,7 @@ TOP 10 CITIES
 | Palo Alto     | $5,270.60       | USD          |
 | Seattle       | $4,252.95       | USD          |
 
-
+**  SQL Queries:
 TOP 10 COUNTRIES BY PRODUCTPRICE
 ```
 SELECT 
@@ -77,7 +77,7 @@ ORDER BY
 LIMIT 10;
 ```
 
-Answer:
+** Answer:
 TOP 10 COUNTRIES BY PRODUCTPRICE
 Here is the formatted table for "country":
 
@@ -99,7 +99,7 @@ Here is the formatted table for "country":
 ## **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
-SQL Queries:
+** SQL Queries:
 TOP 10 Average of Products Ordered by City
 ```
 SELECT 
@@ -117,7 +117,7 @@ ORDER BY
 LIMIT 10;
 ```
 
-Answer:
+** Answer:
 TOP 10 Average of Products Ordered by City
 | city           | average_products_ordered |
 |----------------|--------------------------|
@@ -132,6 +132,7 @@ TOP 10 Average of Products Ordered by City
 | Nashville      | 1886                     |
 | Brno           | 1548                     |
 
+** SQL Queries:
 TOP 10 Average of Products Ordered by Country
 ```
 SELECT 
@@ -147,7 +148,7 @@ ORDER BY
 LIMIT 10;
 ```
 
-Answer:
+** Answer:
 TOP 10 Average of Products Ordered by Country
 | country             | average_products_ordered |
 |---------------------|------------------------|
@@ -162,7 +163,7 @@ TOP 10 Average of Products Ordered by Country
 | Trinidad & Tobago | 1380                   |
 | Armenia             | 1351                   |
 
-SQL Queries:
+** SQL Queries:
 Merged result:
 ```
 SELECT 
@@ -194,7 +195,7 @@ ORDER BY average_products_ordered DESC
 LIMIT 10;
 ```
 
-ANSWER:
+** ANSWER:
 | name             | type    | average_products_ordered |
 |------------------|---------|--------------------------|
 | Council Bluffs   | city    | 7589                     |
@@ -213,7 +214,7 @@ ANSWER:
 
 The best way to see if there are any patterns are to look at the product categories for the products ordered previous query.
 
-SQL Queries:
+** SQL Queries:
 
 ```
 SELECT 
@@ -248,7 +249,8 @@ ORDER BY average_products_ordered DESC
 LIMIT 10;
 ```
 
-Answer:
+** Answer:
+
 | name | type | v2productcategory | average_products_ordered |
 | --- | --- | --- | --- |
 | Council Bluffs | city | Home/Accessories/Fun/ | 15170 |
@@ -271,7 +273,7 @@ So the pattern we can see is that HOME/ is definately in the popular average # o
 
 ASSUMPTIONS: We do not know for sure the quantities of the products sold by city or country, so to answer this question we are going to assume TOP-SELLING means the product that appears in the most number of sessions, because only sessions differeniates between city and country.
 
-SQL Queries:
+** SQL Queries:
 TOP-SELLING Product by Country
 ```
 SELECT 
@@ -309,7 +311,7 @@ ORDER BY
 ```
 
 
-Answer:
+** Answer:
 TOP-SELLING Product by Country
 RETURNS 366 results since there are many multiple top-products for each country.
 ```
@@ -731,7 +733,7 @@ ORDER BY
     City, top_selling_product, Count_of_Sessions DESC;
 ```
 
-Answers:
+** Answers:
 Returns 711 results.  
 ```
 "city"	"top_selling_product"	"sku"	"count_of_sessions"
@@ -1459,7 +1461,7 @@ Can we summarize the impact of revenue generated from each city/countr ? NO.
 
 The only 'revenue' field is in the analytics table and this is mostly empty.
 
-SQL Queries:
+** SQL Queries:
 N/A
 ```
 -- check mismatched VISITid's between all_sessions and analytics for question 5.
@@ -1471,7 +1473,7 @@ WHERE ay.visitID IS NULL OR als.visitID IS NULL OR ay.visitID <> als.visitID;
 -- So there are 11,375 visitID sessions in all_sessions that are missing in the analytics.
 ```
 
-Answer:
+** Answer:
 N/A
 Lack of data for revenue highlighted with:
 ```
