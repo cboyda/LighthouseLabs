@@ -70,12 +70,12 @@ Schema generated from PG Admin4:
 (discuss challenges you faced in the project)
 
 1. The first challenge was that pg admin4 did a poor job of uploading csv data into Amazon AWS RDS PostgreSQL.
-* GUI import failed
-* psql command lines failed
-* COPY is not available
-* \copy was too limited
+    * GUI import failed
+    * psql command lines failed
+    * COPY is not available
+    * \copy was too limited
 
-My solution was to find and use other tools to complete the necessary upload, [DBeaver](https://dbeaver.io/) turned out to be an excellent product.
+    My solution was to find and use other tools to complete the necessary upload, [DBeaver](https://dbeaver.io/) turned out to be an excellent product.
 
 2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
     * why is the same information (totals) repeated in sales_by_sku and sales_report
@@ -102,6 +102,7 @@ graph TD;
 ```
 
 Total time: 25 hours
+
     For curiousity, AWS RDS PostgreSQL v15.2 costs to complete this project was less than $2 and allowed me to 
     leverage the speed and power of cloud database services (db.t3.micro with 2 x vCPU 1GB of RAM and max 20 GB storage)!
 
