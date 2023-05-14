@@ -65,7 +65,8 @@ Since & and anything after is not needed for pagetitle information, and the URL 
 * psql command lines failed
 * COPY is not available
 * \copy was too limited
-Solution was to find and use other tools to complete the necessary upload, DBeaver turned out to be an excellent tool.
+
+My solution was to find and use other tools to complete the necessary upload, DBeaver turned out to be an excellent product.
 
 2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
 * why is the same information (totals) repeated in sales_by_sku and sales_report
