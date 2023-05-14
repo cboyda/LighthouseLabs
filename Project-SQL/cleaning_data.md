@@ -60,7 +60,7 @@ Your choices [for money] are:
 * decimal(12,2) : store the amount with exactly two decimal places. This what most general ledger software uses.
 * float : terrible idea - inadequate accuracy. This is what naive developers use.
 
-For example: $5,123.56 can be stored as 5123560000 microdollars.
+For example: $5,123.56 can be stored as 5123560000 microdollars (which was the original format!)
 * Simple to use and compatible with every language.
 * Enough precision to handle fractions of a cent.
 * Works for very small per-unit pricing (like ad impressions or API charges).
