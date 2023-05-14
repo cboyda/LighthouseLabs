@@ -31,7 +31,7 @@ What issues will you address by cleaning the data?
 - [X] 11. Check products.sentimentscore violates not-null constraint, should these be zero? FIXED in 1(f)
 - [X] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero? FIXED in 1(g)
 - [X] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report.restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
-- [ ] 14. Investigate individual values in the tables, any individual field data needed?
+- [ ] 14. Investigate individual values in the tables, any individual field data needed? ...ongoing
 
 
 
