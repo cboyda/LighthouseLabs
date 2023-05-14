@@ -41,8 +41,9 @@ File project1-postgresgl.sql is the full creation, then cleaning file.  Just rem
 <details>
 <summary> 0. The unit cost in the data needs to be divided by 1,000,000.</summary>
 
-There is no 'unit cost' field.  
-Following the assignment instructions and assuming they meant analytics.unit_price dividing by 1 million using:
+REQUIRED by project assignment.
+First concern, there is no 'unit cost' field.  
+Assuming they meant analytics.unit_price dividing by 1 million using:
 
 ```
 UPDATE analytics
@@ -50,11 +51,12 @@ SET unit_price=ROUND(unit_price/1000000,2);
 -- UPDATE 4301122
 -- Query returned successfully in 1 min 5 secs.
 ```
+	
 ### I definately do NOT agree with this assignment requirement.
 See https://stackoverflow.com/questions/15726535/which-datatype-should-be-used-for-currency 
 Specifically:
 
-Your choices [for money] are:
+Choices [for money] are:
 
 * bigint : store the amount in cents. This is what EFTPOS transactions use.
 * decimal(12,2) : store the amount with exactly two decimal places. This what most general ledger software uses.
