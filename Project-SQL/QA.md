@@ -28,7 +28,6 @@ I was trying to answer Question 1 a different way, looking at the relationship b
 ```
 SELECT 
 	p.SKU,
-	-- this is different p.orderedquantity as product_ordered_quantity,
 	sbs.total_ordered as sales_sku_total_ordered,
 	sr.total_ordered as sales_report_total_ordered
 FROM
@@ -93,11 +92,46 @@ WHERE sbs.total_ordered <> sr.total_ordered;
 
 ### CONCERN:
 What are these values actually reporting? 
-Illustrates why you need a SME to make sense of the data!
+**Illustrates why you need a SME to make sense of the data!
 </details>
+
+<details>
+<summary> 2. Question meaning of products.ordered_quantity.</summary>
+
+Further to the need to clarify the meaning of the data with a subject matter expert (SME) the name/data 
+does not make sense for products.ordered_quantity vs the sales_by_sku or sales_report total_ordered.
+
+```
+SELECT 
+	p.SKU,
+	p.orderedquantity as product_ordered_quantity,
+	sbs.total_ordered as sales_sku_total_ordered,
+	sr.total_ordered as sales_report_total_ordered
+FROM
+	products AS p
+	JOIN sales_by_sku AS sbs ON p.SKU = sbs.productsku
+	JOIN sales_report AS sr ON p.SKU = sr.productsku;
+```
+RETURNS
+
+| sku           | product_ordered_quantity | sales_sku_total_ordered | sales_report_total_ordered |
+|---------------|--------------------------|-------------------------|-----------------------------|
+| GGOEGAAX0581  | 0                        | 0                       | 0                           |
+| 9181139       | 0                        | 0                       | 0                           |
+| GGOEGAAX0596  | 26                       | 1                       | 1                           |
+| GGOEGAAX0365  | 65                       | 0                       | 0                           |
+| GGOEGAAX0325  | 53                       | 6                       | 6                           |
+| GGOEGAAX0296  | 19                       | 0                       | 0                           |
+| GGOEGHGH019699 | 1573                     | 14                      | 14                          |
+
+	
+### How is products ordered quantity larger than sales_by_sku or sales_report total ordered?
+
+</details>
+
 	
 <details>
-<summary> 2. Find, Fix, Future Proof</summary>
+<summary> 3. Find, Fix, Future Proof</summary>
 
 As issues that were found were documented in https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md but more importantly steps were placed to ensure data integrity was maintained into the future.
 	
