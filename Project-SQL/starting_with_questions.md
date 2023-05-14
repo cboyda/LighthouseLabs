@@ -160,6 +160,52 @@ TOP 10 Average of Products Ordered by Country
 | Trinidad & Tobago | 1380                   |
 | Armenia             | 1351                   |
 
+SQL Queries:
+Merged result:
+```
+SELECT 
+    Name,
+    Type,
+    ROUND(average_products_ordered, 0) AS average_products_ordered
+FROM (
+    SELECT 
+        country AS Name,
+        'country' AS Type,
+        AVG(p.orderedQuantity) AS average_products_ordered
+    FROM
+        all_sessions AS als
+    JOIN products AS p ON als.productSKU = p.SKU
+    GROUP BY country
+    UNION 
+    SELECT 
+        city AS Name,
+        'city' AS Type,
+        AVG(p.orderedQuantity) AS average_products_ordered
+    FROM
+        all_sessions AS als
+    JOIN products AS p ON als.productSKU = p.SKU
+    WHERE 
+        city IS NOT NULL AND city <> '(not set)'
+    GROUP BY city
+) AS combined
+ORDER BY average_products_ordered DESC
+LIMIT 10;
+```
+
+ANSWER:
+| name             | type    | average_products_ordered |
+|------------------|---------|--------------------------|
+| Council Bluffs   | city    | 7589                     |
+| Bellflower       | city    | 3786                     |
+| Mali             | country | 3786                     |
+| Montenegro       | country | 3786                     |
+| Cork             | city    | 3786                     |
+| Santiago         | city    | 3607                     |
+| Bellingham       | city    | 2836                     |
+| Detroit          | city    | 2748                     |
+| Papua New Guinea | country | 2558                     |
+| Réunion          | country | 2538                     |
+
 
 ## **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
