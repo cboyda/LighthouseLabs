@@ -24,6 +24,7 @@ graph TD;
 1. This data needed to be manually screened prior to being imported.  
 * For example in all_sessions.pagetitle on row 448 of the csv the length of characters is 576 characters.  
 Statistical Analysis of the length of all page titles shows:
+
 | Statistic         | Value             |
 | ----------------- | ----------------- |
 | Mean              | 35.00330382       |
