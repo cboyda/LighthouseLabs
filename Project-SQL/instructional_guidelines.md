@@ -1,11 +1,11 @@
+# Submission Guidelines:
+
 From
 https://data.compass.lighthouselabs.ca/projects/SQL-final-project
 
-Submission Guidelines:
-
 For this project, you will need to submit a link to your github repo that contains all of the files listed. The files submitted will be evaluated.
 
-Your repo must include the following:
+### Your repo must include the following:
 
     README.md file
         This file should be an overview of your project, covering roughly the same points as your presentation
@@ -23,14 +23,14 @@ Your repo must include the following:
     schema.png file
         This file should contain the ERD of the database
 
-Presentation Guidelines:
+## Presentation Guidelines:
 
     Spend 1 min on project flow structure. What were the steps in your project?
     Spend 1-2 minutes sharing what you discovered this data could tell you and how you used the data to answer those questions.
     Explain your QA process 1 min.
         what would you do if you had a bit more time?
 
-Evaluation Guidelines
+## Evaluation Guidelines
 
 Here are some things you’ll need to keep in mind for this evaluated project:
 

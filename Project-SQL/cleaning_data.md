@@ -1,13 +1,15 @@
-# cleaning_data.md file
 # Part 2: Data Cleaning
+
+## cleaning_data.md file
+
 <details>
-	<summary> Instructions from Project-SQL/instructional_guidelines.md</summary>
+	<summary> Instructions from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/5c0177c223982136dfd2ba61bea07111093da181/Project-SQL/instructional_guidelines.md)</summary>
 --    Fill out this file with a description of the issues that will be addressed by cleaning the data
 --    Include the queries used to clean the data
 </details>
 
 <details>
-	<summary> Instructions from Project-SQL/instructional_guidelines.md</summary>
+	<summary> Instructions from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/5c0177c223982136dfd2ba61bea07111093da181/Project-SQL/assignment.md)</summary>
 As always, once you have received any dataset, your first task is to orient yourself to the data contained within. While exploring the data, you should keep an eye out for any of potential data issues that need to be cleaned.
 Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
 Apart from this, did you see any other issue that requires cleaning? Be sure to take the time upfront to address them.
@@ -29,7 +31,7 @@ What issues will you address by cleaning the data?
 - [X] 11. Check products.sentimentscore violates not-null constraint, should these be zero? FIXED in 1(f)
 - [X] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero? FIXED in 1(g)
 - [X] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report.restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
-- [ ] 14. Investigate individual values in the tables, any individual field data needed?
+- [ ] 14. Investigate individual values in the tables, any individual field data needed? ...ongoing
 
 
 
@@ -39,9 +41,11 @@ Below, provide the SQL queries you used to clean your data.
 File project1-postgresgl.sql is the full creation, then cleaning file.  Just remember to only run the cleaning component AFTER the data has been imported.
 
 <details>
-	<summary> 0. The unit cost in the data needs to be divided by 1,000,000.</summary>
-	There is no 'unit cost' field.  
-	Following the assignment instructions and assuming they meant analytics.unit_price dividing by 1 million using:
+<summary> 0. The unit cost in the data needs to be divided by 1,000,000.</summary>
+
+REQUIRED by project assignment.
+First concern, there is no 'unit cost' field.  
+Assuming they meant analytics.unit_price dividing by 1 million using:
 
 ```
 UPDATE analytics
@@ -49,6 +53,23 @@ SET unit_price=ROUND(unit_price/1000000,2);
 -- UPDATE 4301122
 -- Query returned successfully in 1 min 5 secs.
 ```
+	
+### I do NOT agree with this assignment requirement.  Proper formatting can be done on the output, not in how it is stored.
+See https://stackoverflow.com/questions/15726535/which-datatype-should-be-used-for-currency 
+Specifically:
+
+Choices [for money] are:
+
+* bigint : store the amount in cents. This is what EFTPOS transactions use.
+* decimal(12,2) : store the amount with exactly two decimal places. This what most general ledger software uses.
+* float : terrible idea - inadequate accuracy. This is what naive developers use.
+
+For example: $5,123.56 can be stored as 5123560000 microdollars (which was the original format!)
+* Simple to use and compatible with every language.
+* Enough precision to handle fractions of a cent.
+* Works for very small per-unit pricing (like ad impressions or API charges).
+* Smaller data size for storage than strings or numerics.
+* Easy to maintain accuracy through calculations and apply rounding at the final output.
 	
 </details>
 
@@ -610,12 +631,64 @@ WHERE city = 'not available in demo dataset';
 -- Query returned successfully in 296 msec.
 ```
 
-## (c) all_sessions.totalTransactionRevenue and all_sessions.transactions
+## (c) all_sessions.totalTransactionRevenue, all_sessions.transactions, all_sessions.productrefundAmount, all_sessions.productQuantity, all_sessions.productRevenue, all_sessions.itemQuantity, all_sessions.itemRevenue, all_sessions.transactionRevenue, all_sessions.transactionId, all_sessions.searchKeyword
 	
-Both of these columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
+These columns are blank, no values.  Consideration could be given to remove these columns, but not before confirming with a subject matter expert.  Was information missed, are these columns used to store a function or comparison?
 
 ![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/b9d86569fbef20b700ceb63f8840f08db839e77b/Project-SQL/images/all_sessions-unused%20columns.png?raw=true)
+	
+![image thanks to Observable](https://github.com/cboyda/LighthouseLabs/blob/0225c5660ed107eae9d369874e4655a14f49e79e/Project-SQL/images/all_sessions-unused%20columns2.png?raw=true)
 
 NO columns deleted since this is a destructive change and would need to be confirmed before applied.
 
+## (d) all_sessions.sessionQualityDim
+
+Replacing with 0 to match INTEGER and for better comparisons.
+```
+select sessionQualityDim,  Count(*) as Count
+FROM all_sessions
+GROUP BY sessionQualityDim
+ORDER BY sessionQualityDim DESC;
+-- returns 45 different variations
+-- including 13,906 NULL's
+
+
+UPDATE all_sessions
+SET sessionQualityDim=0
+WHERE sessionQualityDim is NULL;
+-- UPDATE 13906
+-- Query returned successfully in 272 msec.
+```
+	
+## (e) all_sessions.productPrice
+
+All prices in millions, ranging from 8.99 to 300, could divide by 1 million for easier readability.
+
+```
+UPDATE all_sessions
+SET productPrice=productPrice/1000000;
+--UPDATE 15134
+--Query returned successfully in 353 msec.
+```
+
+Also changing datatype to format nicely with MONEY.
+
+```
+ALTER TABLE public.all_sessions ALTER COLUMN productprice TYPE money USING productprice::money;
+```
+	
+Please note I am doing this to be CONSISTENT with FIX 0.  I do NOT agree this should be done normally as it becomes more prone to future rounding errors.
+
+## (f) all_sessions.currencyCode
+
+This is minor but Country "United States" is missing the CurrencyCode, we know this to be USD to just adding for easier comparison (like the top 10 Countries question).
+
+```
+UPDATE all_sessions
+SET currencyCode = 'USD'
+WHERE Country = 'United States';
+-- UPDATE 8727
+-- Query returned successfully in 249 msec.
+```
+	
 </details>
