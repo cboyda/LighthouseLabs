@@ -52,7 +52,7 @@ SET unit_price=ROUND(unit_price/1000000,2);
 -- Query returned successfully in 1 min 5 secs.
 ```
 	
-### I definately do NOT agree with this assignment requirement.
+### I do NOT agree with this assignment requirement.  Proper formatting can be done on the output, not in how it is stored.
 See https://stackoverflow.com/questions/15726535/which-datatype-should-be-used-for-currency 
 Specifically:
 
