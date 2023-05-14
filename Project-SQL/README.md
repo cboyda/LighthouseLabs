@@ -61,6 +61,10 @@ Since & and anything after is not needed for pagetitle information, and the URL 
 
 3. A full work in progress of all test queries can also be found at [work in progress SQL](https://github.com/cboyda/LighthouseLabs/blob/2a1a09f69327dc01f80027cfa3d9252c2559d96f/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql)
 
+Schema generated from PG Admin4:
+![pg admin ERD diagram](https://github.com/cboyda/LighthouseLabs/blob/df3623dd0c1ff9632b0d0678214debdee38796e7/Project-SQL/schema.png?raw=true)
+
+
 ## Challenges 
 (discuss challenges you faced in the project)
 
