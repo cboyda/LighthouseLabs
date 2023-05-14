@@ -80,8 +80,9 @@ My solution was to find and use other tools to complete the necessary upload, [D
 2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
 * why is the same information (totals) repeated in sales_by_sku and sales_report
 * there is multiple information that seems to be in the wrong tables, for example why is product category in all_sessions instead of products
+* For an example see step #13 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
 
-3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 on [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
+3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
 
 ## Future Goals
 (what would you do if you had more time?)
@@ -100,6 +101,7 @@ graph TD;
     tbl_sales_report_0.12MB-->0.12MB;
 ```
 
+Total time: 25 hours
     For curiousity, AWS RDS PostgreSQL v15.2 costs to complete this project was less than $2 and allowed me to 
     leverage the speed and power of cloud database services (db.t3.micro with 2 x vCPU 1GB of RAM and max 20 GB storage)!
 
