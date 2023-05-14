@@ -4,13 +4,10 @@
 Create an efficient PostgreSQL database for ecommerce data files and clean in preparation for analysis.
 
 ## Process
-1. IMPORT data from 5 CSV files.  General plan created in https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/SQL%20Data%20Files/data%20types.xlsx
-2. PostgreSQL Tables created to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows) Full details of exact SQL to create and clean data available https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/project1-postgresql.sql
+1. IMPORT data from 5 CSV files.  General plan created in [datatype creation planning](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/SQL%20Data%20Files/data%20types.xlsx)
+2. PostgreSQL Tables created to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows) Full details of exact SQL to create and clean data available [full project1-postgressql.sql](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/project1-postgresql.sql)
 3. SQL Cleaning of Data which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
-4. Answer question from the data generated including https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/starting_with_questions.md and [part 4: starting with data](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/starting_with_data.md)
-
-
-[a link](https://github.com/user/repo/blob/branch/other_file.md)
+4. Answer question from the data generated including [part 3: starting with questions](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/starting_with_questions.md) and [part 4: starting with data](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/starting_with_data.md)
 
 ```mermaid
 graph TD;
@@ -20,6 +17,8 @@ graph TD;
     sales_by_sku_0.007MB-->tbl_sales_by_sku_0.08MB-->456_rows;
     sales_report_0.034MB-->tbl_sales_report_0.12MB-->454_rows;
 ```
+
+Note: The CSV's were too large to upload to Github with the current max of 100MB.
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
@@ -58,9 +57,9 @@ weixin://private/setresult/SCENE_FETCHQUEUE
 ```
 Since & and anything after is not needed for pagetitle information, and the URL still works!
 
-2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md
+2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on [part 5:QA your data steps](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md)
 
-3. A full work in progress of all test queries can also be found at https://github.com/cboyda/LighthouseLabs/blob/2a1a09f69327dc01f80027cfa3d9252c2559d96f/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql
+3. A full work in progress of all test queries can also be found at [work in progress SQL](https://github.com/cboyda/LighthouseLabs/blob/2a1a09f69327dc01f80027cfa3d9252c2559d96f/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql)
 
 ## Challenges 
 (discuss challenges you faced in the project)
@@ -71,13 +70,13 @@ Since & and anything after is not needed for pagetitle information, and the URL 
 * COPY is not available
 * \copy was too limited
 
-My solution was to find and use other tools to complete the necessary upload, DBeaver turned out to be an excellent product.
+My solution was to find and use other tools to complete the necessary upload, [DBeaver](https://dbeaver.io/) turned out to be an excellent product.
 
 2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
 * why is the same information (totals) repeated in sales_by_sku and sales_report
 * there is multiple information that seems to be in the wrong tables, for example why is product category in all_sessions instead of products
 
-3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 on https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md
+3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 on [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
 
 ## Future Goals
 (what would you do if you had more time?)
