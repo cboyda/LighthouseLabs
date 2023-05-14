@@ -57,6 +57,8 @@ Since & and anything after is not needed for pagetitle information, and the URL 
 
 2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md
 
+3. A full work in progress of all test queries can also be found at https://github.com/cboyda/LighthouseLabs/blob/2a1a09f69327dc01f80027cfa3d9252c2559d96f/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql
+
 ## Challenges 
 (discuss challenges you faced in the project)
 
