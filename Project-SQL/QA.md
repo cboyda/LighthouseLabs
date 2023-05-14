@@ -140,6 +140,22 @@ A great example is #5 on that page, where foreign key constraints were integrate
 The FULL list of fixes is included in https://github.com/cboyda/LighthouseLabs/blob/0af877b6641cc14c155db88b8b63c905e8a5b81e/Project-SQL/project1-postgresql.sql
 
 This was also created in case the data/imported tables was corrupted and needed to be redone.
+
+Another great example is the lack of foreign key constraints between all_sessions and products, based on key.
+
+```
+SELECT als.productSKU AS all_sessions_sku, p.SKU AS products_sku
+FROM all_sessions AS als
+LEFT JOIN products AS p ON als.productSKU = p.SKU
+WHERE p.SKU IS NULL OR als.productSKU IS NULL OR p.SKU <> als.productSKU
+-- RETURNS 2033
+```
+
+* FIND: this means there are 2033 productSKU's in all_sessions that are missing from the Products table.
+* FIX: we could add these to the Products table
+* FUTURE PROOF: add constraint so that any drops or alters of SKU's in the product (primary key) would CASCADE to all_sessions
+	
+This was not done, but would be recommended.
 	
 </details>
 
