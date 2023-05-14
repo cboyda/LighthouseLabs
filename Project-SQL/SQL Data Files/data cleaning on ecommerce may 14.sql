@@ -1,3 +1,5 @@
+-- Work in Progress Queries
+-- Author: Clinton Boyda
 
 -- SALES BY SKU
 -- unable to maintain foreign product key 
@@ -1433,4 +1435,169 @@ SQL Error [23502]: Batch entry 0 INSERT INTO public.analytics (visitnumber,visit
 -- -- 148,642
 
 
+--- ERD diagram
+-- and STARTING with DATA
+-- Question 1
+-- -- test for duplicates of fullvisitorID
+-- SELECT fullvisitorid, COUNT(*) as count
+-- FROM all_sessions
+-- GROUP BY fullvisitorid
+-- HAVING COUNT(*) > 1;
+-- -- returns 863 duplicates
 
+-- SELECT fullvisitorid, COUNT(*) as count
+-- FROM analytics
+-- GROUP BY fullvisitorid
+-- HAVING COUNT(*) > 1;
+-- -- returns 118,574 duplicates
+
+
+-- -- test for duplicates of visitID
+-- SELECT visitid, COUNT(*) as count
+-- FROM all_sessions
+-- GROUP BY visitid
+-- HAVING COUNT(*) > 1;
+-- -- returns 553 duplicates
+
+-- SELECT visitid, COUNT(*) as count
+-- FROM analytics
+-- GROUP BY visitid
+-- HAVING COUNT(*) > 1;
+-- -- returns 146,517 duplicates
+
+
+-- Question 2
+-- Find all duplicates
+-- DO $$DECLARE
+--     r RECORD;
+-- BEGIN
+--     FOR r IN (SELECT table_name,column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'all_sessions')
+--     LOOP
+--         EXECUTE format('SELECT %1$I, COUNT(*) FROM %2$I GROUP BY %1$I HAVING COUNT(*) > 1', r.column_name, r.table_name) INTO r;
+--         IF FOUND THEN
+--             RAISE NOTICE 'Table: %, Column: %, Duplicates: %', r.table_name, r.column_name, r.count;
+--         END IF;
+--     END LOOP;
+-- END$$;
+
+-- SELECT table_name,column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'all_sessions'
+-- -- returns 33 fields in the all_sessions table
+-- -- "table_name"	"column_name"
+-- -- "all_sessions"	"allsession_id"
+-- -- "all_sessions"	"fullvisitorid"
+-- -- "all_sessions"	"channelgrouping"
+-- -- "all_sessions"	"time"
+-- -- "all_sessions"	"country"
+-- -- "all_sessions"	"city"
+-- -- "all_sessions"	"totaltransactionrevenue"
+-- -- "all_sessions"	"transactions"
+-- -- "all_sessions"	"timeonsite"
+-- -- "all_sessions"	"pageviews"
+-- -- "all_sessions"	"sessionqualitydim"
+-- -- "all_sessions"	"date"
+-- -- "all_sessions"	"visitid"
+-- -- "all_sessions"	"type"
+-- -- "all_sessions"	"productrefundamount"
+-- -- "all_sessions"	"productquantity"
+-- -- "all_sessions"	"productprice"
+-- -- "all_sessions"	"productrevenue"
+-- -- "all_sessions"	"productsku"
+-- -- "all_sessions"	"v2productname"
+-- -- "all_sessions"	"v2productcategory"
+-- -- "all_sessions"	"productvariant"
+-- -- "all_sessions"	"currencycode"
+-- -- "all_sessions"	"itemquantity"
+-- -- "all_sessions"	"itemrevenue"
+-- -- "all_sessions"	"transactionrevenue"
+-- -- "all_sessions"	"transactionid"
+-- -- "all_sessions"	"pagetitle"
+-- -- "all_sessions"	"searchkeyword"
+-- -- "all_sessions"	"pagepathlevel1"
+-- -- "all_sessions"	"ecommerceaction_type"
+-- -- "all_sessions"	"ecommerceaction_step"
+-- -- "all_sessions"	"ecommerceaction_option"
+
+-- SELECT fullvisitorID, COUNT(*) FROM all_sessions GROUP BY fullvisitorID HAVING COUNT(*) > 1;
+-- -- returns 863 duplicates
+
+-- DO $$DECLARE
+--     r RECORD;
+--     duplicates_found boolean := false;
+-- BEGIN
+--     FOR r IN (SELECT table_name,column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = 'all_sessions')
+--     LOOP
+--         EXECUTE format('SELECT %1$I, COUNT(*) FROM %2$I GROUP BY %1$I HAVING COUNT(*) > 1', r.column_name, r.table_name) INTO r;
+--         IF FOUND THEN
+--             RAISE NOTICE 'Table: %, Column: %, Duplicates: %', r.table_name, r.column_name, r.count;
+--             duplicates_found := true;
+--         END IF;
+--     END LOOP;
+    
+--     IF NOT duplicates_found THEN
+--         RAISE NOTICE 'No duplicates found in any table';
+--     END IF;
+-- END$$;
+
+
+-- -- adding duplicate tracker for whole database and ELSE if column returns no duplicates
+-- -- modified again to filer out analytics_copy and sort results by table and column names
+-- -- SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public' and table_name <> 'analytics_copy' ORDER BY table_name,column_name
+-- DO $$
+-- DECLARE
+--     r RECORD;
+--     duplicates_found BOOLEAN := false;
+--     result RECORD;
+-- BEGIN
+--     FOR r IN (SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public' and table_name <> 'analytics_copy' ORDER BY table_name,column_name
+-- )
+--     LOOP
+--         EXECUTE format('SELECT %1$I, COUNT(*) FROM %2$I GROUP BY %1$I HAVING COUNT(*) > 1', r.column_name, r.table_name) INTO result;
+--         IF RESULT.count >1 THEN -- found returned from execute call
+--             RAISE NOTICE 'Table: %, Column: %, Duplicates: %', r.table_name, r.column_name, result.count;
+--             duplicates_found := true;
+-- 		ELSE
+-- 			RAISE NOTICE 'Table: %, Column: %, NO Duplicates found.', r.table_name, r.column_name;
+--         END IF;
+--     END LOOP;
+    
+--     IF NOT duplicates_found THEN
+--         RAISE NOTICE 'ZERO duplicates found in any table!';
+--     END IF;
+-- END$$;
+
+
+
+-- Question 3
+-- Find each unique product viewed by each visitor.
+
+-- SELECT visitid, array_agg(DISTINCT productSKU) as unique_products_viewed
+-- FROM all_sessions
+-- JOIN products ON all_sessions.productSKU = products.SKU
+-- GROUP BY visitid;
+-- -- returns 12,678 rows
+
+-- SELECT visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
+-- FROM all_sessions
+-- JOIN products ON all_sessions.productSKU = products.SKU
+-- GROUP BY visitid, productSKU, ProdName, ProdCategory
+-- Order By visitid;
+-- -- returns 13,099 rows
+-- -- sample output
+-- -- "visitid"	"productsku"	"prodname"	"prodcategory"
+-- -- 1470037277	"GGOEGOAQ018099"	"Pen Pencil & Highlighter Set"	"Home/Office/"
+-- -- 1470040969	"GGOEGFAQ016699"	"Bottle Opener Clip"	"Home/Accessories/Drinkware/"
+-- -- 1470042235	"GGOEGAAX0283"	"Android Women's Short Sleeve Hero Tee Black"	"Home/Shop by Brand/Google/"
+-- -- 1470042235	"GGOEGAAX0356"	"YouTube Men's Vintage Tank"	"Home/Apparel/Men's/Men's-T-Shirts/"
+-- -- 1470046384	"GGOEGAAX0358"	"Google Men's  Zip Hoodie"	"Home/Apparel/Men's/"
+-- -- 1470050586	"GGOEGAAX0318"	"YouTube Men's Short Sleeve Hero Tee Black"	"Home/Brands/YouTube/"
+-- -- 1470051098	"GGOEGAAX0340"	"Google Men's Vintage Badge Tee Green"	"Home/Apparel/Men's/Men's-T-Shirts/"
+-- -- 1470057334	"GGOEGAAX0284"	"Women's YouTube Short Sleeve Hero Tee Black"	"Home/Brands/YouTube/"
+-- -- 1470063289	"GGOEGAAX0662"	"Android Toddler Short Sleeve T-shirt Pewter"	"Home/Shop by Brand/"
+-- -- 1470063888	"GGOEGAAX0105"	"Google Men's 100% Cotton Short Sleeve Hero Tee Black"	"Home/Apparel/Men's/"
+
+-- SELECT als.visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
+-- FROM all_sessions as als
+-- JOIN products ON als.productSKU = products.SKU
+-- JOIN analytics ON als.visitID = analytics.visitID
+-- GROUP BY als.visitid, productSKU, ProdName, ProdCategory
+-- Order By als.visitid;
