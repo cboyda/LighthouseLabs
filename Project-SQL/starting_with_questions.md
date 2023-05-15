@@ -18,11 +18,11 @@ Provide the answer to the 5 questions and the queries used to answer each questi
 Answer the following questions and provide the SQL queries used to find the answer.
 </details>
     
-## **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
+## Question 1: Which cities and countries have the highest level of transaction revenues on the site?
 
 "Transaction revenues" undefined, assuming it is the SUM of all_sessions.productPrice field.
 
-** SQL Queries:
+**SQL Queries:**
 
 ```
 --- First ensure there are no NULLs in all_sessions.productPrice
@@ -52,7 +52,7 @@ LIMIT 10;
 ```
 
 
-** Answer:
+**Answer:**
 
 TOP 10 CITIES
 | city           | sum_in_millions | currencycode |
@@ -68,7 +68,7 @@ TOP 10 CITIES
 | Palo Alto     | $5,270.60       | USD          |
 | Seattle       | $4,252.95       | USD          |
 
-**  SQL Queries:
+**SQL Queries:**
 TOP 10 COUNTRIES BY PRODUCTPRICE
 
 ```
@@ -88,7 +88,7 @@ ORDER BY
 LIMIT 10;
 ```
 
-** Answer:
+**Answer:**
 TOP 10 COUNTRIES BY PRODUCTPRICE
 Here is the formatted table for "country":
 
@@ -107,7 +107,7 @@ Here is the formatted table for "country":
 
 
 
-## **Question 2: What is the average number of products ordered from visitors in each city and country?**
+## Question 2: What is the average number of products ordered from visitors in each city and country?
 
 ```
 --- First ensure there are no NULLs in all_sessions.productPrice
@@ -117,7 +117,7 @@ WHERE orderedQuantity IS NULL;
 -- returns no results
 ```
 
-** SQL Queries:
+**SQL Queries:**
 TOP 10 Average of Products Ordered by City
 
 ```
@@ -136,7 +136,7 @@ ORDER BY
 LIMIT 10;
 ```
 
-** Answer:
+**Answer:**
 
 TOP 10 Average of Products Ordered by City
 | city           | average_products_ordered |
@@ -152,7 +152,7 @@ TOP 10 Average of Products Ordered by City
 | Nashville      | 1886                     |
 | Brno           | 1548                     |
 
-** SQL Queries:
+**SQL Queries:**
 TOP 10 Average of Products Ordered by Country
 
 ```
@@ -169,7 +169,7 @@ ORDER BY
 LIMIT 10;
 ```
 
-** Answer:
+**Answer:**
 TOP 10 Average of Products Ordered by Country
 
 | country             | average_products_ordered |
@@ -185,7 +185,7 @@ TOP 10 Average of Products Ordered by Country
 | Trinidad & Tobago | 1380                   |
 | Armenia             | 1351                   |
 
-** SQL Queries:
+**SQL Queries:**
 Merged result:
 
 ```
@@ -218,7 +218,7 @@ ORDER BY average_products_ordered DESC
 LIMIT 10;
 ```
 
-** ANSWER:
+**ANSWER:**
 
 | name             | type    | average_products_ordered |
 |------------------|---------|--------------------------|
@@ -234,11 +234,11 @@ LIMIT 10;
 | Réunion          | country | 2538                     |
 
 
-## **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
+## Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 The best way to see if there are any patterns are to look at the product categories for the products ordered previous query.
 
-** SQL Queries:
+**SQL Queries:**
 
 ```
 SELECT 
@@ -273,7 +273,7 @@ ORDER BY average_products_ordered DESC
 LIMIT 10;
 ```
 
-** Answer:
+**Answer:**
 
 | name | type | v2productcategory | average_products_ordered |
 | --- | --- | --- | --- |
@@ -293,11 +293,11 @@ So the pattern we can see is that HOME/ is definately in the popular average # o
 
 
 
-## **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+## Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
 
 ASSUMPTIONS: We do not know for sure the quantities of the products sold by city or country, so to answer this question we are going to assume TOP-SELLING means the product that appears in the most number of sessions, because only sessions differeniates between city and country.
 
-** SQL Queries:
+**SQL Queries:**
 TOP-SELLING Product by Country
 
 ```
@@ -336,7 +336,7 @@ ORDER BY
 ```
 
 
-** Answer:
+**Answer:**
 TOP-SELLING Product by Country
 RETURNS 366 results since there are many multiple top-products for each country.
 
@@ -722,7 +722,8 @@ select * from products where sku = 'GGOEGBRJ037299';
 | GGOEGBRJ037299 | Alpine Style Backpack  | 165             | 272        | 12                | 0.6            | 0.9                 |
 
 Now we REPEAT the same query for each City.
-SQL Queries:
+
+**SQL Queries:**
 
 ```
 SELECT 
@@ -759,7 +760,7 @@ ORDER BY
     City, top_selling_product, Count_of_Sessions DESC;
 ```
 
-** Answers:
+**Answers:**
 Returns 711 results. 
 
 ```
@@ -1480,7 +1481,7 @@ Returns 711 results.
 These results are too long, we need a better more reliable way to define TOP-SELLING products by city/country!
 
 
-## **Question 5: Can we summarize the impact of revenue generated from each city/country?**
+## Question 5: Can we summarize the impact of revenue generated from each city/country?
 
 How is "revenue generated" defined?  We only know the price of an item and how many sessions that item was ordered in all_sessions. 
 We do not know the quantity by city/country so this question can not be answered with the data provided.
@@ -1488,7 +1489,7 @@ Can we summarize the impact of revenue generated from each city/countr ? NO.
 
 The only 'revenue' field is in the analytics table and this is mostly empty.
 
-** SQL Queries:
+**SQL Queries:**
 N/A
 
 ```
@@ -1501,7 +1502,7 @@ WHERE ay.visitID IS NULL OR als.visitID IS NULL OR ay.visitID <> als.visitID;
 -- So there are 11,375 visitID sessions in all_sessions that are missing in the analytics.
 ```
 
-** Answer:
+**Answer:**
 N/A
 Lack of data for revenue highlighted with:
 
