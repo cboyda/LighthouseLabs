@@ -164,26 +164,26 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 <details>
 <summary>1. Consistency</summary>
 
-	* some leading "blanks" found in product name. see see #14a in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
-	* after foreign keys defined, take steps to maintain consistency with CASCADE on update/delete (specifically for productSKU)
+* some leading "blanks" found in product name. see see #14a in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* after foreign keys defined, take steps to maintain consistency with CASCADE on update/delete (specifically for productSKU)
 </details>
 <details>
 <summary>2. Accuracy</summary>
 
-	* definitions of `normal values` required - ASK SME!
+* definitions of `normal values` required - ASK SME!
 </details>
 <details>
 <summary>3. Validity</summary>
 
-	* sentiment score NOT NULL constraint required IMPUTING see #11 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* sentiment score NOT NULL constraint required IMPUTING see #11 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
 </details>
 <details>
 <summary>4. Uniqueness</summary>
 
-	* assigning primary keys to EVERY table
-	* set foreign key CONSTRAINTS where applicable
-		* connect sales_by_sku.productSKU to products.SKU with CONSTRAINT see #5 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
-		* note all_sessions.productSKU does have many that are still missing in products.SKU = ASK SME!
+* assigning primary keys to EVERY table
+* set foreign key CONSTRAINTS where applicable
+* connect sales_by_sku.productSKU to products.SKU with CONSTRAINT see #5 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* note all_sessions.productSKU does have many that are still missing in products.SKU = ASK SME!
 </details>
 <details>
 <summary>5. Completeness</summary>
@@ -192,7 +192,7 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 <details>
 <summary>6. Timeliness</summary>
 
-	* we have no timeline as to how often this data will be updated (refreshed) = ASK SME!
+* we have no timeline as to how often this data will be updated (refreshed) = ASK SME!
 </details>
 	
 Unfortunately it is not possible to do any automated testing or be 100% thorough without more knowledge about this specific data; **SME input required**.
