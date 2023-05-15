@@ -54,7 +54,7 @@ LIMIT 10;
 
 **Answer:**
 
-TOP 10 CITIES
+TOP 10 CITIES BY PRODUCTPRICE
 | city           | sum_in_millions | currencycode |
 | --------------|----------------|--------------|
 | Mountain View | $44,995.56      | USD          |
