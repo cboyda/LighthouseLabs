@@ -295,7 +295,7 @@ So the pattern we can see is that HOME/ is definately in the popular average # o
 
 ## Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
 
-ASSUMPTIONS: We do not know for sure the quantities of the products sold by city or country, so to answer this question we are going to assume TOP-SELLING means the product that appears in the most number of sessions, because only sessions differeniates between city and country.
+ASSUMPTIONS: We do not know for sure the quantities of the products sold by city or country, so to answer this question we are going to assume TOP-SELLING means the product that appears in the most number of all_essions, because only sessions differeniates between city and country.
 
 **SQL Queries:**
 TOP-SELLING Product by Country
