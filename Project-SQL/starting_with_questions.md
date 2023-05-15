@@ -31,6 +31,7 @@ FROM all_sessions
 WHERE productprice IS NULL;
 
 TOP 10 CITIES BY PRODUCTPRICE
+
 ```
 SELECT 
     city, 
@@ -50,6 +51,7 @@ LIMIT 10;
 
 
 ** Answer:
+
 TOP 10 CITIES
 | city           | sum_in_millions | currencycode |
 | --------------|----------------|--------------|
@@ -66,6 +68,7 @@ TOP 10 CITIES
 
 **  SQL Queries:
 TOP 10 COUNTRIES BY PRODUCTPRICE
+
 ```
 SELECT 
     country, 
@@ -107,6 +110,7 @@ Here is the formatted table for "country":
 
 ** SQL Queries:
 TOP 10 Average of Products Ordered by City
+
 ```
 SELECT 
 	city,
@@ -124,6 +128,7 @@ LIMIT 10;
 ```
 
 ** Answer:
+
 TOP 10 Average of Products Ordered by City
 | city           | average_products_ordered |
 |----------------|--------------------------|
@@ -140,6 +145,7 @@ TOP 10 Average of Products Ordered by City
 
 ** SQL Queries:
 TOP 10 Average of Products Ordered by Country
+
 ```
 SELECT 
 	country,
@@ -156,6 +162,7 @@ LIMIT 10;
 
 ** Answer:
 TOP 10 Average of Products Ordered by Country
+
 | country             | average_products_ordered |
 |---------------------|------------------------|
 | Mali                | 3786                   |
@@ -171,6 +178,7 @@ TOP 10 Average of Products Ordered by Country
 
 ** SQL Queries:
 Merged result:
+
 ```
 SELECT 
     Name,
@@ -202,6 +210,7 @@ LIMIT 10;
 ```
 
 ** ANSWER:
+
 | name             | type    | average_products_ordered |
 |------------------|---------|--------------------------|
 | Council Bluffs   | city    | 7589                     |
@@ -281,6 +290,7 @@ ASSUMPTIONS: We do not know for sure the quantities of the products sold by city
 
 ** SQL Queries:
 TOP-SELLING Product by Country
+
 ```
 SELECT 
     als.country AS Country,
@@ -320,6 +330,7 @@ ORDER BY
 ** Answer:
 TOP-SELLING Product by Country
 RETURNS 366 results since there are many multiple top-products for each country.
+
 ```
 "country"	"top_selling_product"	"sku"	"count_of_sessions"
 "Albania"	"22 oz  Bottle Infuser"	"GGOEYDHJ056099"	1
@@ -696,14 +707,14 @@ RETURNS 366 results since there are many multiple top-products for each country.
 select * from products where sku = 'GGOEGBRJ037299';
 -- this certainly has quantity ordered at 165 but how do we know that is for Argentina?
 ```
-"sku"	"name"	"orderedquantity"	"stocklevel"	"restockingleadtime"	"sentimentscore"	"sentimentmagnitude"
-"GGOEGBRJ037299"	"Alpine Style Backpack"	165	272	12	0.6	0.9
+
 | sku           | name                   | orderedquantity | stocklevel | restockingleadtime | sentimentscore | sentimentmagnitude |
 |---------------|------------------------|-----------------|------------|-------------------|----------------|---------------------|
 | GGOEGBRJ037299 | Alpine Style Backpack  | 165             | 272        | 12                | 0.6            | 0.9                 |
 
 Now we REPEAT the same query for each City.
 SQL Queries:
+
 ```
 SELECT 
     als.city AS City,
@@ -740,7 +751,8 @@ ORDER BY
 ```
 
 ** Answers:
-Returns 711 results.  
+Returns 711 results. 
+
 ```
 "city"	"top_selling_product"	"sku"	"count_of_sessions"
 "Adelaide"	"Men's Watershed Full Zip Hoodie Grey"	"GGOEGAAX0568"	1
@@ -1469,6 +1481,7 @@ The only 'revenue' field is in the analytics table and this is mostly empty.
 
 ** SQL Queries:
 N/A
+
 ```
 -- check mismatched VISITid's between all_sessions and analytics for question 5.
 SELECT als.visitID AS sessions_VisitID, ay.visitID AS analytics_VisitID
@@ -1482,6 +1495,7 @@ WHERE ay.visitID IS NULL OR als.visitID IS NULL OR ay.visitID <> als.visitID;
 ** Answer:
 N/A
 Lack of data for revenue highlighted with:
+
 ```
 SELECT 
     VisitID, 
