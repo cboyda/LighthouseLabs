@@ -4,13 +4,15 @@
 
 <details>
 	<summary> Instructions from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/instructional_guidelines.md)</summary>
---    Fill out this file with a description of the issues that will be addressed by cleaning the data
+
+	--    Fill out this file with a description of the issues that will be addressed by cleaning the data
 --    Include the queries used to clean the data
 </details>
 
 <details>
 	<summary> Instructions from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/assignment.md)</summary>
-As always, once you have received any dataset, your first task is to orient yourself to the data contained within. While exploring the data, you should keep an eye out for any of potential data issues that need to be cleaned.
+
+	As always, once you have received any dataset, your first task is to orient yourself to the data contained within. While exploring the data, you should keep an eye out for any of potential data issues that need to be cleaned.
 Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
 Apart from this, did you see any other issue that requires cleaning? Be sure to take the time upfront to address them.
 In your copy of the cleaning_data.md file, describe what issues you addressed by cleaning the data and provide the queries you executed to clean the data.
