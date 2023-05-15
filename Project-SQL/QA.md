@@ -1,13 +1,13 @@
 # Part 5: QA Your Data
 
 <details>
-<summary>from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/fc95cb5355aa7df9dd06aae010d5fd1404754fed/Project-SQL/assignment.md)</summary>
+<summary>from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/assignment.md)</summary>
 
 In the QA.md file, identify and describe your risk areas. Develop and execute a QA process to address them and validate the accuracy of your results. Provide the SQL queries used to execute the QA process.
 </details>
 
 <details>
-<summary>from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/bbdaf3b7f368d49c5bdac28d43da7e8ab374e4a2/Project-SQL/instructional_guidelines.md)</summary>
+<summary>from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/instructional_guidelines.md)</summary>
 QA.md file
     Identify and describe your risk areas
     Develop and execute a QA process to address the risk areas identified, providing the SQL queries used to implement
@@ -139,11 +139,11 @@ RETURNS
 <details>
 <summary> C. Find, Fix THEN Future Proof</summary>
 
-As [issues](https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md) that were found were documented in but more importantly steps were placed to ensure data integrity was maintained into the future.
+As [issues](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md) that were found were documented in but more importantly steps were placed to ensure data integrity was maintained into the future.
 	
 A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective. 
 	
-The FULL list of fixes is included in [SQL step-by-step creation and cleaning queries](https://github.com/cboyda/LighthouseLabs/blob/0af877b6641cc14c155db88b8b63c905e8a5b81e/Project-SQL/project1-postgresql.sql)
+The FULL list of fixes is included in [SQL step-by-step creation and cleaning queries](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/project1-postgresql.sql)
 
 This was also created in case the data/imported tables was corrupted and needed to be redone.
 
@@ -171,7 +171,7 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 <details>
 <summary>1. Consistency</summary>
 
-* some leading "blanks" found in product name. see see #14a in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* some leading "blanks" found in product name. see see #14a in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 * after foreign keys defined, take steps to maintain consistency with CASCADE on update/delete (specifically for productSKU)
 </details>
 <details>
@@ -182,20 +182,20 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 <details>
 <summary>3. Validity</summary>
 
-* sentiment score NOT NULL constraint required IMPUTING see #11 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* sentiment score NOT NULL constraint required IMPUTING see #11 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 </details>
 <details>
 <summary>4. Uniqueness</summary>
 
 * assigning primary keys to EVERY table
 * set foreign key CONSTRAINTS where applicable
-* connect sales_by_sku.productSKU to products.SKU with CONSTRAINT see #5 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* connect sales_by_sku.productSKU to products.SKU with CONSTRAINT see #5 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 * note all_sessions.productSKU does have many that are still missing in products.SKU = ASK SME!
 </details>
 <details>
 <summary>5. Completeness</summary>
 
-* all_sessions.currencyCode for Countries='United States' were blank.  I assumed the USA uses USD for their currency. see see #14f in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+* all_sessions.currencyCode for Countries='United States' were blank.  I assumed the USA uses USD for their currency. see see #14f in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 </details>
 <details>
 <summary>6. Timeliness</summary>
