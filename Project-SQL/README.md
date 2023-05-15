@@ -4,11 +4,11 @@
 Create an efficient PostgreSQL database for ecommerce data files, clean in preparation for analysis, and share insights.
 
 ## Process
-1. Import data from 5 CSV files.  General plan created in [my excel datatype creation planning](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/SQL%20Data%20Files/data%20types.xlsx)
-2. PostgreSQL Tables created to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows) Full details of exact SQL to create and clean data available [full project1-postgressql.sql](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/project1-postgresql.sql)
-3. SQL [Data Cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md) which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
-4. Document any [Quality Assurance (QA)](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md) notes.
-5. Answer questions from the data generated including [part 3: starting with questions](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/starting_with_questions.md) and [part 4: starting with data](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/starting_with_data.md)
+1. Import data from 5 CSV files.  General plan created in [my excel datatype creation planning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/SQL%20Data%20Files/data%20types.xlsx)
+2. PostgreSQL Tables created to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows) Full details of exact SQL to create and clean data available [full project1-postgressql.sql](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/project1-postgresql.sql)
+3. SQL [Data Cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md) which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
+4. Document any [Quality Assurance (QA)](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/QA.md) notes.
+5. Answer questions from the data generated including [part 3: starting with questions](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/starting_with_questions.md) and [part 4: starting with data](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/starting_with_data.md)
 
 ```mermaid
 graph TD;
@@ -44,7 +44,7 @@ Statistical Analysis of the length of all page titles shows:
 | Sum               | 529740            |
 | Count             | 15134             |
 
-![simple illustration in excel showing outlier field length](https://github.com/cboyda/LighthouseLabs/blob/15f7deb7294cb0d032a2db29461e5bcfd1ed4ece/Project-SQL/images/pagetitle%20field%20length%20outlier.png?raw=true)
+![simple illustration in excel showing outlier field length](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/images/pagetitle%20field%20length%20outlier.png?raw=true)
 
 
 This (576 length) is a HUGE outlier and also irrelevant information since the page title is not included in the querystring.
@@ -59,12 +59,12 @@ weixin://private/setresult/SCENE_FETCHQUEUE
 Since & and anything after is not needed for pagetitle information, and the URL still works!
 Once cleaned `pagetitle` nicely fit into a much smaller varchar field.
 
-2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on [part 5: QA your data steps](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/QA.md)
+2. Exercised FIND, FIX, FUTURE PROOF ideology to ensure when bugs in data found and fixed additional constraints were added to minimize future reoccurence.  See process #3 on [part 5: QA your data steps](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/QA.md)
 
-3. A full work in progress of all test queries can also be found at [work in progress SQL](https://github.com/cboyda/LighthouseLabs/blob/2a1a09f69327dc01f80027cfa3d9252c2559d96f/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql)
+3. A full work in progress of all test queries can also be found at [work in progress SQL](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql)
 
 Schema generated from PG Admin4:
-![pg admin ERD diagram](https://github.com/cboyda/LighthouseLabs/blob/df3623dd0c1ff9632b0d0678214debdee38796e7/Project-SQL/schema.png?raw=true)
+![pg admin ERD diagram](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/schema.png?raw=true)
 
 
 ## Challenges 
@@ -81,9 +81,9 @@ Schema generated from PG Admin4:
 2. The second challenge was non-standard tables and duplicate information really requires input from a subject matter expert to explain the data:
     * why is the same information (totals) repeated in sales_by_sku and sales_report
     * there is multiple information that seems to be in the wrong tables, for example why is product category in all_sessions instead of products
-    * For an example see step #13 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
+    * For an example see step #13 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 
-3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
+3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 
 ## Future Goals
 `(what would you do if you had more time?)`
