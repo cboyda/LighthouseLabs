@@ -22,7 +22,8 @@ QA.md file
 | 3 | DATA DICTIONARIES AND DATA MODELS ARE LACKING                                 | Medium | High   | - Ensure accurate and current documentation of data models and mapping documents<BR>- Create meaningful documentation of data definitions and data descriptions in a data dictionary<BR>- Provide training to QA team by data stewards/ owners |
 	
 
-QA Process:
+## QA Process:
+	
 Describe your QA process and include the SQL queries used to execute it.
 
 <details>
@@ -163,7 +164,8 @@ WHERE p.SKU IS NULL OR als.productSKU IS NULL OR p.SKU <> als.productSKU
 This was not done, but would be recommended.
 	
 </details>
-	
+
+### QA Goals
 Continually working on this section with the data.  Prioritized data needed for queries / questions first but this part can be continually improved.
 Process includes focusing on the [The Six Primary Dimensions for Data Quality Assessment](https://www.sbctc.edu/resources/documents/colleges-staff/commissions-councils/dgc/data-quality-deminsions.pdf):
 <details>
