@@ -290,6 +290,7 @@ LIMIT 10;
 
 So the pattern we can see is that HOME/ is definately in the popular average # of products ordered.
 
+I have very low confidence in this result since the relationship between city/country and products is not clearly defined in these tables/relationships.
 
 
 
