@@ -15,6 +15,12 @@ QA.md file
   
 ## What are your risk areas? Identify and describe them.
 
+| # | Data Quality Risks                                          | Odds   | Impact | Potential Risk Mitigation Tasks                                            |
+|---|-------------------------------------------------------------|--------|--------|--------------------------------------------------------------------------|
+| 1 | SOURCE DATA QUALITY IN DOUBT                                     | High | High   | Inaccuracies, omissions, cleanliness, and inconsistencies in the source data should be identified and resolved before or during the extract / transform process
+• Often, specific data elements exist on multiple source systems. Identify the various sources and discuss with the users which are the most applicable <br>- Data integration effort may not meet the planned schedule because the quality of source data is unknown                 |
+| 2 | MASTER TEST PLAN/STRATEGY                                  | Medium | High   | - Create a test plan to document the overall structure and objectives of all project testing—from unit testing to component to system and performance testing. The plan should cover activities over the DW/BI lifecycle and identify evaluation criteria for the testers. |
+
 
 
 QA Process:
