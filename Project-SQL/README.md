@@ -1,7 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-Create an efficient PostgreSQL database for ecommerce data files and clean in preparation for analysis.
+Create an efficient PostgreSQL database for ecommerce data files, clean in preparation for analysis, and share insights.
 
 ## Process
 1. Import data from 5 CSV files.  General plan created in [my excel datatype creation planning](https://github.com/cboyda/LighthouseLabs/blob/d0147fb2b966ad36100ef3ce7e7dfc24b628d9b3/Project-SQL/SQL%20Data%20Files/data%20types.xlsx)
