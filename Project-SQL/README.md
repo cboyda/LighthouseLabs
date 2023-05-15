@@ -1,5 +1,9 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
+Cohort: Lighthouse Labs 
+Database Server: PostgreSql v15.2
+Author: Clinton Boyda
+
 ## Project/Goals
 Create an efficient PostgreSQL database for ecommerce data files, clean in preparation for analysis, and share insights.
 
