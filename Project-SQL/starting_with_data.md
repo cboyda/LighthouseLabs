@@ -28,7 +28,7 @@ The answer to the question
 
 Validation to ensure fullvisitorID is NOT NULL already done with table declaration.
 
-** SQL Queries:**
+**SQL Queries:**
 
 ```
 -- test for duplicates of fullvisitorID
@@ -59,14 +59,14 @@ HAVING COUNT(*) > 1;
 -- returns 146,517 duplicates
 ```
 
-** Answer: **
+**Answer: **
 Provided in comments after each query above, not enough space for 120k rows.
 
 
 
 ## Question 2: Find all duplicate records in all tables.
 
-** SQL Queries:**
+**SQL Queries:**
 
 ```
 DO $$
@@ -92,7 +92,7 @@ BEGIN
 END$$;
 ```
 
-** Answer:**
+**Answer:**
 
 ```
 NOTICE:  Table: all_sessions, Column: allsession_id, NO Duplicates found.
@@ -165,7 +165,7 @@ Query returned successfully in 2 min 23 secs.
 
 ## Question 3: Find each unique product viewed by each visitor.
 
-** SQL Queries:**
+**SQL Queries:**
 
 ```
 SELECT visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
@@ -176,7 +176,7 @@ Order By visitid;
 -- returns 13,099 rows
 ```
 
-** Answer:**
+**Answer:**
 Sample output, but not the whole 13,099 rows for each visit.
 
 | visitid    | productsku        | prodname                                    | prodcategory                         |
@@ -193,7 +193,7 @@ Sample output, but not the whole 13,099 rows for each visit.
 | 1470063888 | GGOEGAAX0105     | Google Men's 100% Cotton Short Sleeve Hero Tee Black | Home/Apparel/Men's/ |
 
 
-** SPECIAL NOTE: **
+**SPECIAL NOTE:**
 If the query includes a condition that the visitID must exist in the Analytics table as well, with the following query, then the results are drastically reduced:
 
 ```
