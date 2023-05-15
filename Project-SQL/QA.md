@@ -158,4 +158,15 @@ WHERE p.SKU IS NULL OR als.productSKU IS NULL OR p.SKU <> als.productSKU
 This was not done, but would be recommended.
 	
 </details>
+	
+Continually working on this section with the data.  Prioritized data needed for queries / questions first but this part can be continually improved.
+Process includes focusing on the [The Six Primary Dimensions for Data Quality Assessment](https://www.sbctc.edu/resources/documents/colleges-staff/commissions-councils/dgc/data-quality-deminsions.pdf):
+1. Consistency
+2. Accuracy
+3. Validity
+4. Uniqueness
+5. Completeness
+6. Timeliness
+	
+Unfortunately it is not possible to do any automated testing or be 100% thorough without more knowledge about this specific data; SME input required.
 
