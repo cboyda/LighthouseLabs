@@ -29,6 +29,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 SELECT *
 FROM all_sessions
 WHERE productprice IS NULL;
+```
 
 TOP 10 CITIES BY PRODUCTPRICE
 
