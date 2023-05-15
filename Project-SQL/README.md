@@ -87,7 +87,7 @@ Schema generated from PG Admin4:
 ## Future Goals
 (what would you do if you had more time?)
 
-1. Consult a subject matter expert to better understand the goals and data.
+1. Consult a subject matter expert to better understand the goals and data.  Then columns/tables can be dropped.
 2. Redo the data export of the CSV so that the data/columns are in the correct tables.
 3. Minimize duplicate data creation in the CSV files PRIOR to importing into the database.
 4. Enforce data integrity throughout ALL steps.  There are productSKUs that are missing in the product table, perhaps this needs DELETE/ALTER CASCADE constraints added to other parts of another database?
