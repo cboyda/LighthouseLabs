@@ -2,14 +2,14 @@
 ## startingwithdata.md file
 
 <details>
-	<summary> Instructions from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/5c0177c223982136dfd2ba61bea07111093da181/Project-SQL/instructional_guidelines.md)</summary>
+	<summary> Instructions from [Project-SQL/instructional_guidelines.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/instructional_guidelines.md)</summary>
 
 Provide the 3 - 5 new questions you decided could be answered with the data
 Include the answer to each question and the accompanying queries used to obtain the answer
 </details>
 
 <details>
-	<summary> Instructions from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/5c0177c223982136dfd2ba61bea07111093da181/Project-SQL/assignment.md)</summary>
+	<summary> Instructions from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/assignment.md)</summary>
 
 Consider the data you have available to you.  You can use the data to:
     - find all duplicate records
