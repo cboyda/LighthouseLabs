@@ -102,7 +102,7 @@ graph TD;
     tbl_sales_report_0.12MB-->0.12MB;
 ```
 
-Total time: 25 hours
+Total time: 27 hours
 
     For curiousity, AWS RDS PostgreSQL v15.2 costs to complete this project was less than $2 and allowed me to 
     leverage the speed and power of cloud database services (db.t3.micro with 2 x vCPU 1GB of RAM and max 20 GB storage)!
