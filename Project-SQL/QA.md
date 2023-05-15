@@ -13,7 +13,7 @@ QA.md file
     Develop and execute a QA process to address the risk areas identified, providing the SQL queries used to implement
 </details>
   
-What are your risk areas? Identify and describe them.
+## What are your risk areas? Identify and describe them.
 
 
 
