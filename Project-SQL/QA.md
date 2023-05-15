@@ -188,6 +188,7 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 <details>
 <summary>5. Completeness</summary>
 
+* all_sessions.currencyCode for Countries='United States' were blank.  I assumed the USA uses USD for their currency. see see #14f in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
 </details>
 <details>
 <summary>6. Timeliness</summary>
