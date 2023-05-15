@@ -68,9 +68,9 @@ Schema generated from PG Admin4:
 
 
 ## Challenges 
-`(discuss challenges you faced in the project)`
+(discuss challenges you faced in the project)
 
-1. The first challenge was that pg admin4 did a poor job of uploading csv data into Amazon AWS RDS PostgreSQL.
+1. The first challenge was that pg admin4 did a poor job of uploading csv data into `Amazon AWS RDS PostgreSQL`.
     * GUI import failed
     * psql command lines failed
         * COPY is not available
@@ -86,9 +86,9 @@ Schema generated from PG Admin4:
 3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md)
 
 ## Future Goals
-`(what would you do if you had more time?)`
+(what would you do if you had more time?)
 
-1. Consult a subject matter expert (SME) to better understand the goals and data.  THEN columns/tables can be **dropped**.
+1. Consult a subject matter expert (SME) to better understand the goals and data.  THEN columns/tables can be `dropped`.
 2. Redo the data export of the CSV so that the data/columns are in the correct tables.
 3. Minimize duplicate data in the CSV files PRIOR to importing into the database.
 4. Enforce data integrity throughout ALL steps.  There are productSKUs that are missing in the product table, perhaps this needs DELETE/ALTER CASCADE constraints added to other parts of another database?
