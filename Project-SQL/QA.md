@@ -21,7 +21,7 @@ QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
 <details>
-<summary> 1. Investigate the value of sales_by_sku and sales_report tables.</summary>
+<summary> A. Investigate the value of sales_by_sku and sales_report tables.</summary>
 
 I was trying to answer Question 1 a different way, looking at the relationship between products and these 2 tables.
 
@@ -96,7 +96,7 @@ What are these values actually reporting?
 </details>
 
 <details>
-<summary> 2. Question meaning of products.ordered_quantity.</summary>
+<summary> B. Question meaning of products.ordered_quantity.</summary>
 
 Further to the need to clarify the meaning of the data with a subject matter expert (SME) the name/data 
 does not make sense for products.ordered_quantity vs the sales_by_sku or sales_report total_ordered.
@@ -131,11 +131,11 @@ RETURNS
 
 	
 <details>
-<summary> 3. Find, Fix, Future Proof</summary>
+<summary> C. Find, Fix, Future Proof</summary>
 
 As issues that were found were documented in https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md but more importantly steps were placed to ensure data integrity was maintained into the future.
 	
-A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective.
+A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective. 
 	
 The FULL list of fixes is included in https://github.com/cboyda/LighthouseLabs/blob/0af877b6641cc14c155db88b8b63c905e8a5b81e/Project-SQL/project1-postgresql.sql
 
@@ -161,12 +161,38 @@ This was not done, but would be recommended.
 	
 Continually working on this section with the data.  Prioritized data needed for queries / questions first but this part can be continually improved.
 Process includes focusing on the [The Six Primary Dimensions for Data Quality Assessment](https://www.sbctc.edu/resources/documents/colleges-staff/commissions-councils/dgc/data-quality-deminsions.pdf):
-1. Consistency
-2. Accuracy
-3. Validity
-4. Uniqueness
-5. Completeness
-6. Timeliness
+<details>
+<summary>1. Consistency</summary>
+
+	* some leading "blanks" found in product name. see see #14a in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+	* after foreign keys defined, take steps to maintain consistency with CASCADE on update/delete (specifically for productSKU)
+</details>
+<details>
+<summary>2. Accuracy</summary>
+
+	* definitions of `normal values` required - ASK SME!
+</details>
+<details>
+<summary>3. Validity</summary>
+
+	* sentiment score NOT NULL constraint required IMPUTING see #11 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+</details>
+<details>
+<summary>4. Uniqueness</summary>
+
+	* assigning primary keys to EVERY table
+	* set foreign key CONSTRAINTS where applicable
+		* connect sales_by_sku.productSKU to products.SKU with CONSTRAINT see #5 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/17c9667c9f014c57f8b5ab6c9b8ce9820a70c658/Project-SQL/cleaning_data.md)
+		* note all_sessions.productSKU does have many that are still missing in products.SKU = ASK SME!
+</details>
+<details>
+<summary>5. Completeness</summary>
+
+</details>
+<summary>6. Timeliness</summary>
+
+	* we have no timeline as to how often this data will be updated (refreshed) = ASK SME!
+</details>
 	
 Unfortunately it is not possible to do any automated testing or be 100% thorough without more knowledge about this specific data; SME input required.
 
