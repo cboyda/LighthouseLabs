@@ -16,7 +16,7 @@ Apart from this, did you see any other issue that requires cleaning? Be sure to 
 In your copy of the cleaning_data.md file, describe what issues you addressed by cleaning the data and provide the queries you executed to clean the data.
 </details>    
 
-What issues will you address by cleaning the data?
+**What issues will you address by cleaning the data?**
 - [X] 0. The unit cost in the data needs to be divided by 1,000,000.
 - [X] 1. Find all fields with any NULL values in ALL tables.
 - [X] 2. Check analytics.bounces violates not-null constraint, FIXED in 1(d)
