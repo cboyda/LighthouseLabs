@@ -139,11 +139,11 @@ RETURNS
 <details>
 <summary> C. Find, Fix THEN Future Proof</summary>
 
-As issues that were found were documented in https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md but more importantly steps were placed to ensure data integrity was maintained into the future.
+As [issues](https://github.com/cboyda/LighthouseLabs/blob/66c535757e829fedce9e2e5b0520b290108df5ab/Project-SQL/cleaning_data.md) that were found were documented in but more importantly steps were placed to ensure data integrity was maintained into the future.
 	
 A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective. 
 	
-The FULL list of fixes is included in https://github.com/cboyda/LighthouseLabs/blob/0af877b6641cc14c155db88b8b63c905e8a5b81e/Project-SQL/project1-postgresql.sql
+The FULL list of fixes is included in [SQL step-by-step creation and cleaning queries](https://github.com/cboyda/LighthouseLabs/blob/0af877b6641cc14c155db88b8b63c905e8a5b81e/Project-SQL/project1-postgresql.sql)
 
 This was also created in case the data/imported tables was corrupted and needed to be redone.
 
