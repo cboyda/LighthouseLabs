@@ -32,6 +32,7 @@ What issues will you address by cleaning the data?
 - [X] 12. Check products.sentimentmagnitude violates not-null constraint, should these be zero? FIXED in 1(g)
 - [X] 13. Investigate DUPLICATE fields sales_report.name, sales_report.stockLevel, sales_report.restockingLeadTime, sales_report.sentimentScore, sales_report.sentimentMagnitude in both products and sales_reports TABLE?  
 - [ ] 14. Investigate individual values in the tables, any individual field data needed? ...ongoing
+- [ ] 15. Validate individual data in each column. ...ongoing
 
 
 
@@ -691,4 +692,16 @@ WHERE Country = 'United States';
 -- Query returned successfully in 249 msec.
 ```
 	
+</details>
+
+
+<details>
+<summary> 15. Validate individual data in each column. </summary>
+
+If there was more time AND I had input from a subject matter expert each column's data could be sanitized.  
+	
+For example :
+	* all_sessions.pageTitle has some non-English characters, are these expected?  What is the normal expected result here.
+	* #7 above specifically lists columns with NULL values
+
 </details>
