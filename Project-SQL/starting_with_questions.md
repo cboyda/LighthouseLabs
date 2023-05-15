@@ -29,6 +29,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 SELECT *
 FROM all_sessions
 WHERE productprice IS NULL;
+-- returns no results
 ```
 
 TOP 10 CITIES BY PRODUCTPRICE
@@ -108,6 +109,13 @@ Here is the formatted table for "country":
 
 ## **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
+```
+--- First ensure there are no NULLs in all_sessions.productPrice
+SELECT *
+FROM products
+WHERE orderedQuantity IS NULL;
+-- returns no results
+```
 
 ** SQL Queries:
 TOP 10 Average of Products Ordered by City
