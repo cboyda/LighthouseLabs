@@ -189,6 +189,7 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 <summary>5. Completeness</summary>
 
 </details>
+<details>
 <summary>6. Timeliness</summary>
 
 	* we have no timeline as to how often this data will be updated (refreshed) = ASK SME!
