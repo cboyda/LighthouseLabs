@@ -195,5 +195,5 @@ Process includes focusing on the [The Six Primary Dimensions for Data Quality As
 	* we have no timeline as to how often this data will be updated (refreshed) = ASK SME!
 </details>
 	
-Unfortunately it is not possible to do any automated testing or be 100% thorough without more knowledge about this specific data; SME input required.
+Unfortunately it is not possible to do any automated testing or be 100% thorough without more knowledge about this specific data; **SME input required**.
 
