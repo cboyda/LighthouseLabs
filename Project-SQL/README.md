@@ -73,8 +73,8 @@ Schema generated from PG Admin4:
 1. The first challenge was that pg admin4 did a poor job of uploading csv data into Amazon AWS RDS PostgreSQL.
     * GUI import failed
     * psql command lines failed
-    * COPY is not available
-    * \copy was too limited
+        * COPY is not available
+        * \copy was too limited
 
     My solution was to find and use other tools to complete the necessary upload, [DBeaver](https://dbeaver.io/) turned out to be an excellent product.
 
