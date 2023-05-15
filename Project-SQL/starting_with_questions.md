@@ -24,6 +24,12 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 ** SQL Queries:
 
+```
+--- First ensure there are no NULLs in all_sessions.productPrice
+SELECT *
+FROM all_sessions
+WHERE productprice IS NULL;
+
 TOP 10 CITIES BY PRODUCTPRICE
 ```
 SELECT 
