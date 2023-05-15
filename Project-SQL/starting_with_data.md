@@ -26,7 +26,10 @@ The answer to the question
 
 ## Question 1: Find the total number of duplicate visitors (`fullVisitorID`)
 
+Validation to ensure fullvisitorID is NOT NULL already done with table declaration.
+
 ** SQL Queries:
+
 ```
 -- test for duplicates of fullvisitorID
 SELECT fullvisitorid, COUNT(*) as count
@@ -64,6 +67,7 @@ Provided in comments after each query above, not enough space for 120k rows.
 ## Question 2: Find all duplicate records in all tables.
 
 ** SQL Queries:
+
 ```
 DO $$
 DECLARE
@@ -89,6 +93,7 @@ END$$;
 ```
 
 ** Answer:
+
 ```
 NOTICE:  Table: all_sessions, Column: allsession_id, NO Duplicates found.
 NOTICE:  Table: all_sessions, Column: channelgrouping, Duplicates: 8653
@@ -161,6 +166,7 @@ Query returned successfully in 2 min 23 secs.
 ## Question 3: Find each unique product viewed by each visitor.
 
 ** SQL Queries:
+
 ```
 SELECT visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
 FROM all_sessions
@@ -172,6 +178,7 @@ Order By visitid;
 
 ** Answer:
 Sample output, but not the whole 13,099 rows for each visit.
+
 | visitid    | productsku        | prodname                                    | prodcategory                         |
 |------------|------------------|---------------------------------------------|-------------------------------------|
 | 1470037277 | GGOEGOAQ018099    | Pen Pencil & Highlighter Set                | Home/Office/                        |
@@ -188,6 +195,7 @@ Sample output, but not the whole 13,099 rows for each visit.
 
 ** SPECIAL NOTE: 
 If the query includes a condition that the visitID must exist in the Analytics table as well, with the following query, then the results are drastically reduced:
+
 ```
 SELECT als.visitid, productSKU, v2ProductName as ProdName, v2ProductCategory as ProdCategory
 FROM all_sessions as als
