@@ -68,7 +68,7 @@ Schema generated from PG Admin4:
 
 
 ## Challenges 
-(discuss challenges you faced in the project)
+`(discuss challenges you faced in the project)`
 
 1. The first challenge was that pg admin4 did a poor job of uploading csv data into Amazon AWS RDS PostgreSQL.
     * GUI import failed
@@ -86,7 +86,7 @@ Schema generated from PG Admin4:
 3. Found some of the required data cleaning to be something I would not agree with or do normally, especially in regards to money data formats and datatype storage choices.  See step #0 in [part 2: data cleaning](https://github.com/cboyda/LighthouseLabs/blob/d4e420e83e65acdc3082fb29f076e9b30d1b32d9/Project-SQL/cleaning_data.md)
 
 ## Future Goals
-(what would you do if you had more time?)
+`(what would you do if you had more time?)`
 
 1. Consult a subject matter expert (SME) to better understand the goals and data.  THEN columns/tables can be **dropped**.
 2. Redo the data export of the CSV so that the data/columns are in the correct tables.
