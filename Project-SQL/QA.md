@@ -146,6 +146,14 @@ As [issues](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/clean
 Another great example is the lack of foreign key constraints between all_sessions and products, based on key.
 	
 ```
+-- find mismatched all_sessions.productSKUs not in the products table
+SELECT *
+FROM all_sessions ass
+LEFT JOIN products p ON ass.productSKU = p.SKU
+WHERE p.SKU IS NULL
+ORDER BY ass.productSKU;
+-- returns 2033 but with DUPLICATES of productSKU
+
 SELECT DISTINCT ass.productSKU
 FROM all_sessions ass
 LEFT JOIN products p ON ass.productSKU = p.SKU
@@ -154,8 +162,8 @@ ORDER BY ass.productSKU;
 -- returns 147 unique productSKU's in all_sessions and MISSING in products table
 ```
 
-* FIND: this means there are 147 unique productSKU's in all_sessions that are missing from the Products table.
-* FIX: we could add these to the Products table
+* FIND: this means there are 147 unique productSKU's in all_sessions that are missing from the Products table.  This affects 2,033 rows in all_sessions.
+* FIX: we could add these to the Products table manually
 * FUTURE PROOF: add constraint so that any drops or alters of SKU's in the product (primary key) would CASCADE to all_sessions OR instead of deleting future produt SKU's add active/inactive boolean field.
 	
 This was not done, but would be recommended.
