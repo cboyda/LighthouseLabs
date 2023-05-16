@@ -66,7 +66,7 @@ Once cleaned `pagetitle` nicely fit into a much smaller varchar field.
 
 2. Exercised FIND, FIX, FUTURE PROOF steps to ensure bugs were found, fixed, then constraints were added to minimize future reoccurence.  See process #3 on [part 5: QA your data steps](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/QA.md)
 
-3. A full work in progress of all test queries can also be found at [work in progress SQL](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql)
+**Note:** Looking for my scratch work? All test queries can be found in my [work in progress SQL](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/SQL%20Data%20Files/data%20cleaning%20on%20ecommerce%20may%2014.sql)
 
 Schema generated from PG Admin4:
 ![pg admin ERD diagram](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/schema.png?raw=true)
