@@ -26,7 +26,7 @@ In your copy of the cleaning_data.md file, describe what issues you addressed by
 - [X] 4. Investigate why analytics.units_sold as STRING instead of expected NUMERIC?
 - [X] 5. Attempt to Enforce Foreign key reference failed in Table sales_by_sku.productSKU referring to products.SKU
 - [X] 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?
-- [ ] 7. Consider NUMERIC fields with null to 0 for math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue; not modified as math unaffected and too time consuming. Benefit for possible optimization in future.
+- [ ] 7. Consider NUMERIC fields with null to 0 for math. all_sessions.totaltransationrevenue, all_sessions.transactions, all_sessions.sessionqualitydim, all_sessions.productrefundamount, all_sessions.productquantity, all_sessions.productrevenue, all_sessions.itemquantity, all_sessions.itemrevenue, all_sessions.transactionrevenue; not modified as math unaffected and too time consuming. Benefit for possible optimization in future. SEE #1 above.
 - [X] 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC.
 - [X] 9. Investigate purpose of all_sessions.column28. Is this empty? Bad data import?
 - [X] 10. Investigate all_sessions.visitid and analytics.visitid.  Is this a join?
@@ -79,6 +79,8 @@ For example: $5,123.56 can be stored as 5123560000 microdollars (which was the o
 <details>
 <summary> 1. Find all fields with any NULL values in ALL tables., then decide how to proceed with them. </summary>
 
+Most importantly without SME input NO columns were removed even if they only had 100% Nulls since [each null value only uses one bit on disk](https://github.com/dwyl/learn-postgresql/issues/49).
+	
 QUERY:
 Credit: https://stackoverflow.com/questions/17678635/list-all-tables-in-postgres-that-contain-a-boolean-type-column-with-null-values
 ```
@@ -469,9 +471,8 @@ Also corrected CREATE TABLE initial code to ensure this problem doesn't reoccur.
 <details>
 <summary> 7. Consider NUMERIC fields with null to 0 for math.</summary>
 
-Without a SME to confirm only necessary columns for our questions/math were tested and corrected for NULLs.
-
-Most importantly without SME input NO columns were removed even if they only had 100% Nulls since [each null value only uses one bit on disk](https://github.com/dwyl/learn-postgresql/issues/49).
+Without a SME to confirm, only necessary columns for our questions/math were tested and corrected for NULLs.
+	
 </details>
 
 
