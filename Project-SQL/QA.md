@@ -139,16 +139,12 @@ RETURNS
 <details>
 <summary> C. Find, Fix THEN Future Proof</summary>
 
-As [issues](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md) that were found were documented in but more importantly steps were placed to ensure data integrity was maintained into the future.
+As [issues](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md) were found they were documented.  Most importantly steps were also taken to ensure data integrity was maintained into the future.
 	
-A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective. 
+* A great example is #5 on that page, where foreign key constraints were integrated to make the JOIN more effective. 
 	
-The FULL list of fixes is included in [SQL step-by-step creation and cleaning queries](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/project1-postgresql.sql)
-
-This was also created in case the data/imported tables was corrupted and needed to be redone.
-
 Another great example is the lack of foreign key constraints between all_sessions and products, based on key.
-
+	
 ```
 SELECT als.productSKU AS all_sessions_sku, p.SKU AS products_sku
 FROM all_sessions AS als
@@ -162,6 +158,9 @@ WHERE p.SKU IS NULL OR als.productSKU IS NULL OR p.SKU <> als.productSKU
 * FUTURE PROOF: add constraint so that any drops or alters of SKU's in the product (primary key) would CASCADE to all_sessions
 	
 This was not done, but would be recommended.
+	
+NOTE: A FULL list of fixes is included in [SQL step-by-step creation and cleaning queries](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/project1-postgresql.sql)  This was also created in case the data/imported tables was corrupted and needed to be redone.
+
 	
 </details>
 
