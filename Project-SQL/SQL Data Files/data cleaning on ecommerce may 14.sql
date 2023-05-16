@@ -1601,3 +1601,19 @@ SQL Error [23502]: Batch entry 0 INSERT INTO public.analytics (visitnumber,visit
 -- JOIN analytics ON als.visitID = analytics.visitID
 -- GROUP BY als.visitid, productSKU, ProdName, ProdCategory
 -- Order By als.visitid;
+
+-- unresolved FOREIGN key unable to be CONSTRAINED
+-- find mismatched all_sessions.productSKUs not in the products table
+SELECT *
+FROM all_sessions ass
+LEFT JOIN products p ON ass.productSKU = p.SKU
+WHERE p.SKU IS NULL
+ORDER BY ass.productSKU;
+-- returns 2033 but with DUPLICATES of productSKU
+
+SELECT DISTINCT ass.productSKU
+FROM all_sessions ass
+LEFT JOIN products p ON ass.productSKU = p.SKU
+WHERE p.SKU IS NULL
+ORDER BY ass.productSKU;
+-- returns 147 unique productSKU's in all_sessions and MISSING in products table
