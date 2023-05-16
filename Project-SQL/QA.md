@@ -15,7 +15,7 @@ QA.md file
   
 ## What are your risk areas? Identify and describe them.
 
-| # | Data Quality Risks                                          | Odds   | Impact | Potential Risk Mitigation Tasks                                            |
+| # | Data Quality Risks                                          | Probability   | Impact | Potential Risk Mitigation Tasks                                            |
 |---|-------------------------------------------------------------|--------|--------|--------------------------------------------------------------------------|
 | 1 | SOURCE DATA QUALITY IN DOUBT                                      | High | High   | - Inaccuracies, omissions, cleanliness, and inconsistencies in the source data should be identified and resolved before or during the extract / transform process<BR>- Often, specific data elements exist on multiple source systems. Identify the various sources and discuss with the users which are the most applicable <br>- Data integrity is necessary on data being input into the system, not just at the transform stage
 | 2 | SOURCE & TARGET DATA MAPS SUSPECT                                  | Medium | High   | - Data dictionaries should be developed and maintained to support all data associated with the project. Quality data mapping documents may be the result. |
