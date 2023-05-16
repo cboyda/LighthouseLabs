@@ -10,6 +10,7 @@ Create an efficient PostgreSQL database for ecommerce data files, clean in prepa
 ## Process
 1. Import data from 5 CSV files.  General plan created in [my excel datatype creation planning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/SQL%20Data%20Files/data%20types.xlsx)
 2. Utilized AWS RDS PostgreSQL database tables to store analytics(4,301,122 rows), all_sessions(15,134 rows), products(1,092), sales_by_sku(462 rows), sales_report(454 rows) Full details of exact SQL to create and clean data available [full project1-postgressql.sql](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/project1-postgresql.sql)
+    For curiousity, AWS RDS PostgreSQL v15.2 costs to complete this project was less than $2 and allowed me to leverage the speed and power of cloud         database services (db.t3.micro with 2 x vCPU 1GB of RAM and max 20 GB storage)!
 3. SQL [Data Cleaning](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/cleaning_data.md) which resulted in products(+2 new rows) and sales_by_sku(-6 unmatched rows)
 4. Document any [Quality Assurance (QA)](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/QA.md) notes.
 5. Answer questions from the data generated including [part 3: starting with questions](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/starting_with_questions.md) and [part 4: starting with data](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/starting_with_data.md)
@@ -106,8 +107,9 @@ graph TD;
     tbl_sales_report_0.12MB-->0.12MB;
 ```
 
+
 Total time: 27 hours
 
-    For curiousity, AWS RDS PostgreSQL v15.2 costs to complete this project was less than $2 and allowed me to 
-    leverage the speed and power of cloud database services (db.t3.micro with 2 x vCPU 1GB of RAM and max 20 GB storage)!
+    "Data Science is not a magic want.  Expecting miracles without a basic understanding of the business case [not provided], constraints involved [not provided], data at hand, and **quality** of data can lead to spurious results" 
+-- [P B K Chaitanya](https://www.linkedin.com/pulse/10-key-constraints-data-science-teams-digital-leaders-p-b-k-chaitanya/)
 
