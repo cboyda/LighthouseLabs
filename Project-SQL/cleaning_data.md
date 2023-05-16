@@ -444,15 +444,6 @@ FIX APPLIED, Foreign Key created!
 </details>
 
 <details>
-<summary> 7. Consider NUMERIC fields with null to 0 for math.</summary>
-
-Without a SME to confirm only necessary columns for our questions/math were tested and corrected for NULLs.
-
-Most importantly without SME input NO columns were removed even if they only had 100% Nulls since [each null value only uses one bit on disk](https://github.com/dwyl/learn-postgresql/issues/49).
-</details>
-
-<details>
-<details>
 <summary> 6. Investigate analytics.fullvisitorId is NUMERIC so why is all_sessions.fullvisitorId as VARCHAR?</summary>
 
 This was just a typo when table was created.  Easy fix, change datatype to match with query:
@@ -474,6 +465,17 @@ JOIN analytics USING(fullvisitorid);
 Also corrected CREATE TABLE initial code to ensure this problem doesn't reoccur.
 </details>
 
+
+<details>
+<summary> 7. Consider NUMERIC fields with null to 0 for math.</summary>
+
+Without a SME to confirm only necessary columns for our questions/math were tested and corrected for NULLs.
+
+Most importantly without SME input NO columns were removed even if they only had 100% Nulls since [each null value only uses one bit on disk](https://github.com/dwyl/learn-postgresql/issues/49).
+</details>
+
+
+	
 <details>
 <summary> 8. Investigate all_sessions.itemrevenue is STRING when revenue should probably be NUMERIC. </summary
 
