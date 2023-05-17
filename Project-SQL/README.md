@@ -111,6 +111,6 @@ graph TD;
 Total time: 27 hours
 
 
-"Data Science is not a magic want.  Expecting miracles without a basic understanding of the business case [not provided], constraints involved [not provided], data at hand, and **quality** of data can lead to [spurious](https://dictionary.cambridge.org/example/english/spurious-result) results" 
+"Data Science is not a magic wand.  Expecting miracles without a basic understanding of the business case [not provided], constraints involved [not provided], data at hand, and **quality** of data can lead to [spurious](https://dictionary.cambridge.org/example/english/spurious-result) results" 
 -- [P B K Chaitanya](https://www.linkedin.com/pulse/10-key-constraints-data-science-teams-digital-leaders-p-b-k-chaitanya/)
 
