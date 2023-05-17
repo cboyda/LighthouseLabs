@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS all_sessions
     itemRevenue VARCHAR(100), -- empty?
     transactionRevenue NUMERIC, -- >11,2 empty?
     transactionId VARCHAR(100), -- mostly empty
-    pageTitle VARCHAR(200) NOT NULL,
+    pageTitle VARCHAR(100) NOT NULL,
     searchKeyword VARCHAR(100), -- empty?
     pagePathLevel1 VARCHAR(50) NOT NULL,
     eCommerceAction_type INT NOT NULL,
