@@ -107,8 +107,10 @@ graph TD;
     tbl_sales_report_0.12MB-->0.12MB;
 ```
 
+## Presentation
+* Summary [slideshow presentation](https://github.com/cboyda/LighthouseLabs/raw/main/Project-SQL/LH%20SQL%20Project%20Presentation.pptx) also available
 
-Total time: 27 hours
+Total time: 30 hours
 
 
 "Data Science is not a magic wand.  Expecting miracles without a basic understanding of the business case [not provided], constraints involved [not provided], data at hand, and **quality** of data can lead to [spurious](https://dictionary.cambridge.org/example/english/spurious-result) results" 
