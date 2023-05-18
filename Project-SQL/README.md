@@ -113,4 +113,4 @@ graph TD;
 "Data Science is not a magic wand.  Expecting miracles without a basic understanding of the business case [not provided], constraints involved [not provided], data at hand, and **quality** of data can lead to [spurious](https://dictionary.cambridge.org/example/english/spurious-result) results" 
 -- [P B K Chaitanya](https://www.linkedin.com/pulse/10-key-constraints-data-science-teams-digital-leaders-p-b-k-chaitanya/)
 
-Total project time: 30 hours
+Total project time: 30 hours => Grade: [**EXCEPTIONAL**](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/Project%20Grade%20%3D%20EXCEPTIONAL.pdf)
