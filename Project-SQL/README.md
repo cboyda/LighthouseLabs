@@ -108,11 +108,9 @@ graph TD;
 ```
 
 ## Presentation
-* Summary [slideshow presentation](https://github.com/cboyda/LighthouseLabs/raw/main/Project-SQL/LH%20SQL%20Project%20Presentation.pptx) also available
-
-Total time: 30 hours
-
+* Summary powerpoint [slideshow presentation](https://github.com/cboyda/LighthouseLabs/raw/main/Project-SQL/LH%20SQL%20Project%20Presentation.pptx) also created (5 min)
 
 "Data Science is not a magic wand.  Expecting miracles without a basic understanding of the business case [not provided], constraints involved [not provided], data at hand, and **quality** of data can lead to [spurious](https://dictionary.cambridge.org/example/english/spurious-result) results" 
 -- [P B K Chaitanya](https://www.linkedin.com/pulse/10-key-constraints-data-science-teams-digital-leaders-p-b-k-chaitanya/)
 
+Total project time: 30 hours
