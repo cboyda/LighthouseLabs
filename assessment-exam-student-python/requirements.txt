@@ -1,5 +1,0 @@
-requests
-pandas
-pytest
-pytest-json-report
-xlrd
