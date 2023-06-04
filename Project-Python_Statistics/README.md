@@ -1,13 +1,13 @@
 # Final-Project-Statistical-Modelling-with-Python
 
 ## Project/Goals
-Pull data from 3 API's, merge them then model them to look for any statistical relationships to [demonstrate Python Statistical assignment](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Pull data from 3 API's, merge them then model them to look for any statistical relationships to [demonstrate Python Statistical assignment](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/assignment.md).
 
 ## Process
 ### Step 1: CityBikes API
 * Grab live data from CityBikes API
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada
-* Python code in notebook [city_bikes.ipyb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/city_bikes.ipynb)
+* Google Colab Python code in notebook [city_bikes.ipyb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/city_bikes.ipynb)
  * results format stored in `station_name, city, empty_slots, slots, free_bikes, lat/long, timestamp`
 
 | ![all stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png) | 
@@ -16,7 +16,11 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 2: FourSquare and YELP API's
 * Pull Points of Interest (POI's) near each of the `stations` 
-* specificaly looked with 1000m for "parks"
+* specificaly looked with 1000m for "PARKS"
+* Google Colab Python code in notebook [yelp_foursquare_EDA.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/yelp_foursquare_EDA.ipynb)
+ * merged column from FourSquare of `location_count` (for nearby POI's)
+ * merged columns from YELP of `yelp_location_count` and `yelp_review_count` for total reviews of those POI's
+
 ### Step 3: Merge/Store Data in SQLite
 * Now that we had review_counts and number of "parks" nearby each of our `stations`, merged all results
 * added 
@@ -30,7 +34,16 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ## Results
 (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
 ### Insights
+* if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
+
+| ![popular stations]((https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png)) | 
+|:--:| 
+| *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
+
+
 ### Quality of APIs
+* # of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
+ * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 ### Questions Unanswered?
 ### EDA
 ### Model Results
