@@ -7,6 +7,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Step 1: CityBikes API
 * Grab live data from CityBikes API
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada
+https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png?raw=true
+
 ### Step 2: FourSquare and YELP API's
 * Pull Points of Interest (POI's) near each of the `stations` 
 * specificaly looked with 1000m for "parks"
@@ -21,10 +23,23 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ## Results
 (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
+### Insights
+### Quality of APIs
+### Questions Unanswered?
+### EDA
+### Model Results
+### Model Predictions
 
 ## Challenges 
 1. Poor API documentation 
+2. Assignment needs more clarification for better statiscally significant results.
 
 ## Future Goals
 (what would you do if you had more time?)
 * gather better information to better predict # of ebikes available
+* better document functions and my code for future reference and reusability
+* rewrite API calls to include actual review scores
+* rewrite code to allow for easier modification of universal results including making the call/model formation for
+  * any city
+  * other predictions including `free_bikes` `slots_avialable`
+  * any POI category
