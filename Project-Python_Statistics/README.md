@@ -7,16 +7,19 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Step 1: CityBikes API
 * Grab live data from CityBikes API
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada
+* Python code in notebook [city_bikes.ipyb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/city_bikes.ipynb)
+ * results format stored in `station_name, city, empty_slots, slots, free_bikes, lat/long, timestamp`
 
 | ![all stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png) | 
 |:--:| 
-| *All ebike Stations in Vancouver* |
+| *All ebike Stations in Vancouver as of June 3, 2023* |
 
 ### Step 2: FourSquare and YELP API's
 * Pull Points of Interest (POI's) near each of the `stations` 
 * specificaly looked with 1000m for "parks"
 ### Step 3: Merge/Store Data in SQLite
 * Now that we had review_counts and number of "parks" nearby each of our `stations`, merged all results
+* added 
 * stored results in CSV format 
 * exported results in SQLite format
 ### Step 4: Build Statistical Model
