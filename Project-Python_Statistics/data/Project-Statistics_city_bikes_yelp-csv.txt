@@ -1,0 +1,243 @@
+city,station_name,empty_slots,slots,free_bikes,ebikes,latitude,longitude,yelp_location_count,yelp_review_count
+Vancouver,10th & Cambie,22,35,13,4,49.262487,-123.114397,8,42
+Vancouver,Yaletown-Roundhouse Station,6,16,10,0,49.274566,-123.121817,14,94
+Vancouver,Dunsmuir & Beatty,23,26,3,1,49.279764,-123.110154,10,61
+Vancouver,12th & Yukon (City Hall),14,16,2,2,49.260599,-123.113504,10,49
+Vancouver,8th & Ash,15,16,1,0,49.264215,-123.117772,9,69
+Vancouver,Spyglass & Seawall,2,14,12,0,49.270877,-123.115103,11,73
+Vancouver,Stamps Landing,7,14,7,1,49.26893,-123.11813,10,76
+Vancouver,Ontario & Seawall,0,20,20,0,49.271721,-123.104207,7,34
+Vancouver,Canada Place,13,26,13,2,49.287214,-123.11287,6,56
+Vancouver,Granville & Georgia,16,20,4,3,49.282409,-123.118541,9,48
+Vancouver,Pender & Burrard,14,26,12,2,49.287097,-123.118551,7,37
+Vancouver,Marinaside & Davie,12,22,10,0,49.273471,-123.118016,13,86
+Vancouver,Robson & Hornby,22,30,7,0,49.282758,-123.122092,10,49
+Vancouver,Hornby & Pender,20,22,2,2,49.28602,-123.116624,9,74
+Vancouver,Homer & Robson (Vancouver Public Library),19,20,1,1,49.279739,-123.116251,11,87
+Vancouver,Beatty & Robson,16,20,4,0,49.277483,-123.114279,11,79
+Vancouver,Beatty & Nelson,10,14,4,0,49.275679,-123.116963,11,67
+Vancouver,Abbott & Cordova,9,22,13,1,49.282759,-123.106955,10,64
+Vancouver,Comox & Denman,3,18,14,1,49.288444,-123.139203,11,244
+Vancouver,Cordova & Bute,9,14,5,0,49.289124,-123.12196,8,1213
+Vancouver,Hornby & Nelson,17,18,1,1,49.28062,-123.12482,12,94
+Vancouver,Helmcken & Burrard,15,15,0,0,49.279938,-123.127478,11,80
+Vancouver,Pacific & Richards,9,14,5,0,49.273663,-123.127075,14,114
+Vancouver,Chilco & Beach,8,14,6,0,49.28972,-123.144028,10,1292
+Vancouver,Comox & Broughton,11,12,1,1,49.285253,-123.134356,9,152
+Vancouver,Bute & Comox,15,22,7,0,49.283343,-123.131099,12,166
+Vancouver,Cambie & Water,15,32,17,0,49.284605,-123.108662,9,74
+Vancouver,Keefer & Abbott,1,28,26,3,49.279821,-123.10802,11,66
+Vancouver,Expo & Carrall,0,16,14,4,49.278004,-123.105664,10,63
+Vancouver,Keefer & Columbia,8,14,6,0,49.279342,-123.101822,10,56
+Vancouver,Marinaside & Cooperage,2,26,24,2,49.273833,-123.114373,12,75
+Vancouver,Bidwell & Burnaby,12,26,13,2,49.28526,-123.141809,8,138
+Vancouver,Robson & Granville,23,30,7,4,49.281506,-123.120101,11,58
+Vancouver,Expo & Smithe,5,14,9,0,49.276115,-123.114496,11,79
+Vancouver,Cypress & Cornwall,6,22,16,2,49.272827,-123.147744,8,130
+Vancouver,Anderson & 2nd,23,28,5,1,49.269361,-123.13782,10,87
+Vancouver,7th & Granville,11,14,3,1,49.2653,-123.13811,10,68
+Vancouver,10th & Granville,7,14,7,2,49.262598,-123.138921,10,45
+Vancouver,14th & Granville,13,14,1,0,49.25894,-123.139272,7,16
+Vancouver,14th & Cambie,11,14,3,2,49.258763,-123.115392,10,51
+Vancouver,Ontario & 5th,1,20,20,1,49.266724,-123.104824,8,39
+Vancouver,10th & Main,13,18,5,5,49.262141,-123.101961,10,46
+Vancouver,Cypress & 4th,0,18,17,2,49.268269,-123.147885,9,86
+Vancouver,Vanier Park,3,28,25,0,49.275717,-123.142564,11,151
+Vancouver,Nelson & Mainland,18,20,2,0,49.276436,-123.11877,11,69
+Vancouver,Nelson & Richards,17,18,0,0,49.277844,-123.120942,13,74
+Vancouver,7th & Heather,13,18,5,0,49.265089,-123.119425,10,76
+Vancouver,Harwood & Bute,13,20,7,0,49.28026,-123.135244,10,165
+Vancouver,Chilco & Barclay,6,18,12,0,49.291909,-123.140713,11,1294
+Vancouver,Chilco & Robson,9,16,7,2,49.293257,-123.138563,10,1292
+Vancouver,Nicola & Robson,12,18,5,0,49.288011,-123.132006,12,255
+Vancouver,Carrall & Hastings,2,18,16,1,49.28117,-123.104419,7,50
+Vancouver,šxʷƛ̓ənəq Xwtl'e7énḵ Square - Vancouver Art Gallery,24,28,2,0,49.283227,-123.120523,10,49
+Vancouver,Stanley Park - Vancouver Aquarium,6,16,10,1,49.299292,-123.130281,8,1228
+Vancouver,Stanley Park - Second Beach North,5,16,11,0,49.29534,-123.150433,3,33
+Vancouver,Stanley Park - Second Beach South,7,19,12,0,49.294318,-123.148808,5,40
+Vancouver,Stanley Park - Totem Poles,12,20,8,0,49.298657,-123.121176,4,1096
+Vancouver,Heather & 14th,17,18,1,1,49.259183,-123.120126,8,45
+Vancouver,8th & Ontario,16,16,0,0,49.263837,-123.105173,9,45
+Vancouver,1st & Chestnut,17,26,8,1,49.270721,-123.146175,10,132
+Vancouver,7th & Arbutus,7,16,9,0,49.265605,-123.152566,6,8
+Vancouver,5th & Arbutus,8,16,7,0,49.267222,-123.153157,7,78
+Vancouver,10th & Oak,20,30,5,4,49.262255,-123.126217,9,45
+Vancouver,Arbutus & 16th,36,40,4,0,49.257654,-123.153212,7,11
+Vancouver,Cypress & 14th,6,12,5,3,49.25919,-123.148268,9,18
+Vancouver,Cypress & 16th,10,12,2,2,49.25741,-123.148531,8,14
+Vancouver,Georgia & Thurlow,12,12,0,0,49.285953,-123.124066,9,36
+Vancouver,Thurlow & Pendrell,1,16,15,5,49.280881,-123.130672,14,193
+Vancouver,Heather & 16th,11,12,1,1,49.256845,-123.120071,7,25
+Vancouver,14th & Ontario,12,16,3,2,49.25849,-123.104799,9,45
+Vancouver,14th & Main,9,14,5,4,49.258425,-123.100792,10,46
+Vancouver,David Lam Park - West,10,18,8,0,49.270905,-123.126006,14,115
+Vancouver,Beach & Seymour,5,18,13,1,49.273568,-123.129935,14,113
+Vancouver,Richards & Helmcken,5,18,2,1,49.277141,-123.122589,13,74
+Vancouver,Burrard & 4th,8,16,8,0,49.267859,-123.145782,10,91
+Vancouver,Burrard & 7th,14,16,2,1,49.265336,-123.145823,9,21
+Vancouver,South False Creek Seawall,4,14,10,0,49.267628,-123.127698,11,71
+Vancouver,Chestnut & McNicoll,9,16,7,0,49.275938,-123.145939,8,130
+Vancouver,Creekside Park North,1,18,17,6,49.2756,-123.102661,7,27
+Vancouver,Alexander & Main,2,20,17,1,49.284157,-123.099917,7,53
+Vancouver,Arbutus Greenway & 14th,18,20,2,1,49.258924,-123.152591,8,12
+Vancouver,Arbutus Greenway & Fir,8,16,8,0,49.266774,-123.141135,10,101
+Vancouver,Kitsilano Beach Park,14,36,21,4,49.273355,-123.154493,5,95
+Vancouver,Arbutus & McNicoll,5,30,25,4,49.276144,-123.151272,6,192
+Vancouver,Vine & 4th,14,18,4,3,49.268339,-123.157443,8,82
+Vancouver,Alexander & Dunlevy,7,14,7,0,49.284062,-123.095097,6,42
+Vancouver,Alder & 11th,9,14,5,2,49.261742,-123.13148,12,48
+Vancouver,10th & Columbia,12,14,2,0,49.262206,-123.109091,10,39
+Vancouver,1st & Manitoba,1,32,31,2,49.27023,-123.10651,12,50
+Vancouver,10th & Ontario,15,20,5,2,49.262062,-123.104656,9,45
+Vancouver,Quebec & 1st,1,18,17,1,49.27033,-123.10275,8,35
+Vancouver,Columbia & 14th,12,14,2,0,49.258902,-123.109596,12,46
+Vancouver,Bute & Davie,12,20,8,4,49.282224,-123.132778,11,156
+Vancouver,7th & Laurel,7,14,7,0,49.265071,-123.123864,9,65
+Vancouver,7th &  Alder,10,16,6,1,49.265198,-123.131043,11,69
+Vancouver,Science World,1,16,15,2,49.273691,-123.102232,6,22
+Vancouver,1st & Scotia,2,20,18,0,49.2685027,-123.0975014,8,33
+Vancouver,Georgia & Main,6,20,14,0,49.278529,-123.100017,10,57
+Vancouver,Shaw Tower,7,18,6,0,49.288682,-123.11818,3,27
+Vancouver,York & Yew,7,20,11,2,49.271741,-123.155421,5,95
+Vancouver,Pine & 10th,17,20,3,2,49.262822,-123.14338,9,23
+Vancouver,8th & Scotia,6,12,4,3,49.263635,-123.099236,10,46
+Vancouver,Alberni & Jervis,14,18,4,1,49.28763,-123.127245,11,176
+Vancouver,Stanley Park - Information Booth,14,20,6,0,49.297933,-123.130758,9,1242
+Vancouver,14th & Alder,14,14,0,0,49.258819,-123.131317,11,43
+Vancouver,Pender & Gore,9,14,5,2,49.280284,-123.097052,9,55
+Vancouver,Carrall & Seawall,0,12,12,3,49.276294,-123.106534,12,67
+Vancouver,Glen & Union,9,14,5,0,49.277469,-123.081315,5,16
+Vancouver,Adanac & McLean,8,22,14,0,49.277665,-123.073653,2,12
+Vancouver,Commercial & Adanac,5,16,10,2,49.277436,-123.070427,3,14
+Vancouver,Pender & Commercial,6,16,10,1,49.280332,-123.070068,4,15
+Vancouver,Keefer & Princess,11,14,3,1,49.279369,-123.091241,8,44
+Vancouver,Alexander & Railway,13,20,7,1,49.283992,-123.091206,6,42
+Vancouver,Napier & Commercial,12,14,2,1,49.274881,-123.069323,6,19
+Vancouver,Britannia Parking Lot,6,14,8,0,49.275882,-123.071865,4,15
+Vancouver,Thornton & National,3,14,11,0,49.273777,-123.092723,7,18
+Vancouver,Keith & 6th,17,28,11,1,49.265005,-123.079481,9,31
+Vancouver,Glen & 6th,3,20,17,1,49.265024,-123.08127,8,26
+Vancouver,Grant & Commercial,12,14,1,1,49.271377,-123.069416,6,18
+Vancouver,2nd & Commercial,14,22,8,2,49.268616,-123.069908,7,22
+Vancouver,4th & Commercial,10,14,4,1,49.266969,-123.069936,7,22
+Vancouver,8th & Commercial,14,20,6,3,49.263242,-123.070521,9,56
+Vancouver,10th & Commercial,16,26,9,0,49.261403,-123.070102,8,52
+Vancouver,Woodland & 10th,5,14,9,2,49.261263,-123.073707,6,49
+Vancouver,Glen & Broadway,12,18,6,4,49.262242,-123.081459,6,17
+Vancouver,St George & Broadway,4,14,10,1,49.262321,-123.09306,9,38
+Vancouver,7th & Woodland,7,12,5,1,49.264251,-123.073853,7,53
+Vancouver,Woodland & 4th,3,14,11,0,49.266751,-123.073501,6,20
+Vancouver,Woodland & Graveley,11,12,1,1,49.270684,-123.073562,6,20
+Vancouver,Charles & Woodland,7,14,7,1,49.2731,-123.0732,5,19
+Vancouver,18th & Main,13,16,3,3,49.254667,-123.101389,8,24
+Vancouver,Prince Edward & 16th,10,14,4,0,49.256694,-123.096579,12,53
+Vancouver,Prince Edward & 14th,13,14,1,0,49.258352,-123.096337,12,53
+Vancouver,13th & St George,10,16,6,2,49.258817,-123.092797,9,38
+Vancouver,10th & Fraser,11,14,3,3,49.26151,-123.089413,8,34
+Vancouver,8th & Fraser,14,16,2,0,49.263382,-123.088837,7,32
+Vancouver,St Catherines & 10th,6,12,6,0,49.261353,-123.085333,9,34
+Vancouver,St Catherines & 7th,12,20,8,0,49.264466,-123.085183,9,34
+Vancouver,Pender & Victoria,11,16,5,0,49.280197,-123.065859,4,15
+Vancouver,Victoria & 4th,8,16,8,3,49.266725,-123.065925,7,19
+Vancouver,Victoria & 10th,12,12,0,0,49.261188,-123.066009,7,48
+Vancouver,15th & Victoria (Trout Lake),15,18,3,1,49.256857,-123.065646,5,44
+Vancouver,Triumph & Victoria,6,18,12,1,49.283986,-123.065264,3,4
+Vancouver,Windsor & 14th,8,14,6,1,49.257985,-123.083366,9,34
+Vancouver,14th & Fraser,3,16,12,5,49.257939,-123.089531,9,37
+Vancouver,15th & Knight,2,14,12,4,49.256496,-123.075426,6,50
+Vancouver,Commercial & Pandora,4,16,12,0,49.283236,-123.070443,2,3
+Vancouver,Carolina & Great Northern Way,12,16,3,0,49.267266,-123.090786,5,20
+Vancouver,6th & Prince Edward,12,16,3,0,49.265242,-123.095577,11,49
+Vancouver,6th & Carolina,14,16,2,0,49.265213,-123.090785,8,33
+Vancouver,Stanley Park - Third Beach Parking Lot,32,38,6,1,49.302577,-123.155616,1,2
+Vancouver,Union & Dunlevy,3,16,12,0,49.277595,-123.09583,8,44
+Vancouver,Keefer & Hawks,12,16,4,1,49.279235,-123.087528,5,13
+Vancouver,Hawks & Union,2,16,14,0,49.277333,-123.087359,5,13
+Vancouver,Charles & Commercial,17,22,5,3,49.273103,-123.069892,7,23
+Vancouver,10th & Kingsway,9,20,11,3,49.261973,-123.09725,10,46
+Vancouver,Beach & Hornby,7,22,15,0,49.275295,-123.132585,12,109
+Vancouver,Burrard Station (Melville & Dunsmuir),9,28,19,0,49.285871,-123.12105,10,47
+Vancouver,Bute & Barclay,11,14,3,1,49.284893,-123.128685,10,76
+Vancouver,8th & Yukon,19,22,2,0,49.263962,-123.112621,7,57
+Vancouver,Princess & Union,4,12,8,2,49.277615,-123.091654,8,44
+Vancouver,Dunsmuir & Richards,20,22,2,1,49.282214,-123.114101,10,73
+Vancouver,5th & Main,14,20,6,5,49.266456,-123.100324,8,39
+Vancouver,3rd & Quebec,0,20,19,0,49.268216,-123.103168,7,30
+Vancouver,Richards & Cordova,3,24,21,0,49.284554,-123.111031,8,69
+Vancouver,Richards & Robson,17,20,3,0,49.280216,-123.117639,10,62
+Vancouver,Olympic Village Station,7,26,19,2,49.266314,-123.116011,10,69
+Vancouver,Campbell & Hastings,12,14,2,0,49.280852,-123.084746,5,13
+Vancouver,Cardero & Davie,8,18,9,3,49.285512,-123.1384,9,139
+Vancouver,Aquatic Centre,18,40,22,2,49.27821,-123.136972,10,155
+Vancouver,Beach & Broughton,4,22,18,3,49.281301,-123.139108,9,147
+Vancouver,Beach & Cardero,9,22,13,1,49.283298,-123.142288,10,209
+Vancouver,Georgia & Homer,16,18,1,0,49.280787,-123.115271,11,92
+Vancouver,Columbia & 5th,11,18,7,1,49.266476,-123.109389,8,33
+Vancouver,Haro & Denman,8,20,11,2,49.290587,-123.13625,10,1292
+Vancouver,Stanley Park - Prospect Point,0,0,0,0,49.312568,-123.144177,2,21
+Vancouver,Arbutus & 10th,17,18,1,0,49.262835,-123.152626,6,8
+Vancouver,Ontario & 16th,10,14,4,3,49.256825,-123.105234,9,45
+Vancouver,Richards & Davie,12,14,2,2,49.275683,-123.124388,13,95
+Vancouver,8th & Prince Edward,12,18,6,1,49.263518,-123.09568,10,48
+Vancouver,Jervis & Robson,18,20,2,2,49.28691,-123.128818,11,87
+Vancouver,Smithe & Burrard,16,20,3,2,49.282503,-123.124697,10,67
+Vancouver,Broughton & Davie,15,22,4,1,49.283749,-123.136133,8,138
+Vancouver,Cypress & 10th,6,14,8,1,49.262944,-123.148109,10,20
+Vancouver,Granville Island,16,20,4,3,49.27029,-123.135025,11,88
+Vancouver,McLean & Pender,11,16,5,0,49.280427,-123.074082,3,15
+Vancouver,Richards & Smithe,7,18,10,0,49.279259,-123.119145,12,64
+Vancouver,Bute & Robson,16,26,10,0,49.285836,-123.127265,11,83
+Vancouver,Trafalgar & Cornwall,11,20,9,1,49.272969,-123.164325,5,77
+Vancouver,Alma & Point Grey,9,24,14,3,49.27247,-123.185643,4,12
+Vancouver,Point Grey & Blenheim,6,14,8,2,49.271471,-123.17731,6,11
+Vancouver,Hastings & Broughton,17,24,7,0,49.290112,-123.127062,9,1226
+Vancouver,Yew & Broadway,17,18,1,1,49.263523,-123.155267,5,9
+Vancouver,8th & Macdonald,4,22,18,0,49.264928,-123.168068,9,16
+Vancouver,Balaclava & Broadway,3,18,15,7,49.264483,-123.173926,9,16
+Vancouver,Dunbar & Broadway,15,26,11,2,49.264579,-123.18373,6,11
+Vancouver,Grandview & Commercial,5,16,10,2,49.263746,-123.069892,9,56
+Vancouver,14th & Oak,10,14,4,2,49.258761,-123.127071,8,40
+Vancouver,Wallace & 4th,13,18,5,4,49.268974,-123.190701,5,13
+Vancouver,Balsam & Cornwall,10,20,10,0,49.273011,-123.159663,5,77
+Vancouver,Balaclava & 6th,4,16,12,1,49.266924,-123.173849,8,15
+Vancouver,Trafalgar & Broadway,2,16,14,2,49.264326,-123.164725,7,12
+Vancouver,Dunbar & 6th,10,16,6,0,49.266636,-123.183661,5,10
+Vancouver,18th & Cambie,19,24,5,5,49.254818,-123.114785,8,18
+Vancouver,Blenheim & 4th,14,23,9,0,49.268837,-123.177633,7,12
+Vancouver,18th & Heather,12,16,4,1,49.255034,-123.120226,5,11
+Vancouver,Point Grey & Bayswater,10,16,6,0,49.271044,-123.170661,6,13
+Vancouver,20th & Main,14,16,2,0,49.252691,-123.101289,8,23
+Vancouver,Station & Terminal,10,18,8,0,49.272172,-123.097978,10,41
+Vancouver,Jericho Beach,6,34,28,8,49.271082,-123.191458,5,15
+Vancouver,Burrard & Drake,8,24,15,1,49.27808,-123.130557,12,168
+Vancouver,Columbia & 1st,14,24,7,0,49.269969,-123.109623,11,47
+Vancouver,Davie & Beach,13,30,17,3,49.287528,-123.142139,10,238
+Vancouver,Morton & Denman,2,26,24,4,49.28803,-123.142135,10,238
+Vancouver,13th & Cambie,12,14,1,0,49.259579,-123.114769,10,49
+Vancouver,Nelson & Denman,10,18,7,0,49.2890705989865,-123.138407369468,10,1292
+Vancouver,Melville & Bute,12,14,2,0,49.287782,-123.12395,9,129
+Vancouver,Seymour & Cordova,8,19,11,1,49.28512,-123.11242,8,69
+Vancouver,Arbutus & Nanton,10,18,6,5,49.247854,-123.153422,7,15
+Vancouver,Yukon & 6th,12,18,3,1,49.265939,-123.1129,8,58
+Vancouver,11th & Kingsway,6,16,9,8,49.261122,-123.097571,10,46
+Vancouver,Wylie & 2nd,10,18,8,0,49.267725,-123.11311,8,57
+Vancouver,29th & Cambie,15,20,5,0,49.245135,-123.116098,7,178
+Vancouver,Rolston & Granville,8,16,6,2,49.274232,-123.129998,14,132
+Vancouver,East Blvd & 37th,2,20,17,5,49.238105,-123.154966,4,17
+Vancouver,28th & Willow,18,20,2,2,49.246243,-123.124373,6,172
+Vancouver,Ontario & 23rd,6,12,6,3,49.249722,-123.104991,9,189
+Vancouver,30th & Ontario,10,22,12,5,49.243375,-123.104978,4,170
+Vancouver,Franklin & Nanaimo,11,20,9,2,49.282087,-123.056909,5,13
+Vancouver,Lakewood & Triumph,14,16,2,0,49.283968,-123.061615,3,4
+Vancouver,Wall & Eton,4,18,14,0,49.287464,-123.060771,3,4
+Vancouver,Lakewood & Oxford,14,18,4,0,49.285575,-123.061575,3,4
+Vancouver,22nd & Cambie,13,14,1,1,49.251358,-123.115637,9,25
+Vancouver,King Edward & Cambie,15,18,2,1,49.249184,-123.116141,9,184
+Vancouver,Heather & 29th,12,22,10,2,49.245535,-123.120496,5,170
+Vancouver,Cardero & Robson,3,26,23,3,49.289255,-123.132677,11,1306
+Vancouver,Commercial & 20th,19,20,1,1,49.252656,-123.067965,5,44
+Vancouver,Burrard & 14th,12,18,4,4,49.259469,-123.145718,8,15
+Vancouver,Hornby & Drake,19,24,5,2,49.277178,-123.13,13,176
+Vancouver,Cardero & Bayshore,2,20,16,1,49.291597,-123.129158,12,1251
+Vancouver,27th & Main,13,22,9,7,49.247204,-123.101549,6,173
+Vancouver,Cordova & Granville,7,18,10,0,49.2856698,-123.1125432,8,69
