@@ -7,8 +7,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Step 1: CityBikes API
 * Grab live data from CityBikes API
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada
-* 
-![all stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png?raw=true)*All ebike Stations in Vancouver*
+| ![all stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png?raw=true) | 
+|:--:| 
+| *All ebike Stations in Vancouver* |
 
 ### Step 2: FourSquare and YELP API's
 * Pull Points of Interest (POI's) near each of the `stations` 
