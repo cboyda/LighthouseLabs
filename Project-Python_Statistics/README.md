@@ -55,29 +55,6 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * built Classification Regression Model
    * Logistic Regression
 
-## Results
-> (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
-
-### 4a) Quality of APIs
-* Number of Yelp POI results > FourSquare which may be because of the category selected of "PARKS"
-   * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
-
-### 4b) Exploraty Data Analysis (EDA)
-* during EDA, various visualization techniques were applied to explore the data and extract meaningful information
-* Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
-
-
-| ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png) | 
-|:---:|
-| **Feature Histograms by Distribution** |
-
-
-| ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
-|:---:|
-| **Correlation Matrix** |
-
-### 4c) Statistical Models
-
 <details>
   <summary>Statistical Model Details... [click to view]</summary>
   
@@ -102,7 +79,33 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 </details>
 
-### 4d) Model Comparison
+<br/>
+<br/>
+<br/>
+
+
+# Results
+> Fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.
+
+### a) Quality of APIs
+* Number of Yelp POI results > FourSquare which may be because of the category selected of "PARKS"
+   * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
+
+### b) Exploraty Data Analysis (EDA)
+* during EDA, various visualization techniques were applied to explore the data and extract meaningful information
+* Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
+
+
+| ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png) | 
+|:---:|
+| **Feature Histograms by Distribution** |
+
+
+| ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
+|:---:|
+| **Correlation Matrix** |
+
+### c) Model Comparison
 
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
@@ -114,29 +117,34 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 > If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
 
-### 4e) Insights
+### d) Insights
 * if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
 
 | ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
 |:--:| 
 | *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
 
+<br/>
+<br/>
+
 ### Step 5: Build Data Visualizations
 * created data_visualizations notebook
 * created visualization to show free_bikes by neighbourhood
    * neighbourhood shape files from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name)
 
-| ![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png) | 
-|:--:| 
-| *Sunburst breatkdown of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
+### Where are the free bikes in Vancouver? 
 
-* which stations have free_bikes and where are they located?
+| [![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) | 
+|:--:| 
+| *[Interactive Sunburst breakdown](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
+
+### Which stations have free_bikes and where are they located?
 
 | ![station heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-station-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Station in Vancouver as of June 3, 2023* |
 
-* which neighbourhoods have free_bikes?
+### Which neighbourhoods have free_bikes?
 
 | ![neighbourhood heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-neighbourhood-free_bikes.png) | 
 |:--:| 
