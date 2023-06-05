@@ -2,7 +2,7 @@
 by Clinton Boyda
 
 ## Project/Goals
-Pull data from 3 API's, merge them then model them to look for any statistical relationships to [demonstrate Python Statistical assignment](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/assignment.md).
+Pull data from 3 API's, merge them then model them to look for any statistical relationships to demonstrate [Python Statistical assignment](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/assignment.md).
 
 
 ## Process
