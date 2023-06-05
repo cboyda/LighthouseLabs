@@ -26,6 +26,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 3: Joining: Merge then Store Data in SQLite
 * Now that we had review_counts and number of "parks" nearby each of our `stations`, merged all results
+   * we could have predicted `empty_slots, slots, free_bikes< or ebikes`
 
 | ![merged dataframe](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/merged_dataframe.png) | 
 |:--:| 
@@ -52,7 +53,6 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * Built Classification Regression Models
 
 ## Results
-
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
 
 ### 4a) Quality of APIs
@@ -103,7 +103,7 @@ These features do not show statistical significance in predicting ebikes.
 | OLS Regression                       | 17.00                   | 19.56                          |
 | Linear Regression                    | 27.50                   | 3.62                           |
 | GLM Regression                       | 20.90                   | 19.56                          |
-| Logistic Regression (Classification) | 0.06                    | 31.82                          |
+| Logistic Regression (Classification) |  6.00                   | 31.82                          |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
 
 ### 4e) Insights
