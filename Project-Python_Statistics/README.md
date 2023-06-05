@@ -35,6 +35,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * stored results in [CSV format (3x20KB)](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics/data) for quick reference
 * exported results in [SQLite database format (15MB)](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/data/city_bikes_sqlite_database.db) created from Python
   * counts verified to ensure no dataframe information was missed
+  * utilized Python networkx and matplotlib for database relationship illustrations:
 
 | ![table relationships](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sqlite_db_table_relationship.png) | 
 |:--:| 
@@ -61,7 +62,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Quality of APIs
 * Number of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
- * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
+ 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 ### Questions Unanswered?
 ### Exploraty Data Analysis (EDA)
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
@@ -78,11 +79,26 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | *Correlation Matrix* |
 
 ### Model Results
+#### Regresssion Statistical Models
+* Ordinary Least Squares (OLS)
+![ols model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_ols_model.png)
+* Linear Regresion (with OLS)
+![linear regression](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_ols_linear_model.png)
+* Generalized Linear Model (GLM)
+![glm model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_glm_model.png)
+All models fit the data poorly with R2 of OLS 17%, Linear Regresssion 27.5% and GLM 20.9% (Psudo R-squared = CS).
+
+#### Classification Statistical Models
+* Logistical Regression
+![classification model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/classification_logistical_regression.png)
+
 ### Model Predictions
 
 ## Challenges 
-1. Poor API documentation 
-2. Assignment needs more clarification for better statiscally significant results.
+1. Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
+ * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
+ * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
+3. Assignment needs more clarification for better statiscally significant results. Some questions asked weren't possible based on recommended steps.
 
 ## Future Goals
 (what would you do if you had more time?)
