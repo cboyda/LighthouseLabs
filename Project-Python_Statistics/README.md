@@ -82,15 +82,22 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Model Results
 #### Regresssion Statistical Models
 * Ordinary Least Squares (OLS)
+
 ![ols model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_ols_model.png)
+
 * Linear Regresion (with OLS)
+
 ![linear regression](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_ols_linear_model.png)
+
 * Generalized Linear Model (GLM)
+
 ![glm model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_glm_model.png)
+
 All models fit the data poorly with R2 of OLS 17%, Linear Regresssion 27.5% and GLM 20.9% (Psudo R-squared = CS).
 
 #### Classification Statistical Models
 * Logistical Regression
+
 ![classification model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/classification_logistical_regression.png)
 
 ### Model Predictions
@@ -99,10 +106,14 @@ All models fit the data poorly with R2 of OLS 17%, Linear Regresssion 27.5% and 
 1. Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
  * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
  * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
-3. Assignment needs more clarification for better statiscally significant results. Some questions asked weren't possible based on recommended steps.
+2. Assignment needs more clarification for better statiscally significant results. 
+ * Some questions asked weren't possible based on recommended steps.
 
 ## Future Goals
-(what would you do if you had more time?)
+
+> (what would you do if you had more time?)
+
+
 * gather better information to better predict # of ebikes available
 * better document functions and my code for future reference and reusability
 * rewrite API calls to include actual review scores
