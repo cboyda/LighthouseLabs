@@ -48,9 +48,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 4: Build Statistical Model
 * models created to predict the number of `ebikes`
-* Built 3 Statistical Regression Models 
-      * including a Linear Regression with 8 models using list method
-* Built Classification Regression Models
+* Built 3 Statistical Regression Models
+   * including a Linear Regression with 8 models using list method
+* Built Classification Regression Model
 
 ## Results
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
@@ -101,7 +101,7 @@ These features do not show statistical significance in predicting ebikes.
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
 | OLS Regression                       | 17.00                   | 19.56                          |
-| Linear Regression                    | 27.50                   | 3.62                           |
+| Linear Regression                    | 43.40                   | 3.62                           |
 | GLM Regression                       | 20.90                   | 19.56                          |
 | Logistic Regression (Classification) |  6.00                   | 31.82                          |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
