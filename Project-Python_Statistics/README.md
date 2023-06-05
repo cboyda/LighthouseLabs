@@ -190,6 +190,8 @@ In a violin plot, the box-and-whisker elements represent the statistical summary
 
 ✓ gather better information to better predict # of ebikes available
 
+✓ consider method to gather data over time to find trends
+
 ✓ better document functions and my code for future reference and reusability
 
 ✓ rewrite API calls to include actual review scores
