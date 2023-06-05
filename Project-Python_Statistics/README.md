@@ -74,6 +74,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | **Correlation Matrix** |
 
 ### 4c) Statistical Models
+
+<details>
+  <summary>Statistical Model Details</summary>
 #### Regresssion Statistical Models
 * Ordinary Least Squares (OLS)
 
@@ -95,6 +98,7 @@ All models fit the data poorly with R2 of OLS 17%, Linear Regression 27.5% and G
 ![classification model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/classification_logistical_regression.png)
 
 These features do not show statistical significance in predicting ebikes.
+</details>
 
 ### 4d) Model Comparison
 
