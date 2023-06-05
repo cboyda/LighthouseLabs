@@ -62,7 +62,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Quality of APIs
 * Number of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
- 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
+ * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
+
 ### Questions Unanswered?
 ### Exploraty Data Analysis (EDA)
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
