@@ -48,7 +48,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 4: Build Statistical Model
 * models created to predict the number of `ebikes`
-* Built Statistical Regression Models
+* Built 3 Statistical Regression Models 
+      * including a Linear Regression with 8 models using list method
 * Built Classification Regression Models
 
 ## Results
