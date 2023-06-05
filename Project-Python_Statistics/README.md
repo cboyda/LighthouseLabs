@@ -156,6 +156,24 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 |:--:| 
 | *Free Bike Availability in Top 5 Neighbourhoods in Vancouver as of June 3, 2023* |
 
+<details>
+  <summary>What does a violin plot visualization represent?</summary>
+  
+In a violin plot, the box-and-whisker elements represent the statistical summary of the data distribution for each category or group.
+  
+* Violin shape: The shape of the violin represents the data distribution. It is symmetrical along the central line, which represents the median of the data. The width of the violin at a specific point indicates the density or frequency of data points in that region. A wider section indicates a higher concentration of data points, while a narrower section indicates a lower concentration.
+
+* White dot: The white dot within the violin represents the median of the data. It is a measure of central tendency and indicates the middle value of the dataset when sorted.
+
+* Box: The box inside the violin represents the interquartile range (IQR) of the data. It spans from the first quartile (25th percentile) to the third quartile (75th percentile) of the dataset. The height of the box indicates the spread of the middle 50% of the data.
+
+* Whiskers: The whiskers extend from the box and represent the range of the data excluding outliers. By default, they extend up to 1.5 times the IQR. Data points beyond the whiskers are considered outliers and plotted individually.
+
+* Outliers: Individual data points that fall beyond the whiskers are plotted as individual points, helping to identify potential anomalies or extreme values in the data.
+
+The violin plot combines aspects of a box plot and a kernel density plot, providing a visual representation of both the distribution and summary statistics of the data. It allows for easy comparison of distributions between different categories or groups in a single plot.
+</details>
+
 ## Challenges 
 * Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
    * [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each key slots vs free slots etc.
