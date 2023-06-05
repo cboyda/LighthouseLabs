@@ -24,8 +24,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 
 ### Step 3: Joining: Merge then Store Data in SQLite
-* Now that we had review_counts and number of "parks" nearby each of our `stations`, merged all results
-   * we could have predicted `empty_slots, slots, free_bikes< or ebikes`
+* merged POI coutns, review_counts and number of "parks" nearby for each of our `stations`
+   * we could have predicted `empty_slots, slots, free_bikes or ebikes`
 
 | ![merged dataframe](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/merged_dataframe.png) | 
 |:--:| 
