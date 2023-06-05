@@ -57,7 +57,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### 4a) Quality of APIs
 * Number of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
- * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
+⋅⋅* 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 
 ### 4b) Exploraty Data Analysis (EDA)
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
@@ -116,10 +116,10 @@ These features do not show statistical significance in predicting ebikes.
 
 ## Challenges 
 * Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
- * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
- * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
+⋅⋅* [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
+⋅⋅* [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
 * Assignment needs more clarification for better statiscally significant results. 
- * Some questions asked weren't possible based on recommended steps.
+⋅⋅* Some questions asked weren't possible based on recommended steps.
 
 ## Future Goals
 
@@ -129,6 +129,6 @@ These features do not show statistical significance in predicting ebikes.
 * better document functions and my code for future reference and reusability
 * rewrite API calls to include actual review scores
 * rewrite code to allow for easier modification/reusability of universal results including making the call/model formation for
-  * any city
-  * other predictions including `free_bikes` `slots_avialable`
-  * any POI category
+⋅⋅* any city
+⋅⋅* other predictions including `free_bikes` `slots_avialable`
+⋅⋅* any POI category
