@@ -77,6 +77,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 <details>
   <summary>Statistical Model Details</summary>
+  
 #### Regresssion Statistical Models
 * Ordinary Least Squares (OLS)
 
@@ -105,9 +106,9 @@ These features do not show statistical significance in predicting ebikes.
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
 | OLS Regression                       | 17.00                   | 19.56                          |
-| Linear Regression                    | 43.40                   | 3.62                           |
+| Linear Regression                    | **43.40**                   | 3.62                           |
 | GLM Regression                       | 20.90                   | 19.56                          |
-| Logistic Regression (Classification) |  6.00                   | 31.82                          |
+| Logistic Regression (Classification) |  6.00                   | **31.82**                         |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
 
 ### 4e) Insights
@@ -127,7 +128,7 @@ These features do not show statistical significance in predicting ebikes.
 
 ## Future Goals
 
-> (what would you do if you had more time?)
+> What would you do if you had more time?
 
 * gather better information to better predict # of ebikes available
 * better document functions and my code for future reference and reusability
