@@ -94,14 +94,12 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ![glm model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_glm_model.png)
 
-All models fit the data poorly with R2 of OLS 17%, Linear Regression 27.5% and GLM 20.9% (Psudo R-squared = CS).
 
 #### Classification Statistical Models
 * Logistical Regression
 
 ![classification model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/classification_logistical_regression.png)
 
-These features do not show statistical significance in predicting ebikes.
 </details>
 
 ### 4d) Model Comparison
