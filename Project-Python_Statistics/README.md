@@ -55,7 +55,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Insights
 * if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
 
-| ![popular stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png)) | 
+| ![popular stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
 |:--:| 
 | *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
 
