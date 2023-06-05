@@ -128,6 +128,14 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)
 
+* which stations have free_bikes and where are they located?
+
+![station heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-station-free_bikes.png)
+
+* which neighbourhoods have free_bikes?
+
+~[neighbourhood heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-neighbourhood-free_bikes.png)
+
 ## Challenges 
 * Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
    * [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each key slots vs free slots etc.
