@@ -16,8 +16,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 
 ### Step 2: FourSquare and YELP API's
-* Pull Points of Interest (POI's) near each of the `stations` 
-   * specificaly looked with 1000m for "PARKS"
+* used API's to find Points of Interest (POI's) near each of the `stations` 
+   * specificaly looked within 1000m for "PARKS" with the assumption that park users may use e-bikes
 * Google Colab Python code in notebook [yelp_foursquare_EDA.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/yelp_foursquare_EDA.ipynb)
    * merged column from FourSquare of `location_count` (for nearby POI's)
    * merged columns from YELP of `yelp_location_count` and `yelp_review_count` for total reviews of those POI's
