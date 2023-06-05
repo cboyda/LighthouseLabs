@@ -114,6 +114,8 @@ These features do not show statistical significance in predicting ebikes.
 | Logistic Regression (Classification) |  6.00                   | **31.82**                         |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
 
+> If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
+
 ### 4e) Insights
 * if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
 
