@@ -17,14 +17,14 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 2: FourSquare and YELP API's
 * used API's to find Points of Interest (POI's) near each of the `stations` 
-   * specificaly looked within 1000m for "PARKS" with the assumption that park users may use e-bikes
+   * specifically looked within 1000m for "PARKS" with the assumption that park users may use e-bikes
 * Google Colab Python code in notebook [yelp_foursquare_EDA.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/yelp_foursquare_EDA.ipynb)
    * merged column from FourSquare of `location_count` (for nearby POI's)
    * merged columns from YELP of `yelp_location_count` and `yelp_review_count` for total reviews of those POI's
 
 
 ### Step 3: Joining: Merge then Store Data in SQLite
-* merged POI coutns, review_counts and number of "parks" nearby for each of our `stations`
+* merged POI counts, review_counts and number of "parks" nearby for each of our `stations`
    * we could have predicted `empty_slots, slots, free_bikes or ebikes`
 
 | ![merged dataframe](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/merged_dataframe.png) | 
@@ -59,7 +59,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
 
 ### 4a) Quality of APIs
-* Number of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
+* Number of Yelp POI results > FourSquare which may be because of the category selected of "PARKS"
    * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 
 ### 4b) Exploraty Data Analysis (EDA)
@@ -81,7 +81,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 <details>
   <summary>Statistical Model Details</summary>
   
-#### Regresssion Statistical Models
+#### Regression Statistical Models
 * Ordinary Least Squares (OLS)
 
 ![ols model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_ols_model.png)
