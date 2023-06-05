@@ -79,7 +79,10 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 </details>
 
-## Results
+
+
+
+# Results
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
 
 ### 4a) Quality of APIs
