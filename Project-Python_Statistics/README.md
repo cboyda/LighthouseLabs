@@ -78,7 +78,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 
 | ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
+
 |:--:|
+
 | *Correlation Matrix* |
 
 ### Model Results
@@ -102,6 +104,8 @@ All models fit the data poorly with R2 of OLS 17%, Linear Regresssion 27.5% and 
 
 ![classification model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/classification_logistical_regression.png)
 
+These features do not show statistical significance in predicting ebikes.
+
 ### Model Predictions
 
 ## Challenges 
@@ -114,7 +118,6 @@ All models fit the data poorly with R2 of OLS 17%, Linear Regresssion 27.5% and 
 ## Future Goals
 
 > (what would you do if you had more time?)
-
 
 * gather better information to better predict # of ebikes available
 * better document functions and my code for future reference and reusability
