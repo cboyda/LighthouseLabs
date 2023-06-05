@@ -79,7 +79,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 </details>
 
-
+<br/>
+<br/>
+<br/>
 
 
 # Results
