@@ -47,7 +47,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 
 ### Step 4: Build Statistical Model
-* models created to predict the number of ebikes at a given `station`
+* models created to predict the number of `ebikes`
 * Built Statistical Regression Models
 * Built Classification Regression Models
 
