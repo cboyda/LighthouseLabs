@@ -39,6 +39,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | ![table relationships](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sqlite_db_table_relationship.png) | 
 |:--:| 
 | *Database Tables Simplified Relationships* |
+|:--:| 
 | ![database schema](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sqlite_db_schema_diagram.png) | 
 |:--:| 
 | *SQLite Database Schema* |
@@ -69,6 +70,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png) | 
 |:--:| 
 | *Feature Histograms by Distribution* |
+|:--:| 
 | ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
 |:--:| 
 | *Correlation Matrix* |
