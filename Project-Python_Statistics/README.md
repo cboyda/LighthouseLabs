@@ -128,7 +128,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Where are the free bikes in Vancouver? 
 
-| ![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)(https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) | 
+| [![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) | 
 |:--:| 
 | *[Interactive Sunburst breakdown](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
