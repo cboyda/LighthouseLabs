@@ -132,23 +132,29 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * created visualization to show free_bikes by neighbourhood
    * neighbourhood shape files from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name)
 
-### Where are the free bikes in Vancouver? 
+### Where are the `free_bikes` in Vancouver? 
 
 | [![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) | 
 |:--:| 
 | *[Interactive Sunburst breakdown](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
-### Which stations have free_bikes and where are they located?
+### Which stations have `free_bikes` and where are they located?
 
 | ![station heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-station-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Station in Vancouver as of June 3, 2023* |
 
-### Which neighbourhoods have free_bikes?
+### Which neighbourhoods have `free_bikes`?
 
 | ![neighbourhood heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-neighbourhood-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
+
+### Top 5 neighbourhood availability of `free_bikes`?
+
+| ![neighbourhood violins](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/violinplot-top5-neighbourhoods.png) | 
+|:--:| 
+| *Free Bike Availability in Top 5 Neighbourhoods in Vancouver as of June 3, 2023* |
 
 ## Challenges 
 * Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
