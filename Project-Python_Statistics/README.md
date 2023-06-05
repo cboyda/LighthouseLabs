@@ -32,7 +32,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | *Final Merged DataFrame* |
 
 * Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
-* stored results in [CSV format (3x20KB)](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics/data) for quick reference
+* stored results in [CSV format (4x20KB)](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics/data) for quick reference
 * exported results in [SQLite database format (15MB)](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/data/city_bikes_sqlite_database.db) created from Python
    * counts verified to ensure no dataframe information was missed
    * utilized Python networkx and matplotlib for database relationship illustrations:
@@ -128,29 +128,29 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 <br/>
 
 ### Step 5: Build Data Visualizations
-* created data_visualizations notebook
+* Google Colab Python code in notebook [visualizations.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/visualizations.ipynb)
 * created visualization to show free_bikes by neighbourhood
    * neighbourhood shape files from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name)
 
-### Where are the `free_bikes` in Vancouver? 
+### Where are the free_bikes in Vancouver? 
 
 | [![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) | 
 |:--:| 
 | *[Interactive Sunburst breakdown](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
-### Which stations have `free_bikes` and where are they located?
+### Which stations have free_bikes and where are they located?
 
 | ![station heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-station-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Station in Vancouver as of June 3, 2023* |
 
-### Which neighbourhoods have `free_bikes`?
+### Which neighbourhoods have free_bikes?
 
 | ![neighbourhood heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-neighbourhood-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
-### Top 5 neighbourhood availability of `free_bikes`?
+### Top 5 neighbourhood availability of free_bikes?
 
 | ![neighbourhood violins](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/violinplot-top5-neighbourhoods.png) | 
 |:--:| 
