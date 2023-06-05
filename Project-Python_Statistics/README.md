@@ -95,7 +95,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ![glm model](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/regression_glm_model.png)
 
-All models fit the data poorly with R2 of OLS 17%, Linear Regresssion 27.5% and GLM 20.9% (Psudo R-squared = CS).
+All models fit the data poorly with R2 of OLS 17%, Linear Regression 27.5% and GLM 20.9% (Psudo R-squared = CS).
 
 #### Classification Statistical Models
 * Logistical Regression
@@ -106,11 +106,21 @@ These features do not show statistical significance in predicting ebikes.
 
 ### Model Predictions
 
+| Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
+|--------------------------------------|-------------------------|--------------------------------|
+| OLS Regression                       | 17.00                   | 19.56                          |
+| Linear Regression                    | 27.50                   | 3.62                           |
+| GLM Regression                       | 20.90                   | 19.56                          |
+| Logistic Regression (Classification) | 0.06                    | 31.82                          |
+| Baseline (mean of ebikes)            | -                       | 23.97                          |
+
+
+
 ## Challenges 
-1. Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
+* Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
  * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
  * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
-2. Assignment needs more clarification for better statiscally significant results. 
+* Assignment needs more clarification for better statiscally significant results. 
  * Some questions asked weren't possible based on recommended steps.
 
 ## Future Goals
