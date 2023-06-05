@@ -52,7 +52,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * Built Classification Regression Models
 
 ## Results
-(fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
+
+> (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
+
 ### Insights
 * if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
 
