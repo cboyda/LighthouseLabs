@@ -87,11 +87,11 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 # Results
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
 
-# a) Quality of APIs
+### a) Quality of APIs
 * Number of Yelp POI results > FourSquare which may be because of the category selected of "PARKS"
    * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 
-## b) Exploraty Data Analysis (EDA)
+### b) Exploraty Data Analysis (EDA)
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
 * Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
 
@@ -105,7 +105,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 |:---:|
 | **Correlation Matrix** |
 
-## c) Model Comparison
+### c) Model Comparison
 
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
@@ -117,7 +117,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 > If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
 
-## d) Insights
+### d) Insights
 * if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
 
 | ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
