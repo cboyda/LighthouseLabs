@@ -48,9 +48,12 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 4: Build Statistical Model
 * models created to predict the number of `ebikes`
-* Built 3 Statistical Regression Models
-   * including a Linear Regression with 8 models using list method
-* Built Classification Regression Model
+* built 3 Statistical Regression Models including:
+   * Ordinary Least Squares (OLS)
+   * Linear Regression with 8 models using list method
+   * Generalized Linear Model (GLM)
+* built Classification Regression Model
+   * Logistic Regression
 
 ## Results
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
@@ -125,6 +128,7 @@ These features do not show statistical significance in predicting ebikes.
    * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
 * Assignment needs more clarification for better statiscally significant results. 
    * Some questions asked weren't possible based on recommended steps.
+   * Merging of API data was unclear, decided to aggregate values from points of interest.
 
 ## Future Goals
 
