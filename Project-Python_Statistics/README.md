@@ -6,7 +6,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ## Process
 ### Step 1: CityBikes API
-* Grab live data from CityBikes API
+* Grab live data from [CityBikes API](http://api.citybik.es/v2/)
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada (242 stations found)
 * Google Colab Python code in notebook [city_bikes.ipyb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/city_bikes.ipynb)
 
@@ -124,6 +124,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ## Challenges 
 * Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
+   * [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each key slots vs free slots etc.
    * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
    * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
 * Assignment needs more clarification for better statiscally significant results. 
