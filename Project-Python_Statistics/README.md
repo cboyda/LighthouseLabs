@@ -55,19 +55,11 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 > (fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
 
-### Insights
-* if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
-
-| ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
-|:--:| 
-| *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
-
-### Quality of APIs
+### 4a) Quality of APIs
 * Number of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
  * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 
-### Questions Unanswered?
-### Exploraty Data Analysis (EDA)
+### 4b) Exploraty Data Analysis (EDA)
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
 * Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
 
@@ -81,7 +73,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 |:---:|
 | **Correlation Matrix** |
 
-### Model Results
+### 4c) Statistical Models
 #### Regresssion Statistical Models
 * Ordinary Least Squares (OLS)
 
@@ -104,7 +96,7 @@ All models fit the data poorly with R2 of OLS 17%, Linear Regression 27.5% and G
 
 These features do not show statistical significance in predicting ebikes.
 
-### Model Predictions
+### 4d) Model Comparison
 
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
@@ -114,6 +106,12 @@ These features do not show statistical significance in predicting ebikes.
 | Logistic Regression (Classification) | 0.06                    | 31.82                          |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
 
+### 4e) Insights
+* if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
+
+| ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
+|:--:| 
+| *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
 
 
 ## Challenges 
