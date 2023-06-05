@@ -130,6 +130,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 |:--:| 
 | *Sunburst breatkdown of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
+<iframe src="https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html" width="100%" height="500px"></iframe>
+
+
 * which stations have free_bikes and where are they located?
 
 | ![station heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-station-free_bikes.png) | 
