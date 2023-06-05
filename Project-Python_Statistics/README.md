@@ -66,7 +66,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
 * Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
 
-| ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png)) | 
+| ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png) | 
 |:--:| 
 | *Feature Histograms by Distribution* |
 | ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
