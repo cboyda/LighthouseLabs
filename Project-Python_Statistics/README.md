@@ -90,7 +90,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### a) Model Comparison
 
-| Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
+| Model                                | Model Fit: R-squared (%) | Model Prediction Accuracy (%) |
 |--------------------------------------|-------------------------|--------------------------------|
 | OLS Regression                       | 17.00                   | 19.56                          |
 | Linear Regression                    | **43.40**                   | 3.62                           |
