@@ -36,7 +36,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * exported results in [SQLite database format (15MB)](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/data/city_bikes_sqlite_database.db) created from Python
   * counts verified to ensure no dataframe information was missed
 
-| ![table relationships](https://tinyurl.com/yc7rkdpt) | 
+| ![table relationships](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sqlite_db_table_relationship.png) | 
 |:--:| 
 | *Database Tables Simplified Relationships* |
 |:--:| 
@@ -55,7 +55,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Insights
 * if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
 
-| ![popular stations](https://tinyurl.com/mvu484ad) | 
+| ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
 |:--:| 
 | *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
 
@@ -67,9 +67,14 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
 * Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
 
+
 | ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png) | 
+|:--:|
 | *Feature Histograms by Distribution* |
+
+
 | ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
+|:--:|
 | *Correlation Matrix* |
 
 ### Model Results
