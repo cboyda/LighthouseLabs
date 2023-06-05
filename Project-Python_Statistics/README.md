@@ -110,9 +110,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
 | OLS Regression                       | 17.00                   | 19.56                          |
-| Linear Regression                    | `43.40`                   | 3.62                           |
+| Linear Regression                    | ##`43.40`                   | 3.62                           |
 | GLM Regression                       | 20.90                   | 19.56                          |
-| Logistic Regression (Classification) |  6.00                   | `31.82`                         |
+| Logistic Regression (Classification) |  6.00                   | ##`31.82`                         |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
 
 > If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
