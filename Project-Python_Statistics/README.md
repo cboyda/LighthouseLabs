@@ -73,12 +73,12 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 
 | ![histograms](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/histograms.png) | 
-|:--:|
+|:---:|
 | **Feature Histograms by Distribution** |
 
 
 | ![correlation matrix](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/correlation_matrix.png) | 
-|:--:|
+|:---:|
 | **Correlation Matrix** |
 
 ### Model Results
