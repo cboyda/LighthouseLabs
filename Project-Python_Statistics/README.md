@@ -21,11 +21,27 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
  * merged column from FourSquare of `location_count` (for nearby POI's)
  * merged columns from YELP of `yelp_location_count` and `yelp_review_count` for total reviews of those POI's
 
-### Step 3: Merge/Store Data in SQLite
+### Step 3: Joining: Merge then Store Data in SQLite
 * Now that we had review_counts and number of "parks" nearby each of our `stations`, merged all results
-* added 
-* stored results in CSV format 
-* exported results in SQLite format
+
+| ![merged dataframe](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/merged_dataframe.png) | 
+|:--:| 
+| *Final Merged DataFrame* |
+
+* Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
+* stored results in [CSV format](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics/data) for quick reference
+
+| ![table relationships](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sqlite_db_table_relationship.png) | 
+|:--:| 
+| *Database Tables Simplified Relationships* |
+
+* exported results in [SQLite database format](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/data/city_bikes_sqlite_database.db) created from Python
+
+| ![database schema](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sqlite_db_schema_diagram.png) | 
+|:--:| 
+| *SQLite Database Schema* |
+
+
 ### Step 4: Build Statistical Model
 * models created to predict the number of ebikes at a given `station`
 * Built Statistical Regression Models
@@ -40,12 +56,14 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 |:--:| 
 | *Top 10 ebike Stations near the highest reviewed PARKS in Vancouver as of June 3, 2023* |
 
-
 ### Quality of APIs
-* # of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
+* Number of Yelp POI results > FourSquare which may simply because of the category selected of "PARKS"
  * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
 ### Questions Unanswered?
-### EDA
+### Exploraty Data Analysis (EDA)
+* during EDA, various visualization techniques were applied to explore the data and extract meaningful information
+
+
 ### Model Results
 ### Model Predictions
 
