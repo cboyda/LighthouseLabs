@@ -110,9 +110,9 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
 |--------------------------------------|-------------------------|--------------------------------|
 | OLS Regression                       | 17.00                   | 19.56                          |
-| Linear Regression                    | ✓43.40                   | 3.62                           |
+| Linear Regression                    | **43.40**                   | 3.62                           |
 | GLM Regression                       | 20.90                   | 19.56                          |
-| Logistic Regression (Classification) |  6.00                   | >31.82                         |
+| Logistic Regression (Classification) |  6.00                   | **31.82**                         |
 | Baseline (mean of ebikes)            | -                       | 23.97                          |
 
 > If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
@@ -175,11 +175,11 @@ In a violin plot, the box-and-whisker elements represent the statistical summary
 </details>
 
 ## Challenges 
-* Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
+✗ Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
    * [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each key slots vs free slots etc.
    * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
    * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
-* Assignment needs more clarification for better statiscally significant results. 
+✗ Assignment needs more clarification for better statiscally significant results. 
    * Some questions asked weren't possible based on recommended steps.
    * Merging of API data was unclear, decided to aggregate values from points of interest.
 
