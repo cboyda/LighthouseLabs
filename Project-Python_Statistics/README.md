@@ -181,10 +181,10 @@ In a violin plot, the box-and-whisker elements represent the statistical summary
 
 ## Challenges 
 ✗ Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
-   * [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each key slots vs free slots etc.
    * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
    * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
-
+* [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each column
+    
 ✗ Assignment needs more clarification for better statiscally significant results. 
    * Some questions asked weren't possible based on recommended steps.
    * Merging of API data was unclear, decided to aggregate values from points of interest.
