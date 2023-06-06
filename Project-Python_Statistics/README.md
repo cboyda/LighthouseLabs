@@ -9,6 +9,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Step 1: CityBikes API
 * Grab live data from [CityBikes API](http://api.citybik.es/v2/)
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada (242 stations found)
+* assuming free_bikes + ebikes we have 2,288 total bikes in our dataset
 * Google Colab Python code in notebook [city_bikes.ipyb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/city_bikes.ipynb)
 
 | ![all stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png) | 
