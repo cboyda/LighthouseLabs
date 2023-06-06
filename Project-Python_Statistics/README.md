@@ -59,7 +59,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 <br/>
 <br/>
 <details>
-  <summary>**STATISTICAL MODEL DETAILS**... [click to view]</summary>
+  <summary>STATISTICAL MODEL DETAILS... [click to view]</summary>
   
 #### Regression Statistical Models
 * Ordinary Least Squares (OLS)
