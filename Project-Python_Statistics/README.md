@@ -19,15 +19,17 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 2: FourSquare and YELP API's
 * used API's to find Points of Interest (POI's) near each of the `stations` 
-   * specifically looked within 1000m for "PARKS" with the assumption that park users may use e-bikes
+   * specifically looked within 1000m for **"PARKS"** with the assumption that park users may use e-bikes
 * Google Colab Python code in notebook [yelp_foursquare_EDA.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/yelp_foursquare_EDA.ipynb)
    * merged column from FourSquare of `location_count` (for nearby POI's)
    * merged columns from YELP of `yelp_location_count` and `yelp_review_count` for total reviews of those POI's
+      * note results from YELP needed to be further filter to remove items like "Trailer Parks"
+ 
 
 
 ### Step 3: Joining: Merge then Store Data in SQLite
-* merged POI counts, review_counts and number of "parks" nearby for each of our `stations`
-   * we could have predicted `empty_slots, slots, free_bikes or ebikes`
+* merged `review_counts and number of "PARKS"` nearby for each of our City Bike `stations`
+   * we can now predicted `empty_slots, slots, free_bikes or ebikes`
 
 | ![merged dataframe](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/merged_dataframe.png) | 
 |:--:| 
