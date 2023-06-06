@@ -121,7 +121,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 | **Correlation Matrix** |
 
 ### d) Insights
-* if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
+* If popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as:
 
 | ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
 |:--:| 
