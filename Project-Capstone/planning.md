@@ -15,6 +15,7 @@ Let's go through each of these phases.
 In the planning phase, you’ll prepare several documents to help guide you through the execution of your project.
 
 Deadline: Finished and reviewed by a mentor on week 6 day 5.
+
 a) Project Description
 
 Fill in the Final Project Document shared with you in Discord. It should contain at least the following:
@@ -27,20 +28,24 @@ Deliverable: Project description document
 ## 2. Project Setup
 
 To start off on the right foot, you’ll need a good project setup:
+
 a) Git repo setup
 
 Create a repo on GitHub.
+
 b) Access to Data
 
 Data gathering is one of the most important parts of the project. Sometimes, it can take a lot of time and the data we find are not completely as we expected. Make sure to plan enough time for this step.
 
 Deliverable: Data are ready
 ## 3. Project Workflow
+
 a) Project Communication
 
 Conduct daily check-ins in your "Scrum" Discord channel that we will create for you. This is where you will track your progress, accomplishments, and hurdles.
 
 Deliverable: Daily Scrum Check-Ins
+
 b) Project Workflow
 
 You need to take a few key decisions to ensure a smooth project workflow. Ideally, you should think about the following:
