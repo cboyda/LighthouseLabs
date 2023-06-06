@@ -56,7 +56,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
    * Generalized Linear Model (GLM)
 * built Classification Regression Model
    * Logistic Regression
-
+<br/>
+<br/>
 <details>
   <summary>Statistical Model Details... [click to view]</summary>
   
