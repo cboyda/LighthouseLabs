@@ -1,12 +1,12 @@
 
-In this Final Project, you have 2 options; you can choose the option of working on the pre-prepared questions that are a part of the Standard Final project (Option 1), or you can work on one of the provided five datasets and formulate your own data question and Dashboards in Tableau (Option 2). 
+In this Project, you have 2 options; you can choose the option of working on the pre-prepared questions that are a part of the Standard project (Option 1), or you can work on one of the provided five datasets and formulate your own data question and Dashboards in Tableau (Option 2). 
 
 It's up to you! 
 
 > #### Note  
-> If you choose to work on your own project (Option 2) and you feel lost after working on it for an hour or so (you can’t decide on a question based on the dataset, or are finding it difficult to get inspired), we recommend you to switch to the available Standard Final Project (Option 1) to finish the project on time.
+> If you choose to work on your own project (Option 2) and you feel lost after working on it for an hour or so (you can’t decide on a question based on the dataset, or are finding it difficult to get inspired), we recommend you to switch to the available Standard Project (Option 1) to finish the project on time.
 
-### Option 1: Standard Final Project
+### Option 1: Standard Project
 
 You will be working with data from the Canadian Open Data portal. Specifically, you will work with the following datasets that are linked [in this folder](https://drive.google.com/drive/folders/1B2pYgUBLMVEq3rkbcMenu4An_JboESJd?usp=sharing) for download access. The files in the folder are:
 
@@ -53,7 +53,7 @@ Follow the steps below:
   - Effect 
   - When
   - Wildlife
-5. In your final project you should show visualizations with:
+5. In your project you should show visualizations with:
   - Maps
   - Date and time
   - Analytical visuals (Forecasting - Clustering)
@@ -84,7 +84,7 @@ Follow the steps below:
   - KG reflexes
   - Reactions
   - Nationalities
-5. In your final project presentation, you should show visualizations with:
+5. In your project presentation, you should show visualizations with:
   - Maps
   - Analytical visuals (Forecasting - Clustering)
   - Show Me tables
@@ -110,7 +110,7 @@ Follow the steps below:
   - Price
   - Neighbourhood
   - Host Since
-5. In your final project presentation, you should show visualizations with:
+5. In your project presentation, you should show visualizations with:
   - Maps
   - Date and time
   - Analytical visuals (Forecasting - Clustering)
@@ -140,7 +140,7 @@ The World Health Organization estimates the prevalence and mortality of Tubercul
     - Estimated number of deaths from TB (all forms, excluding HIV)
     - Method to derive mortality estimates
     - Case detection rate (all forms), percent
-5. In your final project you should show visualizations with:
+5. In your project you should show visualizations with:
   - Maps
   - Date and time
   - Analytical visuals (Forecasting - Clustering)
@@ -160,7 +160,7 @@ The Global Burden of Disease is a major global study on the causes of death and 
 2. Detect different data types in your data
 3. Build at least 5 different visualizations to learn more about the dataset. 
 4. This table has 36 different features. Can you detect the most important features ? Why do you think these are important? Can you define a question for yourself? Try to learn more about these categories and find appropriate numerical features to study different trends in them. In this dataset, every column has the same importance because it explains one of the conditions that leads to death. Your task is to identify the most important reasons of death (features) in all countries as well as within each country.
-5. In your final project you should show visualizations with:
+5. In your project you should show visualizations with:
   - Maps
   - Date and time
   - Analytical visuals (Forecasting - Clustering)
