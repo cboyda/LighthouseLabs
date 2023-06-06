@@ -1,13 +1,15 @@
-# Final-Project-Statistical-Modelling-with-Python
+# Project: Statistical Modelling with Python
+by Clinton Boyda
 
 ## Project/Goals
-Pull data from 3 API's, merge them then model them to look for any statistical relationships to [demonstrate Python Statistical assignment](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/assignment.md).
+Pull data from 3 API's, merge them then model them to look for any statistical relationships to demonstrate [Python Statistical assignment](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/assignment.md).
 
 
 ## Process
 ### Step 1: CityBikes API
 * Grab live data from [CityBikes API](http://api.citybik.es/v2/)
 * specifically generated a list of ebike `stations` in Vancouver, BC, Canada (242 stations found)
+* assuming free_bikes + ebikes we have 2,288 total bikes in our dataset
 * Google Colab Python code in notebook [city_bikes.ipyb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/city_bikes.ipynb)
 
 | ![all stations](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/images/map_all_vancouver_stations.png) | 
@@ -17,15 +19,17 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 2: FourSquare and YELP API's
 * used API's to find Points of Interest (POI's) near each of the `stations` 
-   * specifically looked within 1000m for "PARKS" with the assumption that park users may use e-bikes
+   * specifically looked within 1000m for **"PARKS"** with the assumption that park users may use e-bikes
 * Google Colab Python code in notebook [yelp_foursquare_EDA.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/yelp_foursquare_EDA.ipynb)
    * merged column from FourSquare of `location_count` (for nearby POI's)
    * merged columns from YELP of `yelp_location_count` and `yelp_review_count` for total reviews of those POI's
+      * note results from YELP needed to be further filter to remove items like "Trailer Parks"
+ 
 
 
 ### Step 3: Joining: Merge then Store Data in SQLite
-* merged POI counts, review_counts and number of "parks" nearby for each of our `stations`
-   * we could have predicted `empty_slots, slots, free_bikes or ebikes`
+* merged `review_counts` and `number of "PARKS"` nearby for each of our City Bike `stations`
+   * we can now predict `empty_slots, slots, free_bikes` or `ebikes`[selected]
 
 | ![merged dataframe](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/merged_dataframe.png) | 
 |:--:| 
@@ -54,9 +58,10 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
    * Generalized Linear Model (GLM)
 * built Classification Regression Model
    * Logistic Regression
-
+<br/>
+<br/>
 <details>
-  <summary>Statistical Model Details... [click to view]</summary>
+  <summary>STATISTICAL MODEL DETAILS... [click to view]</summary>
   
 #### Regression Statistical Models
 * Ordinary Least Squares (OLS)
@@ -87,11 +92,23 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 # Results
 > Fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.
 
-### a) Quality of APIs
-* Number of Yelp POI results > FourSquare which may be because of the category selected of "PARKS"
-   * 74.38% of FourSquare rows have no locations found nearby vs 0% for Yelp
+### a) Model Comparison
 
-### b) Exploraty Data Analysis (EDA)
+| Model                                | Model Fit: R-squared (%) | Model Prediction Accuracy (%) |
+|--------------------------------------|-------------------------|--------------------------------|
+| OLS Regression                       | 17.00                   | 19.56                          |
+| Linear Regression                    | **43.40**                   | 3.62                           |
+| GLM Regression                       | 20.90                   | 19.56                          |
+| Logistic Regression (Classification) |  6.00                   | **31.82**                         |
+| Baseline (mean of ebikes)            | -                       | 23.97                          |
+
+> If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
+
+### b) Quality of APIs
+* Number of Yelp POI results > FourSquare which may be because of the category selected of "PARKS"
+   * 74.38% of City Bikes stations rows returned **NO** locations using FourSquare vs Yelp found results for all stations.
+
+### c) Exploraty Data Analysis (EDA)
 * during EDA, various visualization techniques were applied to explore the data and extract meaningful information
 * Google Colab Python code in notebook [joining_data.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/joining_data.ipynb)
 
@@ -105,20 +122,8 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 |:---:|
 | **Correlation Matrix** |
 
-### c) Model Comparison
-
-| Model                                | Model Fit: R-squared (%) | Model Prediction R-squared (%) |
-|--------------------------------------|-------------------------|--------------------------------|
-| OLS Regression                       | 17.00                   | 19.56                          |
-| Linear Regression                    | **43.40**                   | 3.62                           |
-| GLM Regression                       | 20.90                   | 19.56                          |
-| Logistic Regression (Classification) |  6.00                   | **31.82**                         |
-| Baseline (mean of ebikes)            | -                       | 23.97                          |
-
-> If a model's fit R-squared value is high but the prediction accuracy is low, it suggests that the model is fitting the training data well but is not generalizing well to new, unseen data. 
-
 ### d) Insights
-* if popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as
+* If popularity is defined as # of reviews for the nearby PARKS, the top 10 `stations` could be illustrated as:
 
 | ![popular stations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/map_highest_park_reviews_nearby_stations.png) | 
 |:--:| 
@@ -129,28 +134,28 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 
 ### Step 5: Build Data Visualizations
 * Google Colab Python code in notebook [visualizations.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/visualizations.ipynb)
-* created visualization to show free_bikes by neighbourhood
-   * neighbourhood shape files from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name)
+* created visualization to show `free_bikes` and `ebikes` by neighbourhood
+   * neighbourhood shape files used from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name) allowed the addition of `neighbourhood` column to our dataset
 
-### Where are the free_bikes in Vancouver? 
+### Where are the ebikes in Vancouver and how many are free?? 
 
 | [![sunburst neighbourhoods](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/sunburst_by_neighbourhood.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) | 
 |:--:| 
 | *[Interactive Sunburst breakdown](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/data/sunburst_chart.html) of Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
-### Which stations have free_bikes and where are they located?
+### Which stations have ebikes and where are they located?
 
 | ![station heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-station-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Station in Vancouver as of June 3, 2023* |
 
-### Which neighbourhoods have free_bikes?
+### Which neighbourhoods have ebike availability?
 
 | ![neighbourhood heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/heatmap-neighbourhood-free_bikes.png) | 
 |:--:| 
 | *Free Bike Availability by Neighbourhood in Vancouver as of June 3, 2023* |
 
-### Top 5 neighbourhood availability of free_bikes?
+### Top 5 neighbourhood availability of ebikes?
 
 | ![neighbourhood violins](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Python_Statistics/images/violinplot-top5-neighbourhoods.png) | 
 |:--:| 
@@ -176,10 +181,10 @@ In a violin plot, the box-and-whisker elements represent the statistical summary
 
 ## Challenges 
 ✗ Poor API documentation, would have preferred to find/use these interactive api testing webpages earlier!
-   * [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each key slots vs free slots etc.
    * [YELP Web API testing page](https://docs.developer.yelp.com/reference/v3_business_search)
    * [FourSquare Web API testing page](https://location.foursquare.com/developer/reference/place-search)
-
+* [CityBikes API](http://api.citybik.es/v2/) could benefit from clear definitions of each column
+    
 ✗ Assignment needs more clarification for better statiscally significant results. 
    * Some questions asked weren't possible based on recommended steps.
    * Merging of API data was unclear, decided to aggregate values from points of interest.
