@@ -133,7 +133,7 @@ Pull data from 3 API's, merge them then model them to look for any statistical r
 ### Step 5: Build Data Visualizations
 * Google Colab Python code in notebook [visualizations.ipynb](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Python_Statistics/notebooks/visualizations.ipynb)
 * created visualization to show free_bikes by neighbourhood
-   * neighbourhood shape files from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name)
+   * neighbourhood shape files used from [City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/local-area-boundary/export/?disjunctive.name) allowed the addition of `neighbourhood` column to our dataset
 
 ### Where are the ebikes in Vancouver and how many are free?? 
 
