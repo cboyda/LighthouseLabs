@@ -17,7 +17,7 @@ Datasets used included:
 ## Results
 > Option 1 Selected for Standard Final Project
 
-1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index).
+1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index). ![chart1](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years.png)
 2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.
 3. Compare this trend with the trend of office prices. Which one is getting more expensive, faster?
 4. Create a heatmap of Canada with current house prices for each available district.
