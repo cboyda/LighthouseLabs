@@ -1,14 +1,39 @@
 # Final-Project-Tableau
 
 ## Project/Goals
-(fill in your description and goals here)
+Review provided datasets in Tableau to demonstrate proficiency and insights from this data.
 
 ## Process
 ### (your step 1)
 ### (your step 2)
+Datasets used included:
+* Weekly earnings from 1.1.2001 to 15.4.2015 (weekly_earnings - CSV)
+* Housing constructions from 1955 to 2019 (real_estate_numbers - CSV)
+* House prices from 1.1.2005 to 1.9.2020 (real_estate_prices - EXCEL)
+* Housing_price_index from November 1979 to September 2020
+* Office_realestate_index from November 1979 to September 2020
+* Consumer index from November 1979 to September 2020
 
 ## Results
-(Fill in which Option you chose, either 1 or 2. List the dataset you selected for the project if you selected Option 2. Also, discuss the visualizations you created, and why. For Option 2, also identify what your data question was, and how you went through the prompts.)
+> Option 1 Selected: Standard Final Project
+
+1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index).
+2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.
+3. Compare this trend with the trend of office prices. Which one is getting more expensive, faster?
+4. Create a heatmap of Canada with current house prices for each available district.
+5. Are the price differences between different districts increasing?
+6. Compare the trend of house prices with earnings. *In case you want to plot monthly salary, be aware that the earnings value is per week.
+7. Did people spend more of their earnings in 2014 than they did in 2001?
+8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). Show the effect of these crises on:
+   * Earnings
+   * House prices
+   *  Office prices
+   *  House constructions
+   *  Consumer index
+9. Plot consumer_index together with housing_price_index and fit the regression line between them. Can we predict consumer_index from the housing_price_index?
+10. Try to find an interesting pattern, trend, outlier, etc. from the data used in the above questions.
+    HINT : Double check all units in the table before any comparison.
+
 
 ## Challenges 
 (discuss challenges you faced in the project)
