@@ -1,7 +1,7 @@
-# Final-Project-Tableau
+# Project Tableau Presentation
 
 ## Project/Goals
-Review provided datasets in Tableau to demonstrate proficiency and insights from this data.
+Review provided datasets in [Tableau](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/.~Tableau_Project__63037.twbr) to demonstrate proficiency and insights from this data.
 
 ## Process
 ### (your step 1)
