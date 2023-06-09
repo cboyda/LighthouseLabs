@@ -1,0 +1,1522 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0511.1508                               -->
+<workbook original-version='18.1' source-build='2023.1.2 (20231.23.0511.1508)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='weekly_earnings' inline='true' name='federated.1cq56cn1l1s9so1db73xq0saa5j3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='weekly_earnings' name='semistructpassivestore-direct.03dtlfl0txfdom13dfgqn0owxqly'>
+            <connection class='semistructpassivestore-direct' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='weekly_earnings.json' password='' server=''>
+              <semistruct-schemas>
+                <semistruct-schema table='[weekly_earnings.json]'>
+                  <map key='data' value='true' />
+                  <map key='data.Value' value='true' />
+                  <map key='meta' value='false' />
+                  <map key='meta.view' value='false' />
+                  <map key='meta.view.columns' value='false' />
+                  <map key='meta.view.columns.Value' value='false' />
+                  <map key='meta.view.columns.Value.cachedContents' value='false' />
+                  <map key='meta.view.columns.Value.cachedContents.top' value='false' />
+                  <map key='meta.view.columns.Value.cachedContents.top.Value' value='false' />
+                  <map key='meta.view.columns.Value.format' value='false' />
+                  <map key='meta.view.flags' value='false' />
+                  <map key='meta.view.grants' value='false' />
+                  <map key='meta.view.grants.Value' value='false' />
+                  <map key='meta.view.grants.Value.flags' value='false' />
+                  <map key='meta.view.metadata' value='false' />
+                  <map key='meta.view.metadata.attachments' value='false' />
+                  <map key='meta.view.metadata.attachments.Value' value='false' />
+                  <map key='meta.view.metadata.availableDisplayTypes' value='false' />
+                  <map key='meta.view.metadata.custom_fields' value='false' />
+                  <map key='meta.view.metadata.custom_fields.API &amp; Download Information' value='false' />
+                  <map key='meta.view.metadata.custom_fields.Creator Information' value='false' />
+                  <map key='meta.view.metadata.custom_fields.Dataset Information' value='false' />
+                  <map key='meta.view.metadata.custom_fields.Publisher Information' value='false' />
+                  <map key='meta.view.metadata.custom_fields.Usage' value='false' />
+                  <map key='meta.view.metadata.jsonQuery' value='false' />
+                  <map key='meta.view.metadata.jsonQuery.order' value='false' />
+                  <map key='meta.view.metadata.jsonQuery.order.Value' value='false' />
+                  <map key='meta.view.metadata.renderTypeConfig' value='false' />
+                  <map key='meta.view.metadata.renderTypeConfig.visible' value='false' />
+                  <map key='meta.view.owner' value='false' />
+                  <map key='meta.view.owner.rights' value='false' />
+                  <map key='meta.view.query' value='false' />
+                  <map key='meta.view.query.orderBys' value='false' />
+                  <map key='meta.view.query.orderBys.Value' value='false' />
+                  <map key='meta.view.query.orderBys.Value.expression' value='false' />
+                  <map key='meta.view.rights' value='false' />
+                  <map key='meta.view.sortBys' value='false' />
+                  <map key='meta.view.sortBys.Value' value='false' />
+                  <map key='meta.view.sortBys.Value.flags' value='false' />
+                  <map key='meta.view.tableAuthor' value='false' />
+                  <map key='meta.view.tableAuthor.rights' value='false' />
+                  <map key='meta.view.tags' value='false' />
+                  <map key='{root}' value='true' />
+                </semistruct-schema>
+              </semistruct-schemas>
+            </connection>
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.SchemaViewerObjectModel.true...folders-common>
+        <folder name='Source Measures'>
+          <folder-item name='[data]' type='field' />
+        </folder>
+        <folder name='Weekly Earnings'>
+          <folder-item name='[Document Index (generated)]' type='field' />
+          <folder-item name='[data Index (generated)]' type='field' />
+          <folder-item name='[data.Value Index (generated)]' type='field' />
+        </folder>
+      </_.fcp.SchemaViewerObjectModel.true...folders-common>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph />
+    </datasource>
+    <datasource caption='consumer_index-csv.txt (Multiple Connections)' inline='true' name='federated.0m31pcl0qx2mdg1c0nna7136w99k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='consumer_index-csv' name='textscan.1cahsui1l3qisl18cq3ih1umyt8o'>
+            <connection class='textscan' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='consumer_index-csv.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='housing_price_index-csv' name='textscan.06bmrin09zx04h1e1thks07ru1dq'>
+            <connection class='textscan' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='housing_price_index-csv.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='office_realestate_index-csv' name='textscan.14vpjql0dj1fjf18jxqfd1g1px4q'>
+            <connection class='textscan' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='office_realestate_index-csv.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='real_estate_numbers-csv' name='textscan.0i5zf1411v9xt71bkb4831brsucl'>
+            <connection class='textscan' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='real_estate_numbers-csv.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='real_estate_prices' name='excel-direct.0vu0ikw1fqk1ay17k9u6u0ps0l7p'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data/real_estate_prices.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.06bmrin09zx04h1e1thks07ru1dq' name='housing_price_index-csv.txt' table='[housing_price_index-csv#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='date' ordinal='0' />
+            <column datatype='string' name='region' ordinal='1' />
+            <column datatype='string' name='measures' ordinal='2' />
+            <column datatype='string' name='unit' ordinal='3' />
+            <column datatype='real' name='index_value' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.06bmrin09zx04h1e1thks07ru1dq' name='housing_price_index-csv.txt' table='[housing_price_index-csv#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='date' ordinal='0' />
+            <column datatype='string' name='region' ordinal='1' />
+            <column datatype='string' name='measures' ordinal='2' />
+            <column datatype='string' name='unit' ordinal='3' />
+            <column datatype='real' name='index_value' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>measures</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[measures]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>measures</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>unit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[index_value]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>index_value</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='housing_price_index-csv.txt' datatype='table' name='[__tableau_internal_object_id__].[housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='string' name='[date]' role='dimension' type='nominal' />
+      <column caption='Index Value' datatype='real' name='[index_value]' role='measure' type='quantitative' />
+      <column caption='Measures' datatype='string' name='[measures]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Unit' datatype='string' name='[unit]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='housing_price_index-csv.txt' id='housing_price_index-csv.txt_0749146273D846D7B5EE516A7A0E7BB2'>
+            <properties context=''>
+              <relation connection='textscan.06bmrin09zx04h1e1thks07ru1dq' name='housing_price_index-csv.txt' table='[housing_price_index-csv#txt]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='string' name='date' ordinal='0' />
+                  <column datatype='string' name='region' ordinal='1' />
+                  <column datatype='string' name='measures' ordinal='2' />
+                  <column datatype='string' name='unit' ordinal='3' />
+                  <column datatype='real' name='index_value' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='housing_price_index-csv' inline='true' name='federated.1cdy21a1veoost1armoix07ybdco' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='housing_price_index-csv' name='textscan.0j6t1am1bm1v9114xk3z5093eybs'>
+            <connection class='textscan' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='housing_price_index-csv.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='real_estate_prices' name='excel-direct.0xikgpt0hmx29d1d1t3qd0t0co8f'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data/real_estate_prices.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='office_realestate_index-csv' name='textscan.0wgyvs90wtsv6012dbnkz1ry5kfa'>
+            <connection class='textscan' directory='/Users/clintonboyda/Documents/GitHub/LighthouseLabs/Project-Tableau/data' filename='office_realestate_index-csv.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0xikgpt0hmx29d1d1t3qd0t0co8f' name='Aggregate' table='[Aggregate$]' type='table'>
+          <columns gridOrigin='A1:M190:no:A1:M190:0' header='yes' outcome='6'>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='real' name='Composite_HPI' ordinal='1' />
+            <column datatype='real' name='Single_Family_HPI' ordinal='2' />
+            <column datatype='real' name='One_Storey_HPI' ordinal='3' />
+            <column datatype='real' name='Two_Storey_HPI' ordinal='4' />
+            <column datatype='real' name='Townhouse_HPI' ordinal='5' />
+            <column datatype='real' name='Apartment_HPI' ordinal='6' />
+            <column datatype='integer' name='Composite_Benchmark' ordinal='7' />
+            <column datatype='integer' name='Single_Family_Benchmark' ordinal='8' />
+            <column datatype='integer' name='One_Storey_Benchmark' ordinal='9' />
+            <column datatype='integer' name='Two_Storey_Benchmark' ordinal='10' />
+            <column datatype='integer' name='Townhouse_Benchmark' ordinal='11' />
+            <column datatype='integer' name='Apartment_Benchmark' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0j6t1am1bm1v9114xk3z5093eybs' name='housing_price_index-csv.txt' table='[housing_price_index-csv#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+              <column datatype='date' date-parse-format='yyyy-MM' name='date' ordinal='0' />
+              <column datatype='string' name='region' ordinal='1' />
+              <column datatype='string' name='measures' ordinal='2' />
+              <column datatype='string' name='unit' ordinal='3' />
+              <column datatype='real' name='index_value' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0xikgpt0hmx29d1d1t3qd0t0co8f' name='Aggregate' table='[Aggregate$]' type='table'>
+            <columns gridOrigin='A1:M190:no:A1:M190:0' header='yes' outcome='6'>
+              <column datatype='date' name='Date' ordinal='0' />
+              <column datatype='real' name='Composite_HPI' ordinal='1' />
+              <column datatype='real' name='Single_Family_HPI' ordinal='2' />
+              <column datatype='real' name='One_Storey_HPI' ordinal='3' />
+              <column datatype='real' name='Two_Storey_HPI' ordinal='4' />
+              <column datatype='real' name='Townhouse_HPI' ordinal='5' />
+              <column datatype='real' name='Apartment_HPI' ordinal='6' />
+              <column datatype='integer' name='Composite_Benchmark' ordinal='7' />
+              <column datatype='integer' name='Single_Family_Benchmark' ordinal='8' />
+              <column datatype='integer' name='One_Storey_Benchmark' ordinal='9' />
+              <column datatype='integer' name='Two_Storey_Benchmark' ordinal='10' />
+              <column datatype='integer' name='Townhouse_Benchmark' ordinal='11' />
+              <column datatype='integer' name='Apartment_Benchmark' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0wgyvs90wtsv6012dbnkz1ry5kfa' name='office_realestate_index-csv.txt' table='[office_realestate_index-csv#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+              <column datatype='date' date-parse-format='yyyy-MM' name='date' ordinal='0' />
+              <column datatype='string' name='region' ordinal='1' />
+              <column datatype='string' name='property_type' ordinal='2' />
+              <column datatype='string' name='baseline' ordinal='3' />
+              <column datatype='real' name='index_value' ordinal='4' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Apartment_Benchmark]' value='[Aggregate].[Apartment_Benchmark]' />
+          <map key='[Apartment_HPI]' value='[Aggregate].[Apartment_HPI]' />
+          <map key='[Composite_Benchmark]' value='[Aggregate].[Composite_Benchmark]' />
+          <map key='[Composite_HPI]' value='[Aggregate].[Composite_HPI]' />
+          <map key='[Date]' value='[Aggregate].[Date]' />
+          <map key='[One_Storey_Benchmark]' value='[Aggregate].[One_Storey_Benchmark]' />
+          <map key='[One_Storey_HPI]' value='[Aggregate].[One_Storey_HPI]' />
+          <map key='[Single_Family_Benchmark]' value='[Aggregate].[Single_Family_Benchmark]' />
+          <map key='[Single_Family_HPI]' value='[Aggregate].[Single_Family_HPI]' />
+          <map key='[Townhouse_Benchmark]' value='[Aggregate].[Townhouse_Benchmark]' />
+          <map key='[Townhouse_HPI]' value='[Aggregate].[Townhouse_HPI]' />
+          <map key='[Two_Storey_Benchmark]' value='[Aggregate].[Two_Storey_Benchmark]' />
+          <map key='[Two_Storey_HPI]' value='[Aggregate].[Two_Storey_HPI]' />
+          <map key='[baseline]' value='[office_realestate_index-csv.txt].[baseline]' />
+          <map key='[date (office_realestate_index-csv.txt)]' value='[office_realestate_index-csv.txt].[date]' />
+          <map key='[date]' value='[housing_price_index-csv.txt].[date]' />
+          <map key='[index_value (office_realestate_index-csv.txt)]' value='[office_realestate_index-csv.txt].[index_value]' />
+          <map key='[index_value]' value='[housing_price_index-csv.txt].[index_value]' />
+          <map key='[measures]' value='[housing_price_index-csv.txt].[measures]' />
+          <map key='[property_type]' value='[office_realestate_index-csv.txt].[property_type]' />
+          <map key='[region (office_realestate_index-csv.txt)]' value='[office_realestate_index-csv.txt].[region]' />
+          <map key='[region]' value='[housing_price_index-csv.txt].[region]' />
+          <map key='[unit]' value='[housing_price_index-csv.txt].[unit]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>measures</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[measures]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>measures</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>unit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[index_value]</local-name>
+            <parent-name>[housing_price_index-csv.txt]</parent-name>
+            <remote-alias>index_value</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Composite_HPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Composite_HPI]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Composite_HPI</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Single_Family_HPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Single_Family_HPI]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Single_Family_HPI</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>One_Storey_HPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[One_Storey_HPI]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>One_Storey_HPI</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Two_Storey_HPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Two_Storey_HPI]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Two_Storey_HPI</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Townhouse_HPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Townhouse_HPI]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Townhouse_HPI</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Apartment_HPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Apartment_HPI]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Apartment_HPI</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Composite_Benchmark</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Composite_Benchmark]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Composite_Benchmark</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Single_Family_Benchmark</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Single_Family_Benchmark]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Single_Family_Benchmark</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>One_Storey_Benchmark</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[One_Storey_Benchmark]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>One_Storey_Benchmark</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Two_Storey_Benchmark</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Two_Storey_Benchmark]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Two_Storey_Benchmark</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Townhouse_Benchmark</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Townhouse_Benchmark]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Townhouse_Benchmark</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Apartment_Benchmark</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Apartment_Benchmark]</local-name>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias>Apartment_Benchmark</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Aggregate]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:M190:no:A1:M190:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[office_realestate_index-csv.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date (office_realestate_index-csv.txt)]</local-name>
+            <parent-name>[office_realestate_index-csv.txt]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region (office_realestate_index-csv.txt)]</local-name>
+            <parent-name>[office_realestate_index-csv.txt]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[property_type]</local-name>
+            <parent-name>[office_realestate_index-csv.txt]</parent-name>
+            <remote-alias>property_type</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>baseline</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[baseline]</local-name>
+            <parent-name>[office_realestate_index-csv.txt]</parent-name>
+            <remote-alias>baseline</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[index_value (office_realestate_index-csv.txt)]</local-name>
+            <parent-name>[office_realestate_index-csv.txt]</parent-name>
+            <remote-alias>index_value</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Apartment Benchmark' datatype='integer' name='[Apartment_Benchmark]' role='measure' type='quantitative' />
+      <column caption='Apartment HPI' datatype='real' name='[Apartment_HPI]' role='measure' type='quantitative' />
+      <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
+      <column caption='Composite HPI' datatype='real' name='[Composite_HPI]' role='measure' type='quantitative' />
+      <column caption='Date_RealEstate' datatype='date' name='[Date]' role='dimension' type='ordinal' />
+      <column caption='One Storey Benchmark' datatype='integer' name='[One_Storey_Benchmark]' role='measure' type='quantitative' />
+      <column caption='One Storey HPI' datatype='real' name='[One_Storey_HPI]' role='measure' type='quantitative' />
+      <column caption='Single Family Benchmark' datatype='integer' name='[Single_Family_Benchmark]' role='measure' type='quantitative' />
+      <column caption='Single Family HPI' datatype='real' name='[Single_Family_HPI]' role='measure' type='quantitative' />
+      <column caption='Townhouse Benchmark' datatype='integer' name='[Townhouse_Benchmark]' role='measure' type='quantitative' />
+      <column caption='Townhouse HPI' datatype='real' name='[Townhouse_HPI]' role='measure' type='quantitative' />
+      <column caption='Two Storey Benchmark' datatype='integer' name='[Two_Storey_Benchmark]' role='measure' type='quantitative' />
+      <column caption='Two Storey HPI' datatype='real' name='[Two_Storey_HPI]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Real Estate Prices' datatype='table' name='[__tableau_internal_object_id__].[Aggregate_C23B12D1B47442A59112442571F98EBD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Housing Price Index' datatype='table' name='[__tableau_internal_object_id__].[housing_price_index-csv.txt_3824C5078F9245ED82B4DB7B69F7DAA0]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Office Real Estate Index' datatype='table' name='[__tableau_internal_object_id__].[office_realestate_index-csv.txt_A7CB4933DC99499BBA83A0D25AA23A6D]' role='measure' type='quantitative' />
+      <column caption='Baseline' datatype='string' name='[baseline]' role='dimension' type='nominal' />
+      <column caption='Date_Office' datatype='date' name='[date (office_realestate_index-csv.txt)]' role='dimension' type='ordinal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Index Value (Office Realestate Index-Csv.Txt)' datatype='real' name='[index_value (office_realestate_index-csv.txt)]' role='measure' type='quantitative' />
+      <column caption='Index Value' datatype='real' name='[index_value]' role='measure' type='quantitative' />
+      <column caption='Measures' datatype='string' name='[measures]' role='dimension' type='nominal' />
+      <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+      <column caption='Region (Office Realestate Index-Csv.Txt)' datatype='string' name='[region (office_realestate_index-csv.txt)]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Unit' datatype='string' name='[unit]' role='dimension' type='nominal' />
+      <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:property_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Apartment&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Shopping centre&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;School&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Office&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Warehouse&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Light factory&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Real Estate Prices' id='Aggregate_C23B12D1B47442A59112442571F98EBD'>
+            <properties context=''>
+              <relation connection='excel-direct.0xikgpt0hmx29d1d1t3qd0t0co8f' name='Aggregate' table='[Aggregate$]' type='table'>
+                <columns gridOrigin='A1:M190:no:A1:M190:0' header='yes' outcome='6'>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='real' name='Composite_HPI' ordinal='1' />
+                  <column datatype='real' name='Single_Family_HPI' ordinal='2' />
+                  <column datatype='real' name='One_Storey_HPI' ordinal='3' />
+                  <column datatype='real' name='Two_Storey_HPI' ordinal='4' />
+                  <column datatype='real' name='Townhouse_HPI' ordinal='5' />
+                  <column datatype='real' name='Apartment_HPI' ordinal='6' />
+                  <column datatype='integer' name='Composite_Benchmark' ordinal='7' />
+                  <column datatype='integer' name='Single_Family_Benchmark' ordinal='8' />
+                  <column datatype='integer' name='One_Storey_Benchmark' ordinal='9' />
+                  <column datatype='integer' name='Two_Storey_Benchmark' ordinal='10' />
+                  <column datatype='integer' name='Townhouse_Benchmark' ordinal='11' />
+                  <column datatype='integer' name='Apartment_Benchmark' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Housing Price Index' id='housing_price_index-csv.txt_3824C5078F9245ED82B4DB7B69F7DAA0'>
+            <properties context=''>
+              <relation connection='textscan.0j6t1am1bm1v9114xk3z5093eybs' name='housing_price_index-csv.txt' table='[housing_price_index-csv#txt]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='date' date-parse-format='yyyy-MM' name='date' ordinal='0' />
+                  <column datatype='string' name='region' ordinal='1' />
+                  <column datatype='string' name='measures' ordinal='2' />
+                  <column datatype='string' name='unit' ordinal='3' />
+                  <column datatype='real' name='index_value' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Office Real Estate Index' id='office_realestate_index-csv.txt_A7CB4933DC99499BBA83A0D25AA23A6D'>
+            <properties context=''>
+              <relation connection='textscan.0wgyvs90wtsv6012dbnkz1ry5kfa' name='office_realestate_index-csv.txt' table='[office_realestate_index-csv#txt]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='date' date-parse-format='yyyy-MM' name='date' ordinal='0' />
+                  <column datatype='string' name='region' ordinal='1' />
+                  <column datatype='string' name='property_type' ordinal='2' />
+                  <column datatype='string' name='baseline' ordinal='3' />
+                  <column datatype='real' name='index_value' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[Date]' />
+            </expression>
+            <first-end-point object-id='housing_price_index-csv.txt_3824C5078F9245ED82B4DB7B69F7DAA0' />
+            <second-end-point object-id='Aggregate_C23B12D1B47442A59112442571F98EBD' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[date (office_realestate_index-csv.txt)]' />
+            </expression>
+            <first-end-point object-id='housing_price_index-csv.txt_3824C5078F9245ED82B4DB7B69F7DAA0' />
+            <second-end-point object-id='office_realestate_index-csv.txt_A7CB4933DC99499BBA83A0D25AA23A6D' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Compare Housing vs Office Trends'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='housing_price_index-csv' name='federated.1cdy21a1veoost1armoix07ybdco' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1cdy21a1veoost1armoix07ybdco'>
+            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
+            <column-instance column='[Composite_Benchmark]' derivation='Avg' name='[avg:Composite_Benchmark:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[index_value (office_realestate_index-csv.txt)]' derivation='Avg' name='[avg:index_value (office_realestate_index-csv.txt):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[index_value]' derivation='Avg' name='[avg:index_value:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Index Value (Office Realestate Index-Csv.Txt)' datatype='real' name='[index_value (office_realestate_index-csv.txt)]' role='measure' type='quantitative' />
+            <column caption='Index Value' datatype='real' name='[index_value]' role='measure' type='quantitative' />
+            <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value (office_realestate_index-csv.txt):qk]' included-values='non-null' />
+          <filter class='categorical' column='[federated.1cdy21a1veoost1armoix07ybdco].[none:property_type:nk]'>
+            <groupfilter function='member' level='[none:property_type:nk]' member='&quot;Office&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:date:ok]' member='2006' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2007' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2008' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2009' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2010' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2011' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2012' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2013' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2014' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2016' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2017' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2018' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2019' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2020' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]</column>
+            <column>[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value (office_realestate_index-csv.txt):qk]</column>
+            <column>[federated.1cdy21a1veoost1armoix07ybdco].[none:property_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:Composite_Benchmark:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value (office_realestate_index-csv.txt):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:property_type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value:qk] + ([federated.1cdy21a1veoost1armoix07ybdco].[avg:Composite_Benchmark:qk] + [federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value (office_realestate_index-csv.txt):qk]))</rows>
+        <cols>[federated.1cdy21a1veoost1armoix07ybdco].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{40F188C8-424A-4202-BECC-3EFD638277AF}' />
+    </worksheet>
+    <worksheet name='Trend of Housing Prices after 2005 vs Benchmark'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='housing_price_index-csv' name='federated.1cdy21a1veoost1armoix07ybdco' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1cdy21a1veoost1armoix07ybdco'>
+            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
+            <column-instance column='[Composite_Benchmark]' derivation='Avg' name='[avg:Composite_Benchmark:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[index_value]' derivation='Avg' name='[avg:index_value:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Index Value' datatype='real' name='[index_value]' role='measure' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:date:ok]' member='2006' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2007' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2008' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2009' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2010' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2011' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2012' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2013' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2014' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2016' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2017' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2018' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2019' />
+              <groupfilter function='member' level='[yr:date:ok]' member='2020' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:Composite_Benchmark:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value:qk] + [federated.1cdy21a1veoost1armoix07ybdco].[avg:Composite_Benchmark:qk])</rows>
+        <cols>[federated.1cdy21a1veoost1armoix07ybdco].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{EC07ECBF-85D4-4765-A69D-A83C0198BF78}' />
+    </worksheet>
+    <worksheet name='Trend of Housing Prices over last 40 years'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='housing_price_index-csv' name='federated.1cdy21a1veoost1armoix07ybdco' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1cdy21a1veoost1armoix07ybdco'>
+            <column-instance column='[index_value]' derivation='Avg' name='[avg:index_value:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Index Value' datatype='real' name='[index_value]' role='measure' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]'>
+            <groupfilter from='1983' function='range' level='[yr:date:ok]' to='2020' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value:qk]</rows>
+        <cols>[federated.1cdy21a1veoost1armoix07ybdco].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{EBF996F5-DB6A-46D5-BFF9-6FF3ECEAE230}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='72'>
+    <window class='worksheet' name='Trend of Housing Prices over last 40 years'>
+      <cards>
+        <edge name='left'>
+          <strip size='265'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:date:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:measures:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:unit:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B3032F9E-D050-4621-931D-B0A1FFB707C9}' />
+    </window>
+    <window class='worksheet' name='Trend of Housing Prices after 2005 vs Benchmark'>
+      <cards>
+        <edge name='left'>
+          <strip size='265'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:date:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:measures:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:unit:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BDEED53A-E30B-41B4-BCD8-B49D8CF83613}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Compare Housing vs Office Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='265'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' type='color' />
+            <card pane-specification-id='4' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:property_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:date:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:measures:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:property_type:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[none:unit:nk]</field>
+            <field>[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{85F6E11B-9FE4-4D3F-B3CF-13F78E50EE17}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Compare Housing vs Office Trends' width='192'>
+      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
+      SUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Trend of Housing Prices after 2005 vs Benchmark' width='192'>
+      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
+      /wFlkEQdeNId4QAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Trend of Housing Prices over last 40 years' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
