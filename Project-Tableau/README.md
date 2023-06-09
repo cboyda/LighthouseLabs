@@ -41,7 +41,8 @@ Variance: is another measure of the dispersion of prices over the districts. It 
 
 
 ## Challenges 
-(discuss challenges you faced in the project)
+> Discuss challenges you faced in the project.
+X greatested challenge was trying to understand the overall goal of the question, without clarifying questions or a sample output this is just a guess
 
 ## Future Goals
 (what would you do if you had more time?)
