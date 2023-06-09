@@ -25,7 +25,7 @@ Datasets used included:
 5. Are the price differences between different districts increasing?
 Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
 ![district differences](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-noisey-districts.png)
-In this chart we aggregate results to reduce noise.
+<br>In this chart we aggregate results to reduce noise.
 ![aggregated variance](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-aggregated_districts.png)
 6. Compare the trend of house prices with earnings. *In case you want to plot monthly salary, be aware that the earnings value is per week.
 7. Did people spend more of their earnings in 2014 than they did in 2001?
