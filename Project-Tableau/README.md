@@ -15,7 +15,7 @@ Datasets used included:
 * Consumer index from November 1979 to September 2020
 
 ## Results
-> Option 1 Selected: Standard Final Project
+> Option 1 Selected for Standard Final Project
 
 1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index).
 2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.
