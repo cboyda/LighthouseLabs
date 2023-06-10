@@ -8,7 +8,7 @@ Review provided datasets in [Tableau](https://github.com/cboyda/LighthouseLabs/b
 ### (your step 2)
 Datasets used included:
 * Weekly earnings from 1.1.2001 to 15.4.2015 (weekly_earnings - CSV)
-* Housing constructions from 1955 to 2019 (real_estate_numbers - CSV)
+* Housing constructions from 1955 to 2019 (real_estate_numbers - CSV) with housing starts/completions and geographical regions
 * House prices from 1.1.2005 to 1.9.2020 (real_estate_prices - EXCEL)
 * Housing_price_index from November 1979 to September 2020
 * Office_realestate_index from November 1979 to September 2020
@@ -23,6 +23,10 @@ Datasets used included:
   Which one is getting more expensive, faster? HOUSING is observed with a larger slope/increase vs office prices.
 4. Create a heatmap of Canada with current house prices for each available district.
 5. Are the price differences between different districts increasing?
+Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
+![district differences](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-noisey-districts.png)
+<br>In this chart we aggregate results to reduce noise.
+![aggregated variance](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-aggregated_districts.png)
 6. Compare the trend of house prices with earnings. *In case you want to plot monthly salary, be aware that the earnings value is per week.
 7. Did people spend more of their earnings in 2014 than they did in 2001?
 8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). Show the effect of these crises on:
@@ -37,7 +41,10 @@ Datasets used included:
 
 
 ## Challenges 
-(discuss challenges you faced in the project)
+> Discuss challenges you faced in the project.
+
+X greatested challenge was trying to understand the overall goal of the question, without clarifying questions or a sample output this is just a guess.
+Normally I would assume the need to explore the data and find relationships of interest.
 
 ## Future Goals
 (what would you do if you had more time?)
