@@ -22,6 +22,7 @@ Datasets used included:
 3. Compare this trend with the trend of office prices. ![chart3](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/3-house-prices-since-2005-vs-benchmark-vs-office.png) <br>
   Which one is getting more expensive, faster? HOUSING is observed with a larger slope/increase vs office prices.
 4. Create a heatmap of Canada with current house prices for each available district.
+![house price heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/4-heatmap-house-prices-by-district.png)
 5. Are the price differences between different districts increasing?
 Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
 ![district differences](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-noisey-districts.png)
