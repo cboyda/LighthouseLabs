@@ -6873,7 +6873,7 @@
       </table>
       <simple-id uuid='{6547C9BD-E458-4559-97C5-C84B93D3FE7F}' />
     </worksheet>
-    <worksheet name='Compare Earnings for 2001 vs 2014'>
+    <worksheet name='Compare Earnings'>
       <table>
         <view>
           <datasources>
@@ -7913,7 +7913,7 @@
       </cards>
       <simple-id uuid='{0B2E6B49-0DBF-4FEE-BFC7-77449707B6CD}' />
     </window>
-    <window class='worksheet' maximized='true' name='Compare Housing vs Office Trends'>
+    <window class='worksheet' name='Compare Housing vs Office Trends'>
       <cards>
         <edge name='left'>
           <strip size='265'>
@@ -8171,7 +8171,7 @@
       </cards>
       <simple-id uuid='{859C6A8F-BA4A-4D84-882D-33E56722D4C7}' />
     </window>
-    <window class='worksheet' name='Compare Earnings for 2001 vs 2014'>
+    <window class='worksheet' maximized='true' name='Compare Earnings'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -8192,7 +8192,7 @@
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='160'>
+          <strip size='300'>
             <card pane-specification-id='1' param='[federated.19zaho518bv52e19rlev31rjeljp].[yr:When:ok]' type='color' />
           </strip>
         </edge>
