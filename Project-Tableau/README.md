@@ -30,7 +30,7 @@ Notice that in the first chart our housing prices go to 2021 but once we compare
 Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
 ![district differences](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-noisey-districts.png)
 <br>In this chart we aggregate results to reduce noise.
-![aggregated variance](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-aggregated_districts.png)
+![aggregated variance](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-aggregated_annual_districts.png)
 6. Compare the trend of house prices with earnings. *In case you want to plot monthly salary, be aware that the earnings value is per week.<br>
 ![earnings vs housing](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-housing-vs-earnings.png)
 <br> While this visualization shows the general slope over time there is a mismatch in scales that causes tremendous white space below.  Given more time we could work to standardize these values to better "fill" our chart space.<br> An interesting thing to note is that the housing price has been filled above/below the trend line which really mimics the increases/decreases of the wages over time.<br>
