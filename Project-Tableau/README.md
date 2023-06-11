@@ -21,7 +21,7 @@ Utilized [Python Google Colab](https://github.com/cboyda/LighthouseLabs/blob/mai
 
 1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index). ![chart1](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years-CPI.png)<br>
 Note: This is using the measure: Consumer Price Index (CPI) which excludes indirect taxes, seasonally adjusted.
-2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.![chart2](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/2-house-prices-since-2005-vs-benchmark.png)
+2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.![chart2](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/2-house-prices-2005-vs-benchmark.png)
 3. Compare this trend with the trend of office prices. ![chart3](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/3-house-prices-since-2005-vs-benchmark-vs-office.png) <br>
 This is too complicated to compare easily.  <br>We have 3 graphs with different scales, so by using dual axies and synchronizing the scales we get:<br>
 ![merged prices](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/3-housing-vs-office.png)<br>
