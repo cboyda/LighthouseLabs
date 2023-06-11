@@ -5699,6 +5699,9 @@
       <column caption='Canada_Monthly_Earnings' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Calculation_5888949129722015744]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Canada]*4' />
       </column>
+      <column caption='Correlation of Housing and Earning' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_5888949129779290121]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Corr([Calculation_5888949129722015744],[Composite_Benchmark])' />
+      </column>
       <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
       <column caption='Composite HPI' datatype='real' name='[Composite_HPI]' role='measure' type='quantitative' />
       <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
@@ -6021,6 +6024,223 @@
     <mapsource name='Tableau' />
   </mapsources>
   <worksheets>
+    <worksheet name='% Difference Canadian Housing Prices vs Earnings'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='weekly_earnings_hs_prices' name='federated.19zaho518bv52e19rlev31rjeljp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19zaho518bv52e19rlev31rjeljp'>
+            <column caption='Canada_Monthly_Earnings' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Calculation_5888949129722015744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Canada]*4' />
+            </column>
+            <column caption='Correlation of Housing and Earning' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_5888949129779290121]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Corr([Calculation_5888949129722015744],[Composite_Benchmark])' />
+            </column>
+            <column datatype='real' name='[Canada]' role='measure' type='quantitative' />
+            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_5888949129722015744]' derivation='Avg' name='[avg:Calculation_5888949129722015744:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5888949129722015744]' derivation='Avg' name='[pcdf:avg:Calculation_5888949129722015744:qk:1]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-field='[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Composite_Benchmark]' derivation='Avg' name='[pcdf:avg:Composite_Benchmark:qk:2]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Date]' derivation='Month-Trunc' name='[tmn:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5888949129779290121]' derivation='User' name='[usr:Calculation_5888949129779290121:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</column>
+            <column>[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]</column>
+            <column>[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='render-fold-reversed' value='true' />
+            <encoding attr='space' class='0' field='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Composite_Benchmark:qk:2]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='title' class='0' field='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]' scope='rows' value='Avg. Canadian Monthly Earnings' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#59a14f' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' scope='rows' value='1' />
+            <format attr='border-style' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]' value='Monthy Earnings' />
+            <format attr='title' field='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]' value='Monthy Earnings' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Composite_Benchmark:qk:2]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <lod column='[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1] + ([federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Composite_Benchmark:qk:2] + [federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]))</rows>
+        <cols>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontcolor='#59a14f'>Monthly Earnings</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2004-12-21 17:57:02.465#'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2891.2876061120537'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='78' y='-95' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='0' text-width='250'>
+            <formatted-text>
+              <run bold='true'>Composite Housing Benchmark</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2005-02-05 21:10:21.369#'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2217.4126994906619'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='194' y='-1' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='0' text-width='282'>
+            <formatted-text>
+              <run bold='true'>Composite Housing Benchmark</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2006-05-18 11:35:51.187#'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.018798131945681581'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='168' y='-7' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontcolor='#59a14f'>Monthly Earnings</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2005-03-14 18:55:25.924#'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.015093988450319337'>
+                  <node-reference>
+                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+        <page-trail-options enabled='true' />
+      </table>
+      <simple-id uuid='{140BF5D5-25D6-442A-9BC2-B806DC7A0BC2}' />
+    </worksheet>
     <worksheet name='? looking for Canada house price districts'>
       <table>
         <view>
@@ -6209,180 +6429,6 @@
       </table>
       <simple-id uuid='{6547C9BD-E458-4559-97C5-C84B93D3FE7F}' />
     </worksheet>
-    <worksheet name='Canadian Trend House Prices vs Earnings (2)'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='weekly_earnings_hs_prices' name='federated.19zaho518bv52e19rlev31rjeljp' />
-          </datasources>
-          <datasource-dependencies datasource='federated.19zaho518bv52e19rlev31rjeljp'>
-            <column caption='Canada_Monthly_Earnings' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Calculation_5888949129722015744]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[Canada]*4' />
-            </column>
-            <column datatype='real' name='[Canada]' role='measure' type='quantitative' />
-            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
-            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
-            <column-instance column='[Calculation_5888949129722015744]' derivation='Avg' name='[avg:Calculation_5888949129722015744:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[Calculation_5888949129722015744]' derivation='Avg' name='[avg:Calculation_5888949129722015744:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Calculation_5888949129722015744]' derivation='Avg' name='[pcdf:avg:Calculation_5888949129722015744:qk:1]' pivot='key' type='quantitative'>
-              <table-calc diff-options='Relative' ordering-field='[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]' ordering-type='Field' type='PctDiff'>
-                <address>
-                  <value>-1</value>
-                </address>
-              </table-calc>
-            </column-instance>
-            <column-instance column='[Composite_Benchmark]' derivation='Avg' name='[pcdf:avg:Composite_Benchmark:qk:2]' pivot='key' type='quantitative'>
-              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
-                <address>
-                  <value>-1</value>
-                </address>
-              </table-calc>
-            </column-instance>
-            <column-instance column='[Calculation_5888949129722015744]' derivation='Sum' name='[sum:Calculation_5888949129722015744:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Date]' derivation='Month-Trunc' name='[tmn:Date:qk]' pivot='key' type='quantitative' />
-          </datasource-dependencies>
-          <filter class='quantitative' column='[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]' included-values='non-null' />
-          <filter class='quantitative' column='[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]' included-values='non-null' />
-          <slices>
-            <column>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</column>
-            <column>[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='axis'>
-            <format attr='render-fold-reversed' value='true' />
-            <encoding attr='space' class='0' field='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Composite_Benchmark:qk:2]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
-            <format attr='title' class='0' field='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]' scope='rows' value='Avg. Canadian Monthly Earnings' />
-          </style-rule>
-          <style-rule element='cell'>
-            <format attr='border-color' value='#59a14f' />
-            <format attr='border-width' value='0' />
-            <format attr='border-style' value='none' />
-            <format attr='border-width' scope='rows' value='1' />
-            <format attr='border-style' scope='rows' value='solid' />
-          </style-rule>
-          <style-rule element='quick-filter'>
-            <format attr='title' field='[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]' value='Monthy Earnings' />
-            <format attr='title' field='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]' value='Monthy Earnings' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='false' />
-                <format attr='mark-color' value='#000000' />
-              </style-rule>
-            </style>
-          </pane>
-          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <encodings>
-              <lod column='[federated.19zaho518bv52e19rlev31rjeljp].[sum:Calculation_5888949129722015744:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='false' />
-                <format attr='mark-color' value='#59a14f' />
-              </style-rule>
-            </style>
-          </pane>
-          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Composite_Benchmark:qk:2]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Area' />
-            <encodings>
-              <lod column='[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:ok]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='false' />
-                <format attr='mark-color' value='#000000' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>([federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1] + [federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Composite_Benchmark:qk:2])</rows>
-        <cols>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</cols>
-        <annotations>
-          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
-            <formatted-text>
-              <run bold='true' fontcolor='#59a14f'>Monthly Earnings</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='axis'>
-                <x-coord axis-value='#2004-12-21 17:57:02.465#'>
-                  <node-reference>
-                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
-                  </node-reference>
-                </x-coord>
-                <y-coord axis-value='2891.2876061120537'>
-                  <node-reference>
-                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]</axis>
-                  </node-reference>
-                </y-coord>
-                <page-reference />
-              </visual-coordinate>
-            </point>
-            <body x='78' y='-95' />
-          </annotation>
-          <annotation class='point' id='5' mark-position='1' pullback='0' text-width='250'>
-            <formatted-text>
-              <run bold='true'>Composite Housing Benchmark</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='axis'>
-                <x-coord axis-value='#2005-02-05 21:10:21.369#'>
-                  <node-reference>
-                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
-                  </node-reference>
-                </x-coord>
-                <y-coord axis-value='2217.4126994906619'>
-                  <node-reference>
-                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[avg:Calculation_5888949129722015744:qk]</axis>
-                  </node-reference>
-                </y-coord>
-                <page-reference />
-              </visual-coordinate>
-            </point>
-            <body x='194' y='-1' />
-          </annotation>
-          <annotation class='point' id='6' mark-position='1' pullback='0' text-width='180'>
-            <formatted-text>
-              <run bold='true'>Composite Housing Benchmark</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='axis'>
-                <x-coord axis-value='#2006-05-18 11:35:51.187#'>
-                  <node-reference>
-                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[tmn:Date:qk]</axis>
-                  </node-reference>
-                </x-coord>
-                <y-coord axis-value='0.018798131945681581'>
-                  <node-reference>
-                    <axis>[federated.19zaho518bv52e19rlev31rjeljp].[pcdf:avg:Calculation_5888949129722015744:qk:1]</axis>
-                  </node-reference>
-                </y-coord>
-                <page-reference />
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-        </annotations>
-        <page-trail-options enabled='true' />
-      </table>
-      <simple-id uuid='{140BF5D5-25D6-442A-9BC2-B806DC7A0BC2}' />
-    </worksheet>
     <worksheet name='Compare Housing vs Office Trends'>
       <table>
         <view>
@@ -6474,6 +6520,41 @@
         <cols>[federated.1cdy21a1veoost1armoix07ybdco].[tmn:date:qk]</cols>
       </table>
       <simple-id uuid='{40F188C8-424A-4202-BECC-3EFD638277AF}' />
+    </worksheet>
+    <worksheet name='Correlation Between Housing Prices and Earnings'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='weekly_earnings_hs_prices' name='federated.19zaho518bv52e19rlev31rjeljp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19zaho518bv52e19rlev31rjeljp'>
+            <column caption='Canada_Monthly_Earnings' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Calculation_5888949129722015744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Canada]*4' />
+            </column>
+            <column caption='Correlation of Housing and Earning' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_5888949129779290121]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Corr([Calculation_5888949129722015744],[Composite_Benchmark])' />
+            </column>
+            <column datatype='real' name='[Canada]' role='measure' type='quantitative' />
+            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5888949129779290121]' derivation='User' name='[usr:Calculation_5888949129779290121:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]</rows>
+        <cols>[federated.19zaho518bv52e19rlev31rjeljp].[tyr:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{03BE97A2-7A15-4983-9FE1-A2EE47A3D761}' />
     </worksheet>
     <worksheet name='Heatmap of Current House Prices by District'>
       <table>
@@ -7415,7 +7496,7 @@
       </viewpoint>
       <simple-id uuid='{F812D79F-3F6B-4EBF-85E6-D2B953536234}' />
     </window>
-    <window class='worksheet' maximized='true' name='Canadian Trend House Prices vs Earnings (2)'>
+    <window class='worksheet' name='% Difference Canadian Housing Prices vs Earnings'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -7444,6 +7525,29 @@
         </current-page>
       </viewpoint>
       <simple-id uuid='{164B9281-4FB0-45BD-AE2A-F6BED6B6145B}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Correlation Between Housing Prices and Earnings'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{859C6A8F-BA4A-4D84-882D-33E56722D4C7}' />
     </window>
   </windows>
 </workbook>
