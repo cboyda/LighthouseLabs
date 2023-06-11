@@ -8368,7 +8368,7 @@
       </cards>
       <simple-id uuid='{B3032F9E-D050-4621-931D-B0A1FFB707C9}' />
     </window>
-    <window class='worksheet' maximized='true' name='Trend of Housing Prices after 2005 vs Benchmark'>
+    <window class='worksheet' name='Trend of Housing Prices after 2005 vs Benchmark'>
       <cards>
         <edge name='left'>
           <strip size='265'>
@@ -8389,7 +8389,7 @@
           </strip>
         </edge>
         <edge name='bottom'>
-          <strip size='117'>
+          <strip size='72'>
             <card pane-specification-id='1' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]&#10;[federated.1cdy21a1veoost1armoix07ybdco].[:Measure Names]' type='color' />
           </strip>
           <strip size='2147483647'>
@@ -8471,7 +8471,7 @@
       </cards>
       <simple-id uuid='{0B2E6B49-0DBF-4FEE-BFC7-77449707B6CD}' />
     </window>
-    <window class='worksheet' name='Compare Housing vs Office Trends'>
+    <window class='worksheet' maximized='true' name='Compare Housing vs Office Trends'>
       <cards>
         <edge name='left'>
           <strip size='265'>
