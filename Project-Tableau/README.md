@@ -1,7 +1,7 @@
 # Project Tableau Presentation
 
 ## Project/Goals
-Review provided datasets in [Tableau](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/.~Tableau_Project__63037.twbr) to demonstrate proficiency and insights from this data.
+Review provided datasets in [Tableau](https://github.com/cboyda/LighthouseLabs/raw/main/Project-Tableau/Tableau_Project.twbx) to demonstrate proficiency and insights from this data.
 
 ## Process
 ### (your step 1)
@@ -13,6 +13,8 @@ Datasets used included:
 * Housing_price_index from November 1979 to September 2020
 * Office_realestate_index from November 1979 to September 2020
 * Consumer index from November 1979 to September 2020
+
+Utilized [Python Google Colab](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/data/Tableau_Weekly_Earnings_JSON_Parse.ipynb) to parse the JSON file and create a cleaner csv for Tableau to visualize.
 
 ## Results
 > Option 1 Selected for Standard Final Project
