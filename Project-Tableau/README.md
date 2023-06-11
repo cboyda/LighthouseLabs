@@ -59,6 +59,10 @@ No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 
 
 9. Plot consumer_index together with housing_price_index and fit the regression line between them. Can we predict consumer_index from the housing_price_index?
+Using the CPIW index value, and limiting only to percentages we can easily compare consumer vs housing price indexes.<br>
+![index comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-index-comparison.png)
+<br>These follow eachother so closely, even the linear regression line can be seen to accurately predict housing price from the consumer index.<br>
+![index regression](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-regression-index.png)
 10. Try to find an interesting pattern, trend, outlier, etc. from the data used in the above questions.
     HINT : Double check all units in the table before any comparison.
 
