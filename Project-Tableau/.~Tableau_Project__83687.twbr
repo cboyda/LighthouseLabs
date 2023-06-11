@@ -7590,10 +7590,7 @@
             <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.1cdy21a1veoost1armoix07ybdco].[none:measures:nk]'>
-            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[none:measures:nk]' />
-              <groupfilter function='member' level='[none:measures:nk]' member='%null%' />
-            </groupfilter>
+            <groupfilter function='member' level='[none:measures:nk]' member='&quot;Consumer Price Index (CPI) excluding the effect of indirect taxes, seasonally adjusted&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.1cdy21a1veoost1armoix07ybdco].[yr:date:ok]'>
             <groupfilter from='1983' function='range' level='[yr:date:ok]' to='2020' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
@@ -7786,7 +7783,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='72'>
-    <window class='worksheet' maximized='true' name='Trend of Housing Prices over last 40 years'>
+    <window class='worksheet' name='Trend of Housing Prices over last 40 years'>
       <cards>
         <edge name='left'>
           <strip size='265'>
@@ -7916,7 +7913,7 @@
       </cards>
       <simple-id uuid='{0B2E6B49-0DBF-4FEE-BFC7-77449707B6CD}' />
     </window>
-    <window class='worksheet' name='Compare Housing vs Office Trends'>
+    <window class='worksheet' maximized='true' name='Compare Housing vs Office Trends'>
       <cards>
         <edge name='left'>
           <strip size='265'>
