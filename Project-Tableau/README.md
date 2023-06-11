@@ -4,8 +4,8 @@
 Review provided datasets in [Tableau](https://github.com/cboyda/LighthouseLabs/raw/main/Project-Tableau/Tableau_Project.twbx) to demonstrate proficiency and insights from this data.
 
 ## Process
-### (your step 1)
-### (your step 2)
+### Key
+The key to this dataset was making sure the data was filtered to only include there relevant categories.<br>
 Datasets used included:
 * Weekly earnings from 1.1.2001 to 15.4.2015 (weekly_earnings - CSV)
 * Housing constructions from 1955 to 2019 (real_estate_numbers - CSV) with housing starts/completions and geographical regions
