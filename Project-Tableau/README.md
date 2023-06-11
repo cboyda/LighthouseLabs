@@ -44,7 +44,10 @@ Variance: is another measure of the dispersion of prices over the districts. It 
 7. Did people spend more of their earnings in 2014 than they did in 2001?
 No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ![compare earnings](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/7-compare-earnings-values.png)
-8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). Show the effect of these crises on:
+8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). 
+<details>
+  <summary>Show the effect of these crises on:</summary>
+  
    * a) Earnings
 ![earnings](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8a-earnings-province-economic-crisis.png)
    * b) House prices
@@ -55,14 +58,16 @@ No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ![housing construction](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8d-construction-economic-crisis.png)
    * e) Consumer index
 ![cpi](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/8e-cpi-economic-crisis.png)
-
-
-
+  
+</details>
 9. Plot consumer_index together with housing_price_index and fit the regression line between them. Can we predict consumer_index from the housing_price_index?
 Using the CPIW index value, and limiting only to percentages we can easily compare consumer vs housing price indexes.<br>
+
 ![index comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-index-comparison.png)
 <br>These follow eachother so closely, even the linear regression line can be seen to accurately predict housing price from the consumer index.<br>
-![index regression](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-regression-index.png)
+
+![index regression](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-regression-index.png)<br>
+
 10. Try to find an interesting pattern, trend, outlier, etc. from the data used in the above questions.
     HINT : Double check all units in the table before any comparison.
 ![construction comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-construction.png)
@@ -70,8 +75,7 @@ Found it interesting that starts and completion differed inconsistenctly over ti
 
 * recreated earnings data to compare annually to housing, require [Python modifications to original data](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/data/Modify_Earnings_Annually.ipynb)
 <br>Utilizing that reformated data we can now lookg at how much Alberta contributes to Canada in both construction completed and earnings.  Notice there is not a direct correlation with earnings and construction completed, nor the % of earnings greater in Alberta to construction. I found this counter-intuitive.
-![AB in Canada](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-ABCan-construction-earnings.png)
-
+![AB in Canada](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-AB-Can-construction-earnings.png)
 ## Challenges 
 > Discuss challenges you faced in the project.
 
