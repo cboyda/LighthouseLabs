@@ -72,5 +72,7 @@ Using the CPIW index value, and limiting only to percentages we can easily compa
 
 X greatest challenge was trying to understand the overall goal of the question, without clarifying questions or a sample output this is just a guess.  The role of the subject matter expert is key to understanding the data and matching their knowledge with the clients chart visual goals.  
 
+X Many of the datasources tried to merge data.  For example there are multiple CPI indexes, then the units are percentage AND index values.  Without filtering these to match exactly the graphs/charts quickly can become erroneous.
+
 ## Future Goals
 (what would you do if you had more time?)
