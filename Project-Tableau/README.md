@@ -25,7 +25,8 @@ This is too complicated to compare easily.  <br>We have 3 graphs with different 
 ![merged prices](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/3-housing-vs-office.png)<br>
 Notice that in the first chart our housing prices go to 2021 but once we compare with office prices their data only goes to 2017 so much of the trend is cropped off.
   Which one is getting more expensive, faster? OFFICE SPACE is observed with a larger slope/increase vs housing prices.
-4. Create a heatmap of Canada with current house prices for each available district.
+4. Create a heatmap of Canada with current house prices for each available district.<br>
+Latest time available was Sept 2020, with the size of the composite benchmark relating the size of each district.<br>
 ![house price heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/4-heatmap-house-prices-by-district.png)
 5. Are the price differences between different districts increasing?
 Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
@@ -42,11 +43,19 @@ Variance: is another measure of the dispersion of prices over the districts. It 
 No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ![compare earnings](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/7-compare-earnings-values.png)
 8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). Show the effect of these crises on:
-   * Earnings
-   * House prices
-   *  Office prices
-   *  House constructions
-   *  Consumer index
+   * a) Earnings
+![earnings](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8a-earnings-province-economic-crisis.png)
+   * b) House prices
+![housing prices](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8b-housing-economic-crisis.png)
+   * c) Office prices
+![office prices](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8c-office-economic-crisis.png)
+   * d) House constructions
+![housing construction](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8d-construction-economic-crisis.png)
+   * e) Consumer index
+![cpi](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/8e-cpi-economic-crisis.png)
+
+
+
 9. Plot consumer_index together with housing_price_index and fit the regression line between them. Can we predict consumer_index from the housing_price_index?
 10. Try to find an interesting pattern, trend, outlier, etc. from the data used in the above questions.
     HINT : Double check all units in the table before any comparison.
