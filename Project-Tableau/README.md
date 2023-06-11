@@ -55,8 +55,7 @@ No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ## Challenges 
 > Discuss challenges you faced in the project.
 
-X greatested challenge was trying to understand the overall goal of the question, without clarifying questions or a sample output this is just a guess.
-Normally I would assume the need to explore the data and find relationships of interest.
+X greatest challenge was trying to understand the overall goal of the question, without clarifying questions or a sample output this is just a guess.  The role of the subject matter expert is key to understanding the data and matching their knowledge with the clients chart visual goals.  
 
 ## Future Goals
 (what would you do if you had more time?)
