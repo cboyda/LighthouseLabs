@@ -33,7 +33,10 @@ Variance: is another measure of the dispersion of prices over the districts. It 
 ![aggregated variance](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-aggregated_districts.png)
 6. Compare the trend of house prices with earnings. *In case you want to plot monthly salary, be aware that the earnings value is per week.<br>
 ![earnings vs housing](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-housing-vs-earnings.png)
-<br> While this visualization shows the general slope over time there is a mismatch in scales that causes tremendous white space below.  Given more time we could work to standardize these values to better "fill" our chart space.<br> An interesting thing to note is that the housing price has been filled above/below the trend line which really mimics the increases/decreases of the wages over time.
+<br> While this visualization shows the general slope over time there is a mismatch in scales that causes tremendous white space below.  Given more time we could work to standardize these values to better "fill" our chart space.<br> An interesting thing to note is that the housing price has been filled above/below the trend line which really mimics the increases/decreases of the wages over time.<br>
+![percent difference](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-overlay-percent-difference-housing-vs-earnings.png)
+<br>By calculating the percentage difference we are able to place these trends over top of eachother (on the same axis) and see there is a often a correlation between these values.<br>Let's check the correlation between earnings and housing prices:<br>
+![correlations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-annual-correlation-between-housing-earnings.png)
 7. Did people spend more of their earnings in 2014 than they did in 2001?
 8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). Show the effect of these crises on:
    * Earnings
