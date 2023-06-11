@@ -40,7 +40,7 @@ Variance: is another measure of the dispersion of prices over the districts. It 
 <br> While this visualization shows the general slope over time there is a mismatch in scales that causes tremendous white space below.  Given more time we could work to standardize these values to better "fill" our chart space.<br> An interesting thing to note is that the housing price has been filled above/below the trend line which really mimics the increases/decreases of the wages over time.<br>
 ![percent difference](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-overlay-percent-difference-housing-vs-earnings.png)
 <br>By calculating the percentage difference we are able to place these trends over top of eachother (on the same axis) and see there is a often a correlation between these values.<br>Let's check the correlation between earnings and housing prices:<br>
-![correlations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-annual-correlation-between-housing-earnings.png)
+![correlations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-annual-correlation-between-housing-earning.png)
 7. Did people spend more of their earnings in 2014 than they did in 2001?
 No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ![compare earnings](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/7-compare-earnings-values.png)
