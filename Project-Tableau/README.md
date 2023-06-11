@@ -55,9 +55,6 @@ No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ![housing construction](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/8d-construction-economic-crisis.png)
    * e) Consumer index
 ![cpi](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/8e-cpi-economic-crisis.png)
-
-
-
 9. Plot consumer_index together with housing_price_index and fit the regression line between them. Can we predict consumer_index from the housing_price_index?
 Using the CPIW index value, and limiting only to percentages we can easily compare consumer vs housing price indexes.<br>
 ![index comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-index-comparison.png)
@@ -70,8 +67,7 @@ Found it interesting that starts and completion differed inconsistenctly over ti
 
 * recreated earnings data to compare annually to housing, require [Python modifications to original data](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/data/Modify_Earnings_Annually.ipynb)
 <br>Utilizing that reformated data we can now lookg at how much Alberta contributes to Canada in both construction completed and earnings.  Notice there is not a direct correlation with earnings and construction completed, nor the % of earnings greater in Alberta to construction. I found this counter-intuitive.
-![AB in Canada](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-ABCan-construction-earnings.png)
-
+![AB in Canada](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-AB-Can-construction-earnings.png)
 ## Challenges 
 > Discuss challenges you faced in the project.
 
