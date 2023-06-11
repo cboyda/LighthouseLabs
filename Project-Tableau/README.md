@@ -68,6 +68,7 @@ Using the CPIW index value, and limiting only to percentages we can easily compa
 ![construction comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-construction.png)
 Found it interesting that starts and completion differed inconsistenctly over time.
 
+* recreated earnings data to compare annually to housing, require [Python modifications to original data](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/data/Modify_Earnings_Annually.ipynb)
 
 ## Challenges 
 > Discuss challenges you faced in the project.
