@@ -65,6 +65,8 @@ Using the CPIW index value, and limiting only to percentages we can easily compa
 ![index regression](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/9-regression-index.png)
 10. Try to find an interesting pattern, trend, outlier, etc. from the data used in the above questions.
     HINT : Double check all units in the table before any comparison.
+![construction comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-construction.png)
+Found it interesting that starts and completion differed inconsistenctly over time.
 
 
 ## Challenges 
@@ -76,3 +78,4 @@ X Many of the datasources tried to merge data.  For example there are multiple C
 
 ## Future Goals
 (what would you do if you had more time?)
+* create a much more interactive dashboard, but ensure collected data shares similar columns to leverage shared filters
