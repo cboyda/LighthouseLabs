@@ -6290,6 +6290,45 @@
       </table>
       <simple-id uuid='{BA8DA2EE-9FBC-4F48-A2A1-A505DED67D5D}' />
     </worksheet>
+    <worksheet name='Annual Correlation Between Housing Prices and Earnings'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='weekly_earnings_hs_prices' name='federated.19zaho518bv52e19rlev31rjeljp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19zaho518bv52e19rlev31rjeljp'>
+            <column caption='Canada_Monthly_Earnings' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Calculation_5888949129722015744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Canada]*4' />
+            </column>
+            <column caption='Correlation of Housing and Earning' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_5888949129779290121]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Corr([Calculation_5888949129722015744],[Composite_Benchmark])' />
+            </column>
+            <column datatype='real' name='[Canada]' role='measure' type='quantitative' />
+            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5888949129779290121]' derivation='User' name='[usr:Calculation_5888949129779290121:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]</rows>
+        <cols>[federated.19zaho518bv52e19rlev31rjeljp].[tyr:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{03BE97A2-7A15-4983-9FE1-A2EE47A3D761}' />
+    </worksheet>
     <worksheet name='Canadian Trend House Prices vs Earnings'>
       <table>
         <view>
@@ -6520,41 +6559,6 @@
         <cols>[federated.1cdy21a1veoost1armoix07ybdco].[tmn:date:qk]</cols>
       </table>
       <simple-id uuid='{40F188C8-424A-4202-BECC-3EFD638277AF}' />
-    </worksheet>
-    <worksheet name='Correlation Between Housing Prices and Earnings'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='weekly_earnings_hs_prices' name='federated.19zaho518bv52e19rlev31rjeljp' />
-          </datasources>
-          <datasource-dependencies datasource='federated.19zaho518bv52e19rlev31rjeljp'>
-            <column caption='Canada_Monthly_Earnings' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Calculation_5888949129722015744]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[Canada]*4' />
-            </column>
-            <column caption='Correlation of Housing and Earning' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_5888949129779290121]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='Corr([Calculation_5888949129722015744],[Composite_Benchmark])' />
-            </column>
-            <column datatype='real' name='[Canada]' role='measure' type='quantitative' />
-            <column caption='Composite Benchmark' datatype='integer' name='[Composite_Benchmark]' role='measure' type='quantitative' />
-            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
-            <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Calculation_5888949129779290121]' derivation='User' name='[usr:Calculation_5888949129779290121:qk]' pivot='key' type='quantitative' />
-          </datasource-dependencies>
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-        </panes>
-        <rows>[federated.19zaho518bv52e19rlev31rjeljp].[usr:Calculation_5888949129779290121:qk]</rows>
-        <cols>[federated.19zaho518bv52e19rlev31rjeljp].[tyr:Date:qk]</cols>
-      </table>
-      <simple-id uuid='{03BE97A2-7A15-4983-9FE1-A2EE47A3D761}' />
     </worksheet>
     <worksheet name='Heatmap of Current House Prices by District'>
       <table>
@@ -7434,7 +7438,7 @@
       </viewpoint>
       <simple-id uuid='{8446EBFD-B75D-418C-987A-9BDFD6CB6D24}' />
     </window>
-    <window class='worksheet' name='Variance of House Prices Aggregated Districts'>
+    <window class='worksheet' maximized='true' name='Variance of House Prices Aggregated Districts'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -7526,7 +7530,7 @@
       </viewpoint>
       <simple-id uuid='{164B9281-4FB0-45BD-AE2A-F6BED6B6145B}' />
     </window>
-    <window class='worksheet' maximized='true' name='Correlation Between Housing Prices and Earnings'>
+    <window class='worksheet' name='Annual Correlation Between Housing Prices and Earnings'>
       <cards>
         <edge name='left'>
           <strip size='160'>
