@@ -72,7 +72,10 @@ Using the CPIW index value, and limiting only to percentages we can easily compa
 10. Try to find an interesting pattern, trend, outlier, etc. from the data used in the above questions.
     HINT : Double check all units in the table before any comparison.
 ![construction comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-construction.png)
-Found it interesting that starts and completion differed inconsistenctly over time.
+Found it interesting that starts and completion differed inconsistenctly over time.<br>
+And certainly affected by recessions (1990) and mortgage collapses in our econony (2009).<br>
+![construction econonmic crisis](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-CAN-construction-economic-crisis.png)
+
 
 * recreated earnings data to compare annually to housing, require [Python modifications to original data](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/data/Modify_Earnings_Annually.ipynb)
 <br>Utilizing that reformated data we can now lookg at how much Alberta contributes to Canada in both construction completed and earnings.  
