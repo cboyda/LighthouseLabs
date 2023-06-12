@@ -73,7 +73,7 @@ Using the CPIW index value, and limiting only to percentages we can easily compa
     HINT : Double check all units in the table before any comparison.
 ![construction comparison](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-construction.png)
 Found it interesting that starts and completion differed inconsistenctly over time.<br>
-And certainly affected by recessions (1990) and mortgage collapses in our econony (2009).<br>
+And certainly affected by recessions (1990) and mortgage collapses in our econony (2009).  Notice how the construction completion lags thereafter.<br>
 ![construction econonmic crisis](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/10-CAN-construction-economic-crisis.png)
 
 
