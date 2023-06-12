@@ -26,8 +26,8 @@ Note: This is using the measure: Consumer Price Index (CPI) which excludes indir
 2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.![chart2](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/2-house-prices-2005-vs-benchmarkb.png)
 3. Compare this trend with the trend of office prices. <br>
 ![merged prices](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/3-housing-vs-officeb.png)<br>
-Notice that in the first chart our housing prices go to 2021 but once we compare with office prices their data only goes to 2017 so much of the trend is cropped off.
-  Which one is getting more expensive, faster? OFFICE SPACE is observed with a larger slope/increase vs housing prices.
+Notice that in the first chart our housing prices go to 2021 but once we compare with office prices their data only goes to 2017 so much of the trend is cropped off.<br>
+   Which one is getting more expensive, faster? OFFICE SPACE is observed with a larger slope/increase vs housing prices.
 4. Create a heatmap of Canada with current house prices for each available district.<br>
 Latest time available was Sept 2020, with the size of the composite benchmark relating the size of each district.<br>
 ![house price heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/4-heatmap-house-prices-by-district.png)
