@@ -19,7 +19,7 @@ Utilized [Python Google Colab](https://github.com/cboyda/LighthouseLabs/blob/mai
 ## Results
 > Option 1 Selected for Standard Final Project
 
-Entire results are available in a [PDF](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/Tableau-Project.pdf), if you prefer.
+Entire results are available in a [PDF](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/Tableau-Project.pdf), or as a [Power Point Presentation](https://github.com/cboyda/LighthouseLabs/raw/main/Project-Tableau/Presentation%20Canadian%20Housing.pptx), or [Presentation Summary in PDF format](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/Presentation%20Canadian%20Housing.pdf).
 
 1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index). ![chart1](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years-CPI.png)<br>
 Note: This is using the measure: Consumer Price Index (CPI) which excludes indirect taxes, seasonally adjusted.
@@ -86,4 +86,4 @@ X Many of the datasources tried to merge data.  For example there are multiple C
 
 ## Future Goals
 (what would you do if you had more time?)
-* create a much more interactive dashboard, but ensure collected data shares similar columns to leverage shared filters
+* create a much more interactive dashboards/animation/timelines, but ensure collected data shares similar columns to leverage shared filters
