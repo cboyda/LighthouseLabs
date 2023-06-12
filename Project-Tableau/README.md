@@ -30,7 +30,7 @@ Notice that in the first chart our housing prices go to 2021 but once we compare
    Which one is getting more expensive, faster? OFFICE SPACE is observed with a larger slope/increase vs housing prices.
 4. Create a heatmap of Canada with current house prices for each available district.<br>
 Latest time available was Sept 2020, with the size of the composite benchmark relating the size of each district.<br>
-![house price heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/4-heatmap-house-prices-by-district.png)
+![house price heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/4-heatmap-house-prices-by-districtb.png)
 5. Are the price differences between different districts increasing?
 Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
 ![district differences](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-noisey-districts.png)
