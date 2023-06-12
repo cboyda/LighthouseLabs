@@ -9025,7 +9025,6 @@
             <mark class='Automatic' />
             <encodings>
               <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
-              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[:Measure Names]' />
             </encodings>
           </pane>
           <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:index_value:qk]'>
@@ -9035,7 +9034,6 @@
             <mark class='Automatic' />
             <encodings>
               <color column='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' />
-              <color column='[federated.1cdy21a1veoost1armoix07ybdco].[:Measure Names]' />
             </encodings>
           </pane>
           <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1cdy21a1veoost1armoix07ybdco].[avg:Composite_Benchmark:qk]'>
@@ -9270,7 +9268,7 @@
       </cards>
       <simple-id uuid='{B3032F9E-D050-4621-931D-B0A1FFB707C9}' />
     </window>
-    <window class='worksheet' name='Trend of Housing Prices after 2005 vs Benchmark'>
+    <window class='worksheet' maximized='true' name='Trend of Housing Prices after 2005 vs Benchmark'>
       <cards>
         <edge name='left'>
           <strip size='265'>
@@ -9292,10 +9290,15 @@
         </edge>
         <edge name='bottom'>
           <strip size='72'>
-            <card pane-specification-id='1' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]&#10;[federated.1cdy21a1veoost1armoix07ybdco].[:Measure Names]' type='color' />
+            <card pane-specification-id='3' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]&#10;[federated.1cdy21a1veoost1armoix07ybdco].[:Measure Names]' type='color' />
           </strip>
           <strip size='2147483647'>
             <card mode='checkdropdown' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:measures:nk]' type='filter' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1cdy21a1veoost1armoix07ybdco].[none:region:nk]' type='color' />
           </strip>
         </edge>
       </cards>
@@ -9457,7 +9460,7 @@
       </viewpoint>
       <simple-id uuid='{81BB3B8F-A11F-461F-986D-B7E1FAE5B36B}' />
     </window>
-    <window class='worksheet' maximized='true' name='Heatmap of Current House Prices by District'>
+    <window class='worksheet' name='Heatmap of Current House Prices by District'>
       <cards>
         <edge name='left'>
           <strip size='160'>
