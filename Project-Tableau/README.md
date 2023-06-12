@@ -86,4 +86,4 @@ X Many of the datasources tried to merge data.  For example there are multiple C
 
 ## Future Goals
 (what would you do if you had more time?)
-* create a much more interactive dashboard, but ensure collected data shares similar columns to leverage shared filters
+* create a much more interactive dashboards/animation/timelines, but ensure collected data shares similar columns to leverage shared filters
