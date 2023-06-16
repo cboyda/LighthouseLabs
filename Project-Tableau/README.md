@@ -25,28 +25,35 @@ Entire results are available in a [PDF](https://github.com/cboyda/LighthouseLabs
 <img src="https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years-CPI.png" style="max-width: 200px;">
 <br>
 Note: This is using the measure: Consumer Price Index (CPI) which excludes indirect taxes, seasonally adjusted.
+<br><br>
 2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.![chart2](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/2-house-prices-2005-vs-benchmarkc.png)
+<br><br>
 3. Compare this trend with the trend of office prices. <br>
 ![merged prices](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/3-housing-vs-officec.png)<br>
 Notice that in the first chart our housing prices go to 2021 but once we compare with office prices their data only goes to 2017 so much of the trend is cropped off.<br>
    Which one is getting more expensive, faster? OFFICE SPACE is observed with a larger slope/increase vs housing prices.
+<br><br>
 4. Create a heatmap of Canada with current house prices for each available district.<br>
 Latest time available was Sept 2020, with the size of the composite benchmark relating the size of each district.<br>
 ![house price heatmap](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/4-heatmap-house-prices-by-districtb.png)
+<br><br>
 5. Are the price differences between different districts increasing?
 Variance: is another measure of the dispersion of prices over the districts. It is the squared value of the standard deviation. Variance provides an understanding of the overall variability of prices and can be useful for comparing the spread between districts.  
 ![district differences](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-noisey-districts.png)
 <br>In this chart we aggregate results to reduce noise.
 ![aggregated variance](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/5-aggregated_annual_districts.png)
+<br><br>
 6. Compare the trend of house prices with earnings. *In case you want to plot monthly salary, be aware that the earnings value is per week.<br>
 ![earnings vs housing](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-housing-vs-earnings.png)
 <br> While this visualization shows the general slope over time there is a mismatch in scales that causes tremendous white space below.  Given more time we could work to standardize these values to better "fill" our chart space.<br> An interesting thing to note is that the housing price has been filled above/below the trend line which really mimics the increases/decreases of the wages over time.<br>
 ![percent difference](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-overlay-percent-difference-housing-vs-earnings.png)
 <br>By calculating the percentage difference we are able to place these trends over top of eachother (on the same axis) and see there is a often a correlation between these values.<br>Let's check the correlation between earnings and housing prices:<br>
 ![correlations](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/6-annual-correlation-between-housing-earning.png)
+<br><br>
 7. Did people spend more of their earnings in 2014 than they did in 2001?
 No expenses were provided, but we can compare earnings for 2014 vs 2001.<br>
 ![compare earnings](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/7-compare-earnings-values.png)
+<br><br>
 8. There were several economic crises in the world in the last 40 years, including these four: Black Monday (1987), Recession (early 1990s), dot com bubble (2000 - 2002), Financial crisis (2007 - 2009). 
 <details>
   <summary>Show the effect of these crises on:</summary>
