@@ -1,6 +1,6 @@
 <style>
 .markdown-body img {
-    max-width: 75%;
+    width: 75%;
 </style>   
 # Project Tableau Presentation
 
