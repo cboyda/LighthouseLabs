@@ -1,3 +1,7 @@
+<style>
+.markdown-body img {
+    max-width: 75%;
+</style>   
 # Project Tableau Presentation
 
 ## Project/Goals
