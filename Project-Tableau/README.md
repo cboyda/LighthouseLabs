@@ -1,5 +1,5 @@
 <style>
-.markdown-body img {
+img {
     width: 75%;
 </style>   
 # Project Tableau Presentation
