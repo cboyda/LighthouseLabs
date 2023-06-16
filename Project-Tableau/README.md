@@ -22,8 +22,7 @@ Utilized [Python Google Colab](https://github.com/cboyda/LighthouseLabs/blob/mai
 Entire results are available in a [PDF](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/Tableau-Project.pdf), or as a [Power Point Presentation](https://github.com/cboyda/LighthouseLabs/raw/main/Project-Tableau/Presentation%20Canadian%20Housing.pptx), or [Presentation Summary in PDF format](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/Presentation%20Canadian%20Housing.pdf).
 
 1. Show the trend of house prices across Canada in the last 40 years (table housing_price_index). 
-<div style="width: 100px">![chart1](https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years-CPI.png)</div>
-<img src="https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years-CPI.png" width="100px">
+<img src="https://raw.githubusercontent.com/cboyda/LighthouseLabs/main/Project-Tableau/images/1-house-prices-last-40years-CPI.png" width="200px">
 <br>
 Note: This is using the measure: Consumer Price Index (CPI) which excludes indirect taxes, seasonally adjusted.
 2. Compare the trend after 2005 with actual benchmark prices in table real_estate_prices to see if there are any differences.![chart2](https://github.com/cboyda/LighthouseLabs/blob/main/Project-Tableau/images/2-house-prices-2005-vs-benchmarkc.png)
