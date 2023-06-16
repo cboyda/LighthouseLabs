@@ -1,7 +1,8 @@
 <style>
 img {
-    width: 75%; }
-</style>   
+    max-width: 75%;
+}
+</style>
 # Project Tableau Presentation
 
 ## Project/Goals
