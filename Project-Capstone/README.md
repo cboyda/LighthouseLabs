@@ -8,11 +8,9 @@
 
 ```mermaid
 graph TD;
-    analytics.csv_448.7MB-->4,301,122_rows-->tbl_analytics_716MB;
+    3x_locations.csv_448.7MB-->4,301,122_rows-->tbl_analytics_716MB;
     all_sessions.csv_3.9MB-->15,134_rows-->tbl_all_sessions_4.7MB;
     products.csv_0.069MB-->1,094_rows-->tbl_products_0.2MB;
-    sales_by_sku_0.007MB-->456_rows-->tbl_sales_by_sku_0.08MB;
-    sales_report_0.034MB-->454_rows-->tbl_sales_report_0.12MB;
 ```
 ### (your step 2)
 
