@@ -17,3 +17,5 @@ Refreshed data science skills with the latest tools involving statistics, analyt
 **Data Visualization · Data Analysis · Dashboard · Statistical Modelling**
 
 ![diploma](https://github.com/cboyda/LighthouseLabs/blob/main/program_diploma.jpg)
+
+Yes, I am available [for hire](https://www.linkedin.com/in/clintonboyda/)
