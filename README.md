@@ -3,9 +3,9 @@
 Completed 500+hour program from [Lighthouse Labs]([https://amii.ca](https://www.lighthouselabs.ca/en/data-analytics))
 
 ## Projects:
-* ![Python Statistical Modelling](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics) including YELP/FourSquare/CityBikes API's 
-* ![SQL Transforming Data](https://github.com/cboyda/LighthouseLabs/tree/main/Project-SQL) utilizing PostgreSQL
-* ![Tableau Visualizations](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Tableau)
+1. ![Python Statistical Modelling](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics) including YELP/FourSquare/CityBikes API's 
+2. ![SQL Transforming Data](https://github.com/cboyda/LighthouseLabs/tree/main/Project-SQL) utilizing PostgreSQL
+3. ![Tableau Visualizations](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Tableau)
 
 ![data pillars](https://github.com/cboyda/LighthouseLabs/blob/main/program_pillars.png)
 
