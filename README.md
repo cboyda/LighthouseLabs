@@ -13,6 +13,7 @@ Refreshed data science skills with the latest tools involving statistics, analyt
 
 ![program_overview](https://github.com/cboyda/LighthouseLabs/blob/main/program_overview.png)
 
-Skills: Data Visualization · Data Analysis · Dashboard · Statistical Modelling
+## Skills: 
+**Data Visualization · Data Analysis · Dashboard · Statistical Modelling**
 
 ![diploma](https://github.com/cboyda/LighthouseLabs/blob/main/program_diploma.jpg)
