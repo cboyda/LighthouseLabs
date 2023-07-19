@@ -2,17 +2,14 @@
 
 Completed 500+hour program from [Lighthouse Labs]([https://amii.ca](https://www.lighthouselabs.ca/en/data-analytics))
 
-/Capstone is our final project
-/Colab is the lessons and practice assignments
+## Projects:
+* ![Python Statistical Modelling](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics) including YELP/FourSquare/CityBikes API's 
+* ![SQL Transforming Data](https://github.com/cboyda/LighthouseLabs/tree/main/Project-SQL) utilizing PostgreSQL
+* ![Tableau Visualizations](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Tableau)
 
 ![data pillars](https://github.com/cboyda/LighthouseLabs/blob/main/program_pillars.png)
 
 Refreshed data science skills with the latest tools involving statistics, analytical modelling, data collection, wrangling, and visualization utilizing APIs, SQL, Python, and Tableau
-
-* Data Collection, Preprocessing, Exploration, Visualization, Transformers, Feature Engineering and Exploratory Data Analysis to reveal trends, insights, and feature correlations. 
-* Models included k-NN, decision trees, regression and pipelines for model comparison
-* Implemented hyperparameter tuning (GridSearch) to decrease the complexity of the model while improving performance metrics
-* Finally Capstone project presented findings and prediction model to enhance business value
 
 ![program_overview](https://github.com/cboyda/LighthouseLabs/blob/main/program_overview.png)
 
