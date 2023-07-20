@@ -1,4 +1,4 @@
-# Final Project: Transforming Data in SQL
+# Project: Transforming Data in SQL
 
 * Cohort: Lighthouse Labs 
 * Database Server: PostgreSql v15.2
