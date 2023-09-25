@@ -1,6 +1,6 @@
 # Data Analytics Diploma
 
-Completed 500+hour program from [Lighthouse Labs]([https://amii.ca](https://www.lighthouselabs.ca/en/data-analytics))
+Completed 500+hour program from [Lighthouse Labs](https://www.lighthouselabs.ca/en/data-analytics)
 
 ## Projects:
 1. ![Python Statistical Modelling](https://github.com/cboyda/LighthouseLabs/tree/main/Project-Python_Statistics) including YELP/FourSquare/CityBikes API's 
