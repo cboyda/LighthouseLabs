@@ -49,8 +49,6 @@ Statistical Analysis of the length of all page titles shows:
 | Sum               | 529740            |
 | Count             | 15134             |
 
-![simple illustration in excel showing outlier field length](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/images/pagetitle%20field%20length%20outlier.png?raw=true)
-
 
 This (576 length) is a HUGE outlier and also irrelevant information since the page title is not included in the querystring.
 Original pagetitle field:
