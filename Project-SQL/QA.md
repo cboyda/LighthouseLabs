@@ -1,7 +1,7 @@
 # Part 5: QA Your Data
 
 <details>
-<summary>from ![Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/assignment.md)</summary>
+<summary>from [Project-SQL/assignment.md](https://github.com/cboyda/LighthouseLabs/blob/main/Project-SQL/assignment.md)</summary>
 
 In the QA.md file, identify and describe your risk areas. Develop and execute a QA process to address them and validate the accuracy of your results. Provide the SQL queries used to execute the QA process.
 </details>
